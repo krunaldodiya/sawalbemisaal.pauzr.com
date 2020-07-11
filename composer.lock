@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48b125cd68f3874faefd4f064d4fa29b",
+    "content-hash": "1162ad08cd250098b19ca6cf84f774dc",
     "packages": [
         {
             "name": "64robots/nova-fields",
@@ -1940,6 +1940,52 @@
                 }
             ],
             "time": "2020-04-16T13:21:26+00:00"
+        },
+        {
+            "name": "madewithlove/laravel-nova-uuid-support",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/madewithlove/laravel-nova-uuid-support.git",
+                "reference": "8d65bff89fb99b4fe50c94341cf4b39cfc6d02fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/madewithlove/laravel-nova-uuid-support/zipball/8d65bff89fb99b4fe50c94341cf4b39cfc6d02fe",
+                "reference": "8d65bff89fb99b4fe50c94341cf4b39cfc6d02fe",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.7.15 | 5.8.* | ^6.0 | ^7.0",
+                "php": "^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Madewithlove\\NovaUuidSupport\\NovaUuidSupportServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Madewithlove\\NovaUuidSupport\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Adds uuid and other string identifier support to Laravel Nova",
+            "keywords": [
+                "identifiers",
+                "laravel",
+                "nova",
+                "primary",
+                "string",
+                "uuid"
+            ],
+            "time": "2020-05-25T07:24:18+00:00"
         },
         {
             "name": "monolog/monolog",

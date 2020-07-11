@@ -27,6 +27,7 @@
         "laravel/sanctum": "^2.2",
         "laravel/telescope": "^3.3",
         "laravel/tinker": "^2.0",
+        "madewithlove/laravel-nova-uuid-support": "^1.1",
         "predis/predis": "^1.1"
     },
     "require-dev": {
