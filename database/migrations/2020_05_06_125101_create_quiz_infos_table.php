@@ -17,7 +17,6 @@ class CreateQuizInfosTable extends Migration
             $table->uuid('id')->primary();
 
             $table->boolean('auto')->default(true);
-            $table->string('title')->unique();
 
             $table->integer('entry_fee')->default(0);
 
@@ -31,8 +30,6 @@ class CreateQuizInfosTable extends Migration
             $table->integer('expiry')->default(60)->comment('expiry in minutes');
             $table->integer('notify')->default(15)->comment('reading in minutes');
             $table->integer('time')->default(10)->comment('time in seconds');
-
-            $table->json('prize_distribution')->nullable();
 
             $table->timestamps();
         });
