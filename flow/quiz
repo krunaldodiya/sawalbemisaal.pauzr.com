@@ -1,0 +1,17 @@
+generate quiz resource
+
+Events
+-------------
+QuizGenerated
+
+Listeners
+---------
+GenerateQuizQuestions
+GenerateQuizTopic
+GenerateQuizNotification
+
+GenerateQuizNotification - Jobs
+----------------
+NotifyBeforeStart
+CheckQuizStatus
+CalculateQuizRanking
