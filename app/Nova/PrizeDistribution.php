@@ -2,38 +2,25 @@
 
 namespace App\Nova;
 
-use App\Nova\Actions\GenerateQuiz;
-use App\Repositories\PushNotificationRepository;
-use App\Repositories\QuizRepository;
 use Illuminate\Http\Request;
-
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\HasMany;
-
-use R64\NovaFields\Number;
-use R64\NovaFields\Row;
-
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class QuizInfo extends Resource
+class PrizeDistribution extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\QuizInfo::class;
-
-    public static $group = 'Quiz';
+    public static $model = \App\PrizeDistribution::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -41,7 +28,7 @@ class QuizInfo extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title'
+        'id',
     ];
 
     /**
@@ -55,19 +42,9 @@ class QuizInfo extends Resource
         return [
             ID::make()->sortable(),
 
-            Boolean::make("Auto"),
+            Text::make('Rank')->sortable(),
 
-            Text::make('Entry Fee (Coins)', 'entry_fee')->sortable(),
-            Text::make('Total Participants', 'total_participants')->sortable(),
-            Text::make('Total Winners', 'total_winners')->sortable(),
-            Text::make('Required Participants', 'required_participants')->sortable(),
-            Text::make('Total Questions', 'all_questions_count')->sortable(),
-            Text::make('Answerable Questions', 'answerable_questions_count')->sortable(),
-            Text::make('Expiry (minutes)', 'expiry')->sortable(),
-            Text::make('Notify Before (Minutes)', 'notify')->sortable(),
-            Text::make('Time Per Question (Seconds)', 'time')->sortable(),
-
-            HasMany::make('Distribution', 'prize_distributions', PrizeDistribution::class),
+            Text::make('Prize')->sortable(),
         ];
     }
 
@@ -112,6 +89,6 @@ class QuizInfo extends Resource
      */
     public function actions(Request $request)
     {
-        return [new GenerateQuiz(new QuizRepository(new PushNotificationRepository))];
+        return [];
     }
 }
