@@ -24,7 +24,8 @@ class QuizInfoObserver
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
-        });
+        })
+        ->toArray();
 
         PrizeDistribution::create($data);
     }
