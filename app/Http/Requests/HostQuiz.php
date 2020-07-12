@@ -17,7 +17,7 @@ class HostQuiz extends FormRequest
         return [
             'total_participants' => 'required',
             'entry_fee' => 'required',
-            'time' => 'required'
+            'expiry' => 'required'
         ];
     }
 
@@ -26,7 +26,7 @@ class HostQuiz extends FormRequest
         return [
             'total_participants.required' => 'Total Participants is required',
             'entry_fee.required' => 'Entry Fee is required',
-            'time.required' => 'Time is required',
+            'expiry.required' => 'Expiry is required',
         ];
     }
 

@@ -34,9 +34,13 @@ class QuizController extends Controller
             'auto' => false,
             'entry_fee' => $request->entry_fee,
             'total_participants' => $request->total_participants,
+            'required_participants' => $request->total_participants,
+            'all_questions_count' => 50,
+            'answerable_questions_count' => 10,
             'total_winners' => $total_winners,
-            'expiry' => $request->time,
-            'notify_before' => 15,
+            'expiry' => $request->expiry,
+            'notify' => 15,
+            'time' => 10
         ]);
 
         $quiz = $this->quizRepositoryInterface->generateQuiz(true, $quizInfo->id, auth()->id());
