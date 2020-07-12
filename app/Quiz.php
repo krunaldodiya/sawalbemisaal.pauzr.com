@@ -37,8 +37,23 @@ class Quiz extends Model
         return $this->belongsTo(QuizInfo::class, 'quiz_info_id');
     }
 
-    public static function generateQuiz()
+    public static function generateTitle()
     {
-        return "HELLO";
+        $number = '0123456789';
+        $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        function generateAlphaNumeric($alphanumeric, $length_of_string)
+        {
+            return substr(
+                str_shuffle($alphanumeric),
+                0,
+                $length_of_string
+            );
+        }
+
+        $random_alphabet = generateAlphaNumeric($alphabet, 2);
+        $random_number = generateAlphaNumeric($number, 4);
+
+        return "{$random_alphabet}{$random_number}";
     }
 }
