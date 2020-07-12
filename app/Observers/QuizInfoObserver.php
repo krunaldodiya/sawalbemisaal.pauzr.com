@@ -27,7 +27,7 @@ class QuizInfoObserver
         })
         ->toArray();
 
-        PrizeDistribution::create($data);
+        PrizeDistribution::insert($data);
     }
 
     /**
