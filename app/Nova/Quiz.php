@@ -53,6 +53,8 @@ class Quiz extends Resource
         return [
             ID::make()->sortable(),
 
+            Text::make('Title')->sortable(),
+
             Text::make("Status")->exceptOnForms(),
 
             DateTime::make('Expired At')

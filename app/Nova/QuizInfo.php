@@ -53,7 +53,6 @@ class QuizInfo extends Resource
         return [
             ID::make()->sortable(),
             Boolean::make("Auto"),
-            Text::make('Title')->sortable(),
             Text::make('Entry Fee (Coins)', 'entry_fee')->sortable(),
             Text::make('Total Participants', 'total_participants')->sortable(),
             Text::make('Total Winners', 'total_winners')->sortable(),
@@ -63,10 +62,6 @@ class QuizInfo extends Resource
             Text::make('Expiry (minutes)', 'expiry')->sortable(),
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
             Text::make('Time Per Question (Seconds)', 'time')->sortable(),
-            Row::make('Prize Distribution', [
-                Number::make('Rank'),
-                Number::make('Coins', 'price'),
-            ], 'prize_distribution'),
         ];
     }
 
