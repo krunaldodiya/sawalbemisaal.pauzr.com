@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\QuizInfo;
+use App\PrizeDistribution;
 
 use Illuminate\Support\Str;
 
