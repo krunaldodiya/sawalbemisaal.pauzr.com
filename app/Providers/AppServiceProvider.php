@@ -10,10 +10,16 @@ use App\Observers\QuizObserver;
 
 use App\QuizParticipant;
 use App\Observers\QuizParticipantObserver;
-use App\Observers\QuizRankingObserver;
+
 use App\User;
 use App\Observers\UserObserver;
+
 use App\QuizRanking;
+use App\Observers\QuizRankingObserver;
+
+use App\QuizInfo;
+use App\Observers\QuizInfoObserver;
+
 use Illuminate\Support\ServiceProvider;
 use Laravel\Sanctum\Sanctum;
 
@@ -41,5 +47,6 @@ class AppServiceProvider extends ServiceProvider
         User::observe(UserObserver::class);
         QuizParticipant::observe(QuizParticipantObserver::class);
         QuizRanking::observe(QuizRankingObserver::class);
+        QuizInfo::observe(QuizInfoObserver::class);
     }
 }
