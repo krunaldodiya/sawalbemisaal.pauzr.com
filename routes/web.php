@@ -9,21 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $prizes = config('prizes');
-
-    $distributions = $prizes[2];
-
-    $data = collect($distributions)->map(function ($distribution, $index) {
-        return [
-            'id' => Str::uuid(),
-            'quiz_info_id' => Str::uuid(),
-            'rank' => $index,
-            'prize' => $distribution,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ];
-    })
-    ->toArray();
-
-    return $data;
+    return "test";
 });

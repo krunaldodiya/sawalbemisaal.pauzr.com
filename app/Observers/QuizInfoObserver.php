@@ -20,7 +20,7 @@ class QuizInfoObserver
                 'id' => Str::uuid(),
                 'quiz_info_id' => $quizInfo->id,
                 'rank' => $index,
-                'prize' => $distribution,
+                'prize' => $quizInfo->entry_fee * $quizInfo->total_participants * 100 / $distribution,
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
