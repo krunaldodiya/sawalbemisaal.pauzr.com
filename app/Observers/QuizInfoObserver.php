@@ -20,7 +20,7 @@ class QuizInfoObserver
                 'prize' => $distribution,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ]
+            ];
         });
 
         PrizeDistribution::create($data);
