@@ -14,7 +14,7 @@ class QuizInfoObserver
 
         $distributions = $prizes[$quizInfo->total_participants];
 
-        $data = collect($distributions)->map(function ($distribution, $index) {
+        $data = collect($distributions)->map(function ($distribution, $index) use ($quizInfo) {
             return [
                 'id' => Str::uuid(),
                 'quiz_info_id' => $quizInfo->id,
