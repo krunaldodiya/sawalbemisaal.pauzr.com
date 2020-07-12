@@ -15,12 +15,14 @@ class QuizInfoObserver
 
         $distributions = $prizes[$quizInfo->total_participants];
 
-        $data = collect($distributions)->map(function ($distribution, $index) use ($quizInfo) {
+        $total_prize = $quizInfo->entry_fee * $quizInfo->total_participants;
+
+        $data = collect($distributions)->map(function ($distribution, $index) use ($quizInfo, $total_prize) {
             return [
                 'id' => Str::uuid(),
                 'quiz_info_id' => $quizInfo->id,
                 'rank' => $index,
-                'prize' => $quizInfo->entry_fee * $quizInfo->total_participants * 100 / $distribution,
+                'prize' => $total_prize * $distribution / 100,
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
