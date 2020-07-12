@@ -14,4 +14,9 @@ class QuizInfo extends Model
     protected $casts = [
         'prize_distribution' => 'json',
     ];
+
+    public function prize_distributions()
+    {
+        return $this->hasMany(PrizeDistribution::class);
+    }
 }
