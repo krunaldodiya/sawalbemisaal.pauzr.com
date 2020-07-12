@@ -36,4 +36,9 @@ class Quiz extends Model
     {
         return $this->belongsTo(QuizInfo::class, 'quiz_info_id');
     }
+
+    public static function generateQuiz()
+    {
+        return "HELLO";
+    }
 }

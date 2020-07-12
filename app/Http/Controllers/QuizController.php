@@ -24,6 +24,11 @@ class QuizController extends Controller
         $this->quizRepositoryInterface = $quizRepositoryInterface;
     }
 
+    public function host(HostQuiz $request)
+    {
+        $quiz = $this->generate();
+    }
+
     public function generate(GenerateQuiz $request)
     {
         $quiz = $this->quizRepositoryInterface->generateQuiz(true, $request->quiz_info_id, $request->user_id);

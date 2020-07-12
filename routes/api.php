@@ -18,6 +18,7 @@ Route::middleware('auth:sanctum')->post('/plans', "PlanController@getPlans");
 Route::middleware('auth:sanctum')->get('/payments/withdraw/history', "PaymentController@getWithdrawHistory");
 Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController@withdrawAmount");
 
+Route::middleware('auth:sanctum')->post('/quiz/host', "QuizController@host");
 Route::middleware('auth:sanctum')->post('/quiz/generate', "QuizController@generate");
 Route::middleware('auth:sanctum')->post('/quiz/join', "QuizController@join");
 Route::middleware('auth:sanctum')->post('/quiz/submit', "QuizController@submit");

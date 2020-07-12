@@ -15,6 +15,7 @@ use App\Listeners\CreateUserTopics;
 use App\Listeners\SubscribeToTopics;
 use App\Listeners\ManageTopicSubscription;
 
+use App\Listeners\GenerateQuizTitle;
 use App\Listeners\GenerateQuizQuestions;
 use App\Listeners\GenerateQuizTopic;
 use App\Listeners\GenerateQuizNotification;
@@ -43,6 +44,8 @@ class EventServiceProvider extends ServiceProvider
         ],
 
         QuizGenerated::class => [
+            GenerateQuizTitle::class,
+
             GenerateQuizQuestions::class,
             GenerateQuizTopic::class,
             GenerateQuizNotification::class,
