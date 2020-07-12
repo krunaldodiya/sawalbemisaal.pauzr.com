@@ -26,7 +26,22 @@ class QuizController extends Controller
 
     public function host(HostQuiz $request)
     {
-        $quiz = $this->generate();
+        $prizes = config('prizes');
+
+        $total_winners = count($prizes[$request->total_participants]);
+
+        $quizInfo = QuizInfo::create([
+            'auto' => false,
+            'entry_fee' => $request->entry_fee,
+            'total_participants' => $request->total_participants,
+            'total_winners' => $total_winners,
+            'expiry' => $request->time,
+            'notify_before' => 15,
+        ]);
+
+        $quiz = $this->quizRepositoryInterface->generateQuiz(true, $quizInfo->id, auth()->id());
+
+        return response(['quiz' => $quiz], 200);
     }
 
     public function generate(GenerateQuiz $request)
