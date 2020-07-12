@@ -4,6 +4,8 @@ namespace App\Observers;
 
 use App\QuizInfo;
 
+use Illuminate\Support\Str;
+
 class QuizInfoObserver
 {
     public function generate($quizInfo)
