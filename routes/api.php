@@ -9,11 +9,10 @@ Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
 Route::middleware('auth:sanctum')->post('/users/token/set', "UserController@setToken");
 
-Route::middleware('auth:sanctum')->get('/rankings', "RankingController@getRankings");
-
 Route::middleware('auth:sanctum')->post('/orders/create', "OrderController@createOrder");
 
-Route::middleware('auth:sanctum')->post('/plans', "PlanController@getPlans");
+Route::middleware('auth:sanctum')->get('/rankings', "RankingController@getRankings");
+Route::middleware('auth:sanctum')->get('/plans', "PlanController@getPlans");
 
 Route::middleware('auth:sanctum')->get('/payments/withdraw/history', "PaymentController@getWithdrawHistory");
 Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController@withdrawAmount");
