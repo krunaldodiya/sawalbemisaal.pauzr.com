@@ -58,7 +58,7 @@ class UserController extends Controller
         try {
             $user = $user->update(['password' => bcrypt($request->password)]);
 
-            return true;
+            return response(['success' => true], 200);
         } catch (\Throwable $th) {
             throw $th;
         }
