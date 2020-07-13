@@ -36,7 +36,7 @@ class GenerateQuiz extends Action
     {
         $quiz_info = $models[0];
 
-        $this->quizRepositoryInterface->generateQuiz(true, $quiz_info->id, null);
+        $this->quizRepositoryInterface->generateQuiz($quiz_info->id);
 
         return Action::message("Quiz has been generated");
     }

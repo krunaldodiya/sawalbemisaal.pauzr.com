@@ -9,5 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return "test";
+    return Quiz::where('id', '')->first();
 });

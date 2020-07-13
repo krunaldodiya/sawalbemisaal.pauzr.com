@@ -17,6 +17,11 @@ class Quiz extends Model
         'expired_at' => 'datetime',
     ];
 
+    public function host()
+    {
+        return $this->hasOne(User::class);
+    }
+
     public function participants()
     {
         return $this->hasMany(QuizParticipant::class);

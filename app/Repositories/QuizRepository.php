@@ -74,11 +74,11 @@ class QuizRepository implements QuizRepositoryInterface
             ->map(function ($participant, $index) use ($quiz) {
                 $rank = $index + 1;
 
-                $contribution = collect($quiz->quiz_infos->distribution)
+                $prize_distributions = collect($quiz->quiz_infos->prize_distributions)
                     ->where('rank', $rank)
                     ->first();
 
-                $prize = $participant->status  === 'finished' && $contribution ? $contribution['price'] : 0;
+                $prize = $participant->status  === 'finished' && $prize_distributions ? $prize_distributions['price'] : 0;
 
                 return [
                     'user_id' => $participant->user_id,
@@ -160,13 +160,13 @@ class QuizRepository implements QuizRepositoryInterface
         ]);
     }
 
-    public function generateQuiz($forceGenerate, $quiz_info_id, $host_id = null)
+    public function generateQuiz($quiz_info_id)
     {
         $quizInfo = QuizInfo::find($quiz_info_id);
 
         return Quiz::create([
             "quiz_info_id" => $quizInfo->id,
-            "host_id" => $host_id,
+            "host_id" => auth()->id(),
             "expired_at" => now()->addMinutes($quizInfo->expiry)
         ]);
     }
