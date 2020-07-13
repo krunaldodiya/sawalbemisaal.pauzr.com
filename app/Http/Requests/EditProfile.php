@@ -15,18 +15,20 @@ class EditProfile extends FormRequest
     public function rules()
     {
         return [
-            'plan_id' => 'required',
-            'payment_id' => 'required',
-            'status' => 'required|boolean',
+            'name' => 'required',
+            'dob' => 'required',
+            'gender' => 'required',
+            'bio' => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'plan_id.required' => 'Plan ID is required',
-            'payment_id.required' => 'Payment ID is required',
-            'status.required' => 'Status is required',
+            'name.required' => 'Name is required',
+            'dob.required' => 'Date of Birth is required',
+            'gender.required' => 'Gender is required',
+            'bio.required' => 'Bio is required',
         ];
     }
 
