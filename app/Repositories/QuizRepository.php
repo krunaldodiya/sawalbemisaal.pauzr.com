@@ -152,6 +152,17 @@ class QuizRepository implements QuizRepositoryInterface
 
         CalculateQuizRanking::dispatch($quiz)->delay($quiz->expired_at->addMinutes(5));
 
+        $host_prize = $quiz->total_participants * $quiz->entry_fee * 0.10;
+
+        $transaction = $quiz->host->createTransaction($host_prize, 'deposit', [
+            'points' => [
+                'id' => $quiz->host->id,
+                'type' => "Quiz Hosted"
+            ]
+        ]);
+
+        $quiz->host->deposit($transaction->transaction_id);
+
         return $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'title' => 'All the Best!',
             'body' => 'Hurry,Start the quiz NOW!',
