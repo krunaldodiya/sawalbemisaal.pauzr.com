@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\GenerateQuiz;
 use App\Http\Requests\JoinQuiz;
-use App\Http\Requests\QuizInfo;
 use App\Http\Requests\SubmitQuiz;
 use App\Http\Requests\HostQuiz;
+use App\Http\Requests\QuizDetail;
 
 use App\QuestionTranslation;
 use App\Quiz;
@@ -94,14 +94,14 @@ class QuizController extends Controller
         return response(['quizzes' => $quizzes], 200);
     }
 
-    public function getQuizById(QuizInfo $request)
+    public function getQuizById(QuizDetail $request)
     {
         $quiz = $this->quizRepositoryInterface->getQuizById($request->quiz_id);
 
         return response(['quiz' => $quiz], 200);
     }
 
-    public function getQuizWinners(QuizInfo $request)
+    public function getQuizWinners(QuizDetail $request)
     {
         $winners = QuizRanking::with('quiz', 'user')
             ->where('quiz_id', $request->quiz_id)
@@ -111,7 +111,7 @@ class QuizController extends Controller
         return response(['winners' => $winners], 200);
     }
 
-    public function getQuizAnswers(QuizInfo $request)
+    public function getQuizAnswers(QuizDetail $request)
     {
         $answers = QuizAnswer::with('question')
             ->where(['quiz_id' => $request->quiz_id, 'user_id' => auth()->id()])
@@ -121,7 +121,7 @@ class QuizController extends Controller
         return response(['answers' => $answers], 200);
     }
 
-    public function getAllQuestions(QuizInfo $request)
+    public function getAllQuestions(QuizDetail $request)
     {
         $user = auth()->user();
 
@@ -141,7 +141,7 @@ class QuizController extends Controller
         return response(['questions' => $questions], 200);
     }
 
-    public function getAnswerableQuestions(QuizInfo $request)
+    public function getAnswerableQuestions(QuizDetail $request)
     {
         $user = auth()->user();
 

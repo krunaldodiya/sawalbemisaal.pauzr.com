@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\JsonResponse;
 
-class QuizInfo extends FormRequest
+class QuizDetail extends FormRequest
 {
     public function authorize()
     {
