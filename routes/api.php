@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->post('/users/password/change', "UserController@changePassword");
 Route::middleware('auth:sanctum')->post('/users/profile/edit', "UserController@editProfile");
 Route::middleware('auth:sanctum')->post('/users/token/set', "UserController@setToken");
+Route::middleware('auth:sanctum')->post('/users/avatar/upload', "UserController@uploadAvatar");
 Route::middleware('auth:sanctum')->get('/users/wallet', "UserController@getWallet");
 Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
