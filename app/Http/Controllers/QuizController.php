@@ -115,7 +115,6 @@ class QuizController extends Controller
     {
         $answers = QuizAnswer::with('question')
             ->where(['quiz_id' => $request->quiz_id, 'user_id' => auth()->id()])
-            ->orderBy('rank', 'asc')
             ->get();
 
         return response(['answers' => $answers], 200);
