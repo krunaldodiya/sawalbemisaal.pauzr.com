@@ -16,7 +16,9 @@ class SubmitQuiz extends FormRequest
     {
         return [
             'quiz_id' => 'required',
-            'meta' => 'required|array',
+            'meta.*.question_id' => 'required',
+            'meta.*.current_answer' => 'required',
+            'meta.*.seconds' => 'required',
         ];
     }
 
