@@ -9,5 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return Quiz::where('id', '')->first();
+    return Quiz::with('host')->where('id', '95b123ad-09bd-482e-b7d9-8432583a91f1')->first();
 });
