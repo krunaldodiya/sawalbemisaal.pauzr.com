@@ -10,6 +10,7 @@ use App\Http\Requests\HostQuiz;
 
 use App\QuestionTranslation;
 use App\Quiz;
+use App\QuizInfo;
 use App\QuizAnswer;
 use App\QuizRanking;
 use App\Repositories\QuizRepositoryInterface;
