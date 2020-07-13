@@ -23,7 +23,7 @@ class GetQuestions extends FormRequest
     public function messages()
     {
         return [
-            'category_id.required' => 'Question ID is required',
+            'category_id.required' => 'Category ID is required',
             'language_id.required' => 'Language ID is required',
         ];
     }
