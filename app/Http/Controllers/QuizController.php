@@ -6,6 +6,7 @@ use App\Http\Requests\GenerateQuiz;
 use App\Http\Requests\JoinQuiz;
 use App\Http\Requests\QuizInfo;
 use App\Http\Requests\SubmitQuiz;
+use App\Http\Requests\HostQuiz;
 
 use App\QuestionTranslation;
 use App\Quiz;

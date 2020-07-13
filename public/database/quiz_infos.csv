@@ -1,2 +1,2 @@
-id,auto,title,entry_fee,total_participants,total_winners,required_participants,all_questions_count,answerable_questions_count,expiry,notify,time,prize_distribution,created_at,updated_at
-eb7a609f-2afb-43ee-b016-854c45637957,t,Free,0,10,1,10,50,10,60,15,10,,,2020-06-09 09:09:08
+id,auto,entry_fee,total_participants,total_winners,required_participants,all_questions_count,answerable_questions_count,expiry,notify,time,created_at,updated_at
+02709a6e-b89f-4176-88bc-184cd98eb1b1,f,10,5,2,5,50,10,60,15,10,2020-07-12 09:47:39,2020-07-12 09:47:39
