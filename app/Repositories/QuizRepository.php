@@ -128,7 +128,7 @@ class QuizRepository implements QuizRepositoryInterface
 
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
-        if ($quiz_participant->status !== 'finished') {
+        if ($quiz_participant->status === 'finished') {
             throw new Error("Quiz already finished");
         }
 
