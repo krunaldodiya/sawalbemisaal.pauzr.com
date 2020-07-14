@@ -35,10 +35,12 @@ class CheckQuizStatus implements ShouldQueue
     {
         $quiz = Quiz::with('participants', 'quiz_infos', 'rankings')->find($this->quiz->id);
 
-        if ($quiz->participants()->count() < $quiz->quiz_infos->required_participants) {
-            return $quizRepositoryInterface->cancelQuiz($quiz);
-        }
+        dump($quiz);
 
-        return $quizRepositoryInterface->startQuiz($quiz);
+        // if ($quiz->participants()->count() < $quiz->quiz_infos->required_participants) {
+        //     return $quizRepositoryInterface->cancelQuiz($quiz);
+        // }
+
+        // return $quizRepositoryInterface->startQuiz($quiz);
     }
 }
