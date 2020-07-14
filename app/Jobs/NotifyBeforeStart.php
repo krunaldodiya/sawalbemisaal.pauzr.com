@@ -36,18 +36,11 @@ class NotifyBeforeStart implements ShouldQueue
     {
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $this->quiz->id])->first();
 
-        dump([
+        $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'title' => 'Quiz will start in few minutes',
             'body' => "Everyone is preparing, are you?",
             'image' => url('images/notify_soon.jpg'),
             'quiz_id' => $this->quiz->id,
         ]);
-
-        // $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
-        //     'title' => 'Quiz will start in few minutes',
-        //     'body' => "Everyone is preparing, are you?",
-        //     'image' => url('images/notify_soon.jpg'),
-        //     'quiz_id' => $this->quiz->id,
-        // ]);
     }
 }
