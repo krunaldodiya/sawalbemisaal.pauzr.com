@@ -81,7 +81,7 @@ class QuizRepository implements QuizRepositoryInterface
         $quiz
             ->participants()
             ->where(function ($query) {
-                return $query->where('status', 'joined')->orWhere('status', 'started');
+                return $query->where('status', 'joined');
             })
             ->update(['status' => 'missed']);
 
@@ -128,8 +128,12 @@ class QuizRepository implements QuizRepositoryInterface
 
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
-        if ($quiz_participant->quiz_status !== 'started') {
+        if ($quiz->status !== 'started') {
             throw new Error("Quiz not started yet");
+        }
+
+        if ($quiz_participant->status !== 'joined') {
+            throw new Error("Quiz not joined yet");
         }
 
         $answers = collect($meta)
