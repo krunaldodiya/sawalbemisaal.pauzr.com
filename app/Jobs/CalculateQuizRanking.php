@@ -33,6 +33,17 @@ class CalculateQuizRanking implements ShouldQueue
      */
     public function handle(QuizRepositoryInterface $quizRepositoryInterface)
     {
+        $host_prize = $this->quiz->total_participants * $this->quiz->entry_fee * 0.10;
+
+        $transaction = $this->quiz->host->createTransaction($host_prize, 'deposit', [
+            'points' => [
+                'id' => $this->quiz->host->id,
+                'type' => "Quiz Hosted"
+            ]
+        ]);
+
+        $this->quiz->host->deposit($transaction->transaction_id);
+
         return $quizRepositoryInterface->calculateQuizRankings($this->quiz->id);
     }
 }

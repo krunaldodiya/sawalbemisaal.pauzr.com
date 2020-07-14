@@ -77,13 +77,9 @@ class Quiz extends Resource
 
             HasMany::make("Quiz Rankings", "rankings"),
 
-            BelongsToMany::make("Questions", "questions")
-                ->fields(function () {
-                    return [
-                        Boolean::make('Answerable', 'is_answerable'),
-                        Text::make('Answerable', 'is_answerable'),
-                    ];
-                }),
+            BelongsToMany::make("Questions", "questions"),
+
+            BelongsToMany::make("Answerable Questions", "answerable_questions"),
         ];
     }
 
