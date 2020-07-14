@@ -56,6 +56,33 @@ class QuizRepository implements QuizRepositoryInterface
         ]);
     }
 
+    public function startQuiz($quiz)
+    {
+        $quiz->update(['status' => 'started']);
+
+        $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
+
+        CalculateQuizRanking::dispatch($quiz)->delay($quiz->expired_at->addMinutes(5));
+
+        $host_prize = $quiz->total_participants * $quiz->entry_fee * 0.10;
+
+        $transaction = $quiz->host->createTransaction($host_prize, 'deposit', [
+            'points' => [
+                'id' => $quiz->host->id,
+                'type' => "Quiz Hosted"
+            ]
+        ]);
+
+        $quiz->host->deposit($transaction->transaction_id);
+
+        return $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+            'title' => 'All the Best!',
+            'body' => 'Hurry,Start the quiz NOW!',
+            'image' => url('images/notify_started.jpg'),
+            'quiz_id' => $quiz->id,
+        ]);
+    }
+
     public function calculateQuizRankings($quiz_id)
     {
         $quiz = $this->getQuizById($quiz_id);
@@ -140,35 +167,6 @@ class QuizRepository implements QuizRepositoryInterface
                 'points' => $answers->sum('points'),
                 'status' => 'finished',
             ]);
-    }
-
-    public function startQuiz($quiz_id)
-    {
-        $quiz = $this->getQuizById($quiz_id);
-
-        $quiz->update(['status' => 'started']);
-
-        $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
-
-        CalculateQuizRanking::dispatch($quiz)->delay($quiz->expired_at->addMinutes(5));
-
-        $host_prize = $quiz->total_participants * $quiz->entry_fee * 0.10;
-
-        $transaction = $quiz->host->createTransaction($host_prize, 'deposit', [
-            'points' => [
-                'id' => $quiz->host->id,
-                'type' => "Quiz Hosted"
-            ]
-        ]);
-
-        $quiz->host->deposit($transaction->transaction_id);
-
-        return $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
-            'title' => 'All the Best!',
-            'body' => 'Hurry,Start the quiz NOW!',
-            'image' => url('images/notify_started.jpg'),
-            'quiz_id' => $quiz->id,
-        ]);
     }
 
     public function generateQuiz($quiz_info_id)
