@@ -96,7 +96,7 @@ class QuizRepository implements QuizRepositoryInterface
                     ->where('rank', $rank)
                     ->first();
 
-                $prize = $participant->status  === 'finished' && $prize_distributions ? $prize_distributions['price'] : 0;
+                $prize = $participant->status  === 'finished' && $prize_distributions ? $prize_distributions['prize'] : 0;
 
                 return [
                     'user_id' => $participant->user_id,
