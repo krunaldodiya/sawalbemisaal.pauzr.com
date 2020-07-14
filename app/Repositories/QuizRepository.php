@@ -35,7 +35,9 @@ class QuizRepository implements QuizRepositoryInterface
 
         QuizParticipant::where('quiz_id', $quiz->id)->update(['status' => 'suspended']);
 
-        $quiz->participants->each(function ($user) use ($quiz) {
+        $quiz->participants->each(function ($quiz_participants) use ($quiz) {
+            $user = $quiz_participants->user;
+
             $transaction = $user->createTransaction($quiz->quiz_infos->entry_fee, 'deposit', [
                 'points' => [
                     'id' => $user->id,
