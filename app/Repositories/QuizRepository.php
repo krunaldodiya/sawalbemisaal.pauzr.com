@@ -50,7 +50,7 @@ class QuizRepository implements QuizRepositoryInterface
 
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
 
-        return $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+        $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'title' => 'Quiz suspended! Due to less participants',
             'body' => 'Don\'t worry, more quizzes loaded for you!',
             'image' => url('images/notify_canceled.png'),
@@ -112,7 +112,7 @@ class QuizRepository implements QuizRepositoryInterface
 
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
 
-        return $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+        $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'title' => 'Winners Announced',
             'body' => 'Check the list,NOW! Congrats winners!',
             'image' => url('images/notify_winners.png'),
