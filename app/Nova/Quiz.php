@@ -77,9 +77,9 @@ class Quiz extends Resource
 
             HasMany::make("Quiz Rankings", "rankings"),
 
-            BelongsToMany::make("Questions", "questions"),
+            BelongsToMany::make("Questions", "questions", Question::class),
 
-            BelongsToMany::make("Answerable Questions", "answerable_questions"),
+            BelongsToMany::make("Answerable Questions", "answerable_questions", Question::class),
         ];
     }
 
