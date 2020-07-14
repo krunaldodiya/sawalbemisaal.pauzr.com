@@ -147,7 +147,7 @@ class QuizRepository implements QuizRepositoryInterface
                     'id' => Str::uuid(),
                     'user_id' => $user->id,
                     'quiz_id' => $quiz->id,
-                    'question_id' => $question_translation->id,
+                    'question_id' => $question_translation->question_id,
                     'points' => $points,
                     'time' => $answer['seconds'],
                     'current_answer' => $answer['current_answer'],
