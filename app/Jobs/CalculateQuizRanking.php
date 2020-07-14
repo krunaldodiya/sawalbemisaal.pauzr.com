@@ -35,7 +35,7 @@ class CalculateQuizRanking implements ShouldQueue
     {
         $quiz = $this->quiz;
 
-        $host_prize = $quiz->quiz_info->total_participants * $quiz->quiz_info->entry_fee * 0.10;
+        $host_prize = $quiz->quiz_infos->total_participants * $quiz->quiz_infos->entry_fee * 0.10;
 
         $transaction = $quiz->host->createTransaction($host_prize, 'deposit', [
             'points' => [
