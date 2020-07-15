@@ -1,6 +1,5 @@
 <?php
 
-use App\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,9 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $participants = User::inRandomOrder()
-            ->limit(5)
-            ->get();
-
-    return $participants;
+    return "test";
 });

@@ -170,7 +170,10 @@ class QuizRepository implements QuizRepositoryInterface
 
     public function joinBulkQuiz($quiz_id, $total_participants)
     {
-        $participants = User::inRandomOrder()
+        $ids = QuizParticipant::where('quiz_id', $quiz_id)->pluck('user_id');
+
+        $participants = User::whereNotIn($ids)
+            ->inRandomOrder()
             ->limit($total_participants)
             ->get();
 
