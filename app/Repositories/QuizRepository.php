@@ -177,7 +177,7 @@ class QuizRepository implements QuizRepositoryInterface
             ->limit($total_participants)
             ->get();
 
-        return collect($participants)->each(function ($participant) {
+        return collect($participants)->each(function ($participant) use ($quiz_id) {
             return $this->joinQuiz($quiz_id, $participant->id);
         });
     }
