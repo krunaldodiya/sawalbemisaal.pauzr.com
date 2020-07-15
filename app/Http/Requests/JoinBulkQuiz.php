@@ -16,7 +16,7 @@ class JoinBulkQuiz extends FormRequest
     {
         return [
             'quiz_id' => 'required',
-            'participants' => 'required|numeric'
+            'total_participants' => 'required|numeric'
         ];
     }
 
@@ -24,8 +24,8 @@ class JoinBulkQuiz extends FormRequest
     {
         return [
             'quiz_id.required' => 'Quiz ID is required',
-            'quiz_id.required' => 'Participants is required',
-            'quiz_id.number' => 'Participants field must be a number',
+            'total_participants.required' => 'Total Participants is required',
+            'total_participants.number' => 'Total Participants field must be a number',
         ];
     }
 
