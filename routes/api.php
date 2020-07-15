@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController
 Route::middleware('auth:sanctum')->post('/quiz/host', "QuizController@host");
 Route::middleware('auth:sanctum')->post('/quiz/generate', "QuizController@generate");
 Route::middleware('auth:sanctum')->post('/quiz/join', "QuizController@join");
+Route::middleware('auth:sanctum')->post('/quiz/join/bulk', "QuizController@joinBulk");
 Route::middleware('auth:sanctum')->post('/quiz/submit', "QuizController@submit");
 Route::middleware('auth:sanctum')->get('/quiz/active', "QuizController@getActiveQuizzes");
 Route::middleware('auth:sanctum')->get('/quiz/user', "QuizController@getUserQuizzes");
@@ -40,5 +41,3 @@ Route::get('/countries', "HomeController@getCountries");
 Route::get('/languages', "HomeController@getLanguages");
 Route::get('/categories', "HomeController@getCategories");
 Route::get('/questions', "HomeController@getQuestions");
-
-Route::get('/quiz/join/bulk', "QuizController@joinBulk");
