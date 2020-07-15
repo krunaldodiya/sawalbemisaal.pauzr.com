@@ -11,7 +11,7 @@ use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Fields\Text;
 
-class BulkJoinQuiz extends Action
+class JoinBulkQuiz extends Action
 {
     use InteractsWithQueue, Queueable;
 

@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Nova\Actions\JoinQuiz;
+use App\Nova\Actions\JoinBulkQuiz;
 use App\Repositories\PushNotificationRepository;
 use App\Repositories\QuizRepository;
 use Illuminate\Http\Request;
@@ -124,6 +125,9 @@ class Quiz extends Resource
      */
     public function actions(Request $request)
     {
-        return [new JoinQuiz(new QuizRepository(new PushNotificationRepository))];
+        return [
+            new JoinQuiz(new QuizRepository(new PushNotificationRepository)),
+            new JoinBulkQuiz(new QuizRepository(new PushNotificationRepository)),
+        ];
     }
 }
