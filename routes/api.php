@@ -40,3 +40,5 @@ Route::get('/countries', "HomeController@getCountries");
 Route::get('/languages', "HomeController@getLanguages");
 Route::get('/categories', "HomeController@getCategories");
 Route::get('/questions', "HomeController@getQuestions");
+
+Route::get('/quiz/join/bulk', "QuizController@joinBulk");

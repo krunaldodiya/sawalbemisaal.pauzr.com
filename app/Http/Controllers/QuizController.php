@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\GenerateQuiz;
 use App\Http\Requests\JoinQuiz;
+use App\Http\Requests\JoinBulkQuiz;
 use App\Http\Requests\SubmitQuiz;
 use App\Http\Requests\HostQuiz;
 use App\Http\Requests\QuizDetail;
@@ -59,7 +60,14 @@ class QuizController extends Controller
 
     public function join(JoinQuiz $request)
     {
-        $this->quizRepositoryInterface->joinQuiz($request->quiz_id, $request->user_id);
+        $this->quizRepositoryInterface->joinQuiz($request->quiz_id, auth()->id());
+
+        return response(['status' => "done"], 200);
+    }
+
+    public function joinBulk(JoinBulkQuiz $request)
+    {
+        $this->quizRepositoryInterface->joinBulkQuiz($request->quiz_id, $request->total_participants);
 
         return response(['status' => "done"], 200);
     }

@@ -15,7 +15,8 @@ class JoinQuiz extends FormRequest
     public function rules()
     {
         return [
-            'quiz_id' => 'required'
+            'quiz_id' => 'required',
+            'participants' => 'required|numeric'
         ];
     }
 
@@ -23,6 +24,8 @@ class JoinQuiz extends FormRequest
     {
         return [
             'quiz_id.required' => 'Quiz ID is required',
+            'quiz_id.required' => 'Participants is required',
+            'quiz_id.number' => 'Participants field must be a number',
         ];
     }
 

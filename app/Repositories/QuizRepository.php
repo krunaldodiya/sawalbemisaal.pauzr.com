@@ -168,6 +168,15 @@ class QuizRepository implements QuizRepositoryInterface
             ]);
     }
 
+    public function joinBulkQuiz($quiz_id, $total_participants)
+    {
+        $participants = User::inRandomOrder()
+            ->limit($total_participants)
+            ->get();
+
+        return $this->quizRepositoryInterface->joinQuiz($request->quiz_id, auth()->id());
+    }
+
     public function generateQuiz($quiz_info_id)
     {
         $quizInfo = QuizInfo::find($quiz_info_id);
