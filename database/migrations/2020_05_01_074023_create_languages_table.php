@@ -22,6 +22,7 @@ class CreateLanguagesTable extends Migration
             $table->string('background_image')->nullable();
             $table->string('background_color')->nullable();
             $table->integer('order')->nullable();
+            $table->timestamps();
         });
     }
 
