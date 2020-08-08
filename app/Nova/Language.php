@@ -48,8 +48,8 @@ class Language extends Resource
             ID::make()->sortable(),
 
             Text::make('Name')->sortable(),
-            Text::make('Nick Name')->sortable(),
-            Text::make('Short Name')->sortable(),
+            Text::make('Nick Name', 'nickname')->sortable(),
+            Text::make('Short Name', 'shortname')->sortable(),
             Text::make('Background Image', 'background_image')->sortable(),
             Text::make('Background Color', 'background_color')->sortable(),
         ];
