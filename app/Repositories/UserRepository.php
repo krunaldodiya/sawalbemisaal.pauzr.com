@@ -15,7 +15,9 @@ class UserRepository implements UserRepositoryInterface
 
     public function getAuth($mobile, $country_id)
     {
-        $user = User::firstOrCreate(['mobile' => $mobile, 'country_id' => $country_id]);
+        $auth = User::firstOrCreate(['mobile' => $mobile, 'country_id' => $country_id]);
+
+        $user = $this->getUserById($auth->id);
 
         return [
             'user' => $user,
