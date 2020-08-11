@@ -37,7 +37,7 @@ class CreateUsersTable extends Migration
             $table->string('version')->nullable();
             $table->string('fcm_token')->nullable();
 
-            $table->boolean('status')->default(true);
+            $table->boolean('status')->default(false);
 
             $table->rememberToken();
             $table->timestamps();
