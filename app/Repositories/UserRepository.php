@@ -13,13 +13,13 @@ class UserRepository implements UserRepositoryInterface
             ->first();
     }
 
-    public function getAuth($authUser)
+    public function getAuth($mobile, $country_id)
     {
-        $user = $this->getUserById($authUser->id);
+        $user = User::where(['mobile' => $mobile, 'country_id' => $country_id])->firstOrCreate();
 
         return [
             'user' => $user,
             'token' => $user->createToken($user->id)->plainTextToken
-        ];;
+        ];
     }
 }

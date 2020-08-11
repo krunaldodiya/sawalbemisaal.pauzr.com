@@ -29,13 +29,7 @@ class OtpController extends Controller
 
         $country_id = $request->country_id;
 
-        $user = User::where('mobile', $mobile)->first();
-
         $country = Country::find($country_id);
-
-        if (!$user) {
-            throw new Error("User does not exists", 404);
-        }
 
         $otp = mt_rand(1000, 9999);
 
@@ -56,8 +50,6 @@ class OtpController extends Controller
 
         $country_id = $request->country_id;
 
-        $user = User::where('mobile', $mobile)->first();
-
         $country = Country::find($country_id);
 
         $verifyOtp = $this->otpRepositoryInterface->verifyOtp($country, $request->mobile, $request->otp);
@@ -66,7 +58,7 @@ class OtpController extends Controller
             return response(["success" => false, "error" => $verifyOtp['message']], 400);
         }
 
-        $auth = $this->userRepositoryInterface->getAuth($user);
+        $auth = $this->userRepositoryInterface->getAuth($mobile, $country_id);
 
         return response(["success" => true, "token" => $auth['token'], "user" => $auth['user']], 200);
     }
