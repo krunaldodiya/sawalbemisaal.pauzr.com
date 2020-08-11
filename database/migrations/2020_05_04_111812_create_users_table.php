@@ -16,23 +16,20 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
-            $table->string('email')->unique();
+            $table->string('email')->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
 
             $table->string('mobile')->unique();
             $table->timestamp('mobile_verified_at')->nullable();
 
-            $table->string('username')->unique();
-            $table->string('password');
+            $table->string('username')->nullable()->unique();
+            $table->string('password')->nullable();
 
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('dob')->default("01-01-1990");
             $table->enum('gender', ['None', 'Male', 'Female'])->default('None');
             $table->string('avatar')->nullable();
             $table->text('bio')->nullable();
-
-            $table->uuid('language_id')->default("640a547f-97c9-4b05-8b8e-e2b10f797b0f");
-            $table->foreign('language_id')->references('id')->on('languages')->onUpdate('cascade')->onDelete('cascade');
 
             $table->uuid('country_id');
             $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');
