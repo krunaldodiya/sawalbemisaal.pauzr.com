@@ -11,7 +11,7 @@ use Laravel\Nova\Fields\ActionFields;
 
 use Laravel\Nova\Fields\File;
 
-use App\Imports\QuestionTranslation;
+use App\QuestionTranslation;
 
 use Maatwebsite\Excel\Facades\Excel;
 
