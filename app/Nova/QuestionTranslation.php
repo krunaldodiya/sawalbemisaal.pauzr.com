@@ -13,7 +13,7 @@ use Laravel\Nova\Fields\Textarea;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-use App\Nova\Action\ImportQuestionTranslation;
+use App\Nova\Actions\ImportQuestionTranslation;
 
 class QuestionTranslation extends Resource
 {
