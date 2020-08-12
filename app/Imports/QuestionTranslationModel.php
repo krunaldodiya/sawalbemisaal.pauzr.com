@@ -8,6 +8,7 @@ use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class QuestionTranslationModel implements ToModel, WithHeadingRow
 {
@@ -19,7 +20,7 @@ class QuestionTranslationModel implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new QuestionTranslation([
-           'id'             => $row['id'],
+           'id'             => Str::uuid(),
            'question_id'    => $row['question_id'],
            'language_id'    => $row['language_id'],
            'question'       => $row['question'],
