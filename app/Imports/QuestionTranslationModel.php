@@ -5,10 +5,11 @@ namespace App\Imports;
 use App\QuestionTranslation;
 
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 use Carbon\Carbon;
 
-class QuestionTranslationModel implements ToModel
+class QuestionTranslationModel implements ToModel, WithHeadingRow
 {
     /**
      * @param array $row
