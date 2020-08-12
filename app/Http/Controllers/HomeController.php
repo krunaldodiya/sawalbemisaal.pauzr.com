@@ -12,6 +12,7 @@ use App\Http\Requests\GetQuestions;
 use Illuminate\Http\Request;
 
 use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\QuestionTranslationModel;
 
 class HomeController extends Controller
 {
