@@ -24,24 +24,6 @@ class ImportQuestionTranslations extends Action
     use InteractsWithQueue, Queueable, SerializesModels;
 
     /**
-     * Get the displayable name of the action.
-     *
-     * @return string
-     */
-    public function name()
-    {
-        return __('Import Question Translations');
-    }
-
-    /**
-     * @return string
-     */
-    public function uriKey() :string
-    {
-        return 'import-question-translations';
-    }
-
-    /**
      * Perform the action on the given models.
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
