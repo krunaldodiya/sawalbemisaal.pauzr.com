@@ -15,7 +15,7 @@ use Laravel\Nova\Fields\ActionFields;
 
 use Laravel\Nova\Fields\File;
 
-use App\QuestionTranslation;
+use App\Imports\QuestionTranslationModel;
 
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -50,13 +50,7 @@ class ImportQuestionTranslations extends Action
      */
     public function handle(ActionFields $fields)
     {
-        $data = Excel::import(new QuestionTranslation, $fields->file);
-
-        $records = $data[0];
-
-        unset($records[0]);
-
-        QuestionTranslation::insert($records);
+        $data = Excel::import(new QuestionTranslationModel, $fields->file);
 
         return Action::message('Success!');
     }
