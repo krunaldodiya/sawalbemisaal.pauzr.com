@@ -54,12 +54,8 @@ class HomeController extends Controller
 
     public function excel(Request $request)
     {
-        $data = Excel::toArray(new QuestionTranslation, $request->file);
+        $data = Excel::import(new QuestionTranslationModel, $request->file);
 
-        $records = $data[0];
-
-        unset($records[0]);
-
-        QuestionTranslation::insert($records);
+        dd($data);
     }
 }
