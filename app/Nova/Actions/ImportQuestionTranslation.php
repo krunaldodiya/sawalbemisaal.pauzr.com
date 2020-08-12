@@ -26,7 +26,7 @@ class ImportQuestionTranslation extends Action
      */
     public function name()
     {
-        return __('Import Users');
+        return __('Import Question Translation');
     }
 
     /**
@@ -34,7 +34,7 @@ class ImportQuestionTranslation extends Action
      */
     public function uriKey() :string
     {
-        return 'import-users';
+        return 'import-question-translation';
     }
 
     /**
