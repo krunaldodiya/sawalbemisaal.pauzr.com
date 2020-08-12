@@ -16,6 +16,7 @@
     "require": {
         "php": "^7.2.5",
         "64robots/nova-fields": "^0.17.0",
+        "anaseqal/nova-import": "^0.0.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
@@ -27,6 +28,7 @@
         "laravel/sanctum": "^2.2",
         "laravel/telescope": "^3.3",
         "laravel/tinker": "^2.0",
+        "maatwebsite/excel": "^3.1",
         "madewithlove/laravel-nova-uuid-support": "^1.1",
         "predis/predis": "^1.1"
     },
