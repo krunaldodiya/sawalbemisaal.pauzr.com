@@ -6,6 +6,8 @@ use App\QuestionTranslation;
 
 use Maatwebsite\Excel\Concerns\ToModel;
 
+use Carbon\Carbon;
+
 class QuestionTranslationModel implements ToModel
 {
     /**
@@ -25,8 +27,8 @@ class QuestionTranslationModel implements ToModel
            'option_3'       => $row[6],
            'option_4'       => $row[7],
            'answer'         => $row[8],
-           'created_at'     => $row[9],
-           'updated_at'     => $row[10],
+           'created_at'     => Carbon::parse($row[9]),
+           'updated_at'     => Carbon::parse($row[10]),
         ]);
     }
 }
