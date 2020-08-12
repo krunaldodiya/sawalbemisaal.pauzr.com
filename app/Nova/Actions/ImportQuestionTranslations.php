@@ -2,9 +2,10 @@
 
 namespace App\Nova\Actions;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
 use Illuminate\Support\Collection;
 
 use Anaseqal\NovaImport\Actions\Action;
@@ -19,7 +20,7 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ImportQuestionTranslations extends Action
 {
-    use InteractsWithQueue, Queueable;
+    use InteractsWithQueue, Queueable, SerializesModels;
 
     /**
      * Get the displayable name of the action.
@@ -28,7 +29,7 @@ class ImportQuestionTranslations extends Action
      */
     public function name()
     {
-        return __('Import Question Translation');
+        return __('Import Question Translations');
     }
 
     /**
@@ -36,7 +37,7 @@ class ImportQuestionTranslations extends Action
      */
     public function uriKey() :string
     {
-        return 'import-question-translation';
+        return 'import-question-translations';
     }
 
     /**
