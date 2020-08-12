@@ -19,8 +19,6 @@ class ImportQuestionTranslation extends Action
 {
     use InteractsWithQueue, Queueable;
 
-    public $onlyOnIndex = true;
-
     /**
      * Get the displayable name of the action.
      *
