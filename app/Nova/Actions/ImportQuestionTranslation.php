@@ -22,6 +22,24 @@ class ImportQuestionTranslation extends Action
     public $onlyOnIndex = true;
 
     /**
+     * Get the displayable name of the action.
+     *
+     * @return string
+     */
+    public function name()
+    {
+        return __('Import Users');
+    }
+
+    /**
+     * @return string
+     */
+    public function uriKey() :string
+    {
+        return 'import-users';
+    }
+
+    /**
      * Perform the action on the given models.
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
