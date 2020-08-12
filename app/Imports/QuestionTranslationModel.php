@@ -18,15 +18,15 @@ class QuestionTranslationModel implements ToModel
     public function model(array $row)
     {
         return new QuestionTranslation([
-           'id'             => $row[0],
-           'question_id'    => $row[1],
-           'language_id'    => $row[2],
-           'question'       => $row[3],
-           'option_1'       => $row[4],
-           'option_2'       => $row[5],
-           'option_3'       => $row[6],
-           'option_4'       => $row[7],
-           'answer'         => $row[8],
+           'id'             => $row['id'],
+           'question_id'    => $row['question_id'],
+           'language_id'    => $row['language_id'],
+           'question'       => $row['question'],
+           'option_1'       => $row['option_1'],
+           'option_2'       => $row['option_2'],
+           'option_3'       => $row['option_3'],
+           'option_4'       => $row['option_4'],
+           'answer'         => $row['answer'],
            'created_at'     => now(),
            'updated_at'     => now(),
         ]);
