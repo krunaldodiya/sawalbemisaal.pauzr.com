@@ -15,7 +15,7 @@ use App\QuestionTranslation;
 
 use Maatwebsite\Excel\Facades\Excel;
 
-class ImportQuestionTranslation extends Action
+class ImportQuestionTranslations extends Action
 {
     use InteractsWithQueue, Queueable;
 

@@ -13,7 +13,7 @@ use Laravel\Nova\Fields\Textarea;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-use App\Nova\Actions\ImportQuestionTranslation;
+use App\Nova\Actions\ImportQuestionTranslations;
 
 class QuestionTranslation extends Resource
 {
@@ -108,7 +108,7 @@ class QuestionTranslation extends Resource
     public function actions(Request $request)
     {
         return [
-            new ImportQuestionTranslation
+            new ImportQuestionTranslations
         ];
     }
 }
