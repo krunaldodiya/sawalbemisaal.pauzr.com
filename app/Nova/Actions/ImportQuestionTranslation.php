@@ -46,7 +46,13 @@ class ImportQuestionTranslation extends Action
      */
     public function handle(ActionFields $fields)
     {
-        Excel::import(new QuestionTranslation, $fields->file);
+        $data = Excel::import(new QuestionTranslation, $fields->file);
+
+        $records = $data[0];
+
+        unset($records[0]);
+
+        QuestionTranslation::insert($records);
 
         return Action::message('Success!');
     }
