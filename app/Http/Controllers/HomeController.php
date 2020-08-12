@@ -11,6 +11,8 @@ use App\Http\Requests\GetQuestions;
 
 use Illuminate\Http\Request;
 
+use Maatwebsite\Excel\Facades\Excel;
+
 class HomeController extends Controller
 {
     public function getCountries(Request $request)
@@ -48,5 +50,14 @@ class HomeController extends Controller
             ->paginate(20);
 
         return response(['questions' => $questions], 200);
+    }
+
+    public function excel(Request $request)
+    {
+        $data = Excel::toArray(new QuestionTranslation, $request->file);
+
+        dd($data[0]);
+
+        QuestionTranslation::insert($data);
     }
 }

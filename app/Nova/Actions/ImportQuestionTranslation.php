@@ -59,8 +59,7 @@ class ImportQuestionTranslation extends Action
     public function fields()
     {
         return [
-            File::make('File')
-                ->rules('required'),
+            File::make('File')->rules('required'),
         ];
     }
 }

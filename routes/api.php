@@ -37,6 +37,8 @@ Route::middleware('guest:api')->post('/auth/register', "AuthController@register"
 Route::middleware('guest:api')->post('/otp/request', "OtpController@requestOtp");
 Route::middleware('guest:api')->post('/otp/verify', "OtpController@verifyOtp");
 
+Route::middleware('guest:api')->post('/upload/excel', "HomeController@excel");
+
 Route::get('/countries', "HomeController@getCountries");
 Route::get('/languages', "HomeController@getLanguages");
 Route::get('/categories', "HomeController@getCategories");
