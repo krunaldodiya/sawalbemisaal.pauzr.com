@@ -56,8 +56,10 @@ class HomeController extends Controller
     {
         $data = Excel::toArray(new QuestionTranslation, $request->file);
 
-        dd($data[0]);
+        $records = $data[0];
 
-        QuestionTranslation::insert($data);
+        unset($records[0]);
+
+        QuestionTranslation::insert($records);
     }
 }
