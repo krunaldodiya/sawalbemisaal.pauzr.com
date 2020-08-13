@@ -81,7 +81,7 @@ class QuizController extends Controller
 
     public function getActiveQuizzes(Request $request)
     {
-        $quizzes = Quiz::with('quiz_infos', 'participants', 'questions')
+        $quizzes = Quiz::with('quiz_infos', 'participants')
             ->where('expired_at', '>=', now())
             ->orWhere('status', 'started')
             ->orderBy('expired_at', 'asc')
@@ -92,7 +92,7 @@ class QuizController extends Controller
 
     public function getUserQuizzes(Request $request)
     {
-        $quizzes = Quiz::with('quiz_infos', 'participants', 'questions')
+        $quizzes = Quiz::with('quiz_infos', 'participants')
             ->whereHas('participants', function ($query) {
                 return $query->where('user_id', auth()->id());
             })
