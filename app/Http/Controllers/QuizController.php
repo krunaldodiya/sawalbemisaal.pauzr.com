@@ -46,14 +46,14 @@ class QuizController extends Controller
             'time' => 10
         ]);
 
-        $quiz = $this->quizRepositoryInterface->generateQuiz($quizInfo->id);
+        $quiz = $this->quizRepositoryInterface->generateQuiz($quizInfo->id, $request->private);
 
         return response(['quiz' => $quiz], 200);
     }
 
     public function generate(GenerateQuiz $request)
     {
-        $quiz = $this->quizRepositoryInterface->generateQuiz($request->quiz_info_id);
+        $quiz = $this->quizRepositoryInterface->generateQuiz($request->quiz_info_id, true);
 
         return response(['quiz' => $quiz], 200);
     }

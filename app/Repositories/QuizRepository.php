@@ -183,14 +183,15 @@ class QuizRepository implements QuizRepositoryInterface
         });
     }
 
-    public function generateQuiz($quiz_info_id)
+    public function generateQuiz($quiz_info_id, $private)
     {
         $quizInfo = QuizInfo::find($quiz_info_id);
 
         return Quiz::create([
             "quiz_info_id" => $quizInfo->id,
             "host_id" => auth()->id(),
-            "expired_at" => now()->addMinutes($quizInfo->expiry)
+            "expired_at" => now()->addMinutes($quizInfo->expiry),
+            "private" => $private,
         ]);
     }
 
