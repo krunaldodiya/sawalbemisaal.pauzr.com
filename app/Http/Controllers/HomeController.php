@@ -25,7 +25,7 @@ class HomeController extends Controller
 
     public function getLanguages(Request $request)
     {
-        $languages = Language::get();
+        $languages = Language::with('locales')->get();
 
         return response(['languages' => $languages], 200);
     }
