@@ -48,7 +48,7 @@ class Locale extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make("Language", Language::class),
+            BelongsTo::make("Language", 'language', Language::class),
 
             Text::make('Key')->sortable(),
             Text::make('Value')->sortable(),

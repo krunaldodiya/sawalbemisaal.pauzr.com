@@ -48,7 +48,7 @@ class Language extends Resource
         return [
             ID::make()->sortable(),
 
-            HasMany::make("Locales", Locale::class),
+            HasMany::make("Locales", 'locales', Locale::class),
 
             Text::make('Name')->sortable(),
             Text::make('Nick Name', 'nickname')->sortable(),
