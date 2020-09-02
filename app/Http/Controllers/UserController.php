@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\DeviceToken;
-
 use App\Http\Requests\ChangePassword;
 use App\Http\Requests\EditProfile;
 use App\Http\Requests\UserInfo;
 use App\Http\Requests\SetToken;
 
 use App\Repositories\UserRepositoryInterface;
+
+use App\DeviceToken;
 use App\Wallet;
+use App\User;
+
 use Error;
 
 use Illuminate\Http\Request;
@@ -49,6 +51,19 @@ class UserController extends Controller
             ->first();
 
         return compact('wallet');
+    }
+
+    public function uploadAvatar(Request $request)
+    {
+        $user = auth()->user();
+
+        $file = $request->file('avatar');
+
+        $filename = $file->store($user->id, 'public');
+
+        User::where('id', $user->id)->update(['avatar' => $filename]);
+
+        return response(['filename' => $filename], 200);
     }
 
     public function changePassword(ChangePassword $request)
