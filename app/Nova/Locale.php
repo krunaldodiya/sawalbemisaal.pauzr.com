@@ -26,7 +26,7 @@ class Locale extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'description';
 
     /**
      * The columns that should be searched.
