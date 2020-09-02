@@ -10,14 +10,14 @@ use Laravel\Nova\Fields\BelongsToMany;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Language extends Resource
+class Locale extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Language::class;
+    public static $model = \App\Locale::class;
 
     public static $group = 'User';
 
@@ -26,7 +26,7 @@ class Language extends Resource
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -48,13 +48,11 @@ class Language extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsToMany::make("Locales", "locales", Locale::class),
+            BelongsToMany::make("Languages", "languages", Language::class),
 
-            Text::make('Name')->sortable(),
-            Text::make('Nick Name', 'nickname')->sortable(),
-            Text::make('Short Name', 'shortname')->sortable(),
-            Text::make('Background Image', 'background_image')->sortable(),
-            Text::make('Background Color', 'background_color')->sortable(),
+            Text::make('Key')->sortable(),
+            Text::make('Value')->sortable(),
+            Text::make('Description')->sortable(),
         ];
     }
 

@@ -3,16 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Jamesh\Uuid\HasUuid;
 
-class Language extends Model
+class Locale extends Model
 {
     use HasUuid;
 
     protected $guarded = [];
 
-    public function locales()
+    public function languages()
     {
-        return $this->belongsToMany(Locale::class);
+        return $this->belongsToMany(Language::class);
     }
 }
