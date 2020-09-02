@@ -16,8 +16,12 @@ class CreateLocalesTable extends Migration
         Schema::create('locales', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
+            $table->uuid('language_id');
+            $table->foreign('language_id')->references('id')->on('languages')->onUpdate('cascade')->onDelete('cascade');
+
             $table->string('key')->nullable();
             $table->string('value')->nullable();
+
             $table->text('description')->nullable();
 
             $table->timestamps();

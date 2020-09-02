@@ -12,8 +12,8 @@ class Locale extends Model
 
     protected $guarded = [];
 
-    public function languages()
+    public function language()
     {
-        return $this->belongsToMany(Language::class);
+        return $this->belongsTo(Language::class);
     }
 }

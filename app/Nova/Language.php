@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\HasMany;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -48,7 +48,7 @@ class Language extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsToMany::make("Locales", "locales", Locale::class),
+            HasMany::make("Locales", Locale::class),
 
             Text::make('Name')->sortable(),
             Text::make('Nick Name', 'nickname')->sortable(),

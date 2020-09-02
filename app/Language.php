@@ -13,6 +13,6 @@ class Language extends Model
 
     public function locales()
     {
-        return $this->belongsToMany(Locale::class);
+        return $this->hasMany(Locale::class);
     }
 }
