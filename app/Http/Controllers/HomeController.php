@@ -59,4 +59,17 @@ class HomeController extends Controller
 
         dd($data);
     }
+
+    public function getMediaFile(Request $request)
+    {
+        $media = $request->media;
+
+        $file = $request->file;
+
+        if (Storage::disk('public')->exists($file)) {
+            return response()->file("storage/{$file}");
+        }
+
+        throw new Error("File Does not exists");
+    }
 }
