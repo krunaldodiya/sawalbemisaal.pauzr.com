@@ -28,7 +28,6 @@ class EditProfile extends FormRequest
             'name.required' => 'Name is required',
             'dob.required' => 'Date of Birth is required',
             'gender.required' => 'Gender is required',
-            'bio.required' => 'Bio is required',
         ];
     }
 
