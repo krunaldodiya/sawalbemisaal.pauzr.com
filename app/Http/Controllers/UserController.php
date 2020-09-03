@@ -83,8 +83,12 @@ class UserController extends Controller
     {
         $user = auth()->user();
 
+        $data = $request->all();
+
+        $data['status'] = true;
+
         try {
-            $update = $user->update($request->all());
+            $update = $user->update($data);
 
             $user = $this->userRepositoryInterface->getUserById($user->id);
 
