@@ -16,8 +16,8 @@ class EditProfile extends FormRequest
     {
         return [
             'name' => 'required|min:3',
-            'username' => 'required|unique:users,'.$user->id,
-            'email' => 'required|email|unique:users,'.$user->id,
+            'username' => 'required|unique:users,'.$this->user->id,
+            'email' => 'required|email|unique:users,'.$this->user->id,
             'dob' => 'required',
             'gender' => 'required',
         ];
