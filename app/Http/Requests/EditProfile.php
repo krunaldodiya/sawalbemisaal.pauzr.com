@@ -16,6 +16,8 @@ class EditProfile extends FormRequest
     {
         return [
             'name' => 'required',
+            'username' => 'sometimes|required|min:4|unique:users,username',
+            'email' => 'sometimes|required|email|unique:users,email',
             'dob' => 'required',
             'gender' => 'required',
         ];
@@ -25,6 +27,10 @@ class EditProfile extends FormRequest
     {
         return [
             'name.required' => 'Name is required',
+            'username.required' => 'Username is required',
+            'username.unique' => 'Username must be unique',
+            'email.required' => 'Email is required',
+            'email.unique' => 'Email must be unique',
             'dob.required' => 'Date of Birth is required',
             'gender.required' => 'Gender is required',
         ];
