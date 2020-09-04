@@ -15,9 +15,9 @@ class EditProfile extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'username' => 'sometimes|required|min:4|unique:users,username',
-            'email' => 'sometimes|required|email|unique:users,email',
+            'name' => 'required|min:3',
+            'username' => 'required|min:4|unique:users,username,'.$this->user->id,
+            'email' => 'required|email|unique:users,email,'.$this->user->id,
             'dob' => 'required',
             'gender' => 'required',
         ];
