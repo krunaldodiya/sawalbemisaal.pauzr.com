@@ -35,9 +35,11 @@ class QuizController extends Controller
 
         $total_winners = count($prizes[$request->total_participants]);
 
-        $quiz_date = Carbon::parse($request->timings);
+        $quiz_starting_time = Carbon::parse($request->timings);
 
-        $expiry = $quiz_date->diffInMinutes(now());
+        $current_time = now()->format("d/m/Y h:m A");
+
+        $expiry = $quiz_starting_time->diffInMinutes($current_time);
 
         $quizInfo = QuizInfo::create([
             'auto' => false,
