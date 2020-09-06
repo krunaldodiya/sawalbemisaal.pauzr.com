@@ -18,6 +18,8 @@ use App\Repositories\QuizRepositoryInterface;
 
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
+
 class QuizController extends Controller
 {
     public $quizRepositoryInterface;
@@ -33,6 +35,10 @@ class QuizController extends Controller
 
         $total_winners = count($prizes[$request->total_participants]);
 
+        $quiz_date = Carbon::parse($request->timings);
+
+        $expiry = $quiz_date->diffInMinutes(now());
+
         $quizInfo = QuizInfo::create([
             'auto' => false,
             'entry_fee' => $request->entry_fee,
@@ -41,7 +47,7 @@ class QuizController extends Controller
             'all_questions_count' => 50,
             'answerable_questions_count' => 10,
             'total_winners' => $total_winners,
-            'expiry' => $request->expiry,
+            'expiry' => $expiry,
             'notify' => 15,
             'time' => 10
         ]);
