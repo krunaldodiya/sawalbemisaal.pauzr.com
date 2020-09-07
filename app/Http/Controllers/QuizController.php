@@ -101,7 +101,7 @@ class QuizController extends Controller
             ->orderBy('expired_at', 'asc')
             ->get();
 
-        return response(['quizzes' => $quizzes], 200);
+        return response(['quizzes' => $quizzes, 'auth_id' => auth()->id(), 'auth_user' => auth()->user()], 200);
     }
 
     public function getQuizById(QuizDetail $request)
