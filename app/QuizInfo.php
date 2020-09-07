@@ -12,6 +12,7 @@ class QuizInfo extends Model
     protected $guarded = [];
 
     protected $casts = [
+        'expired_at' => 'datetime',
         'prize_distribution' => 'json',
     ];
 
