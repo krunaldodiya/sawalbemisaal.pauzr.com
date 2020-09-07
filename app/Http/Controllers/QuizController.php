@@ -84,8 +84,7 @@ class QuizController extends Controller
     public function getActiveQuizzes(Request $request)
     {
         $quizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
-            ->where('expired_at', '>=', now())
-            ->orWhere('status', 'started')
+            ->where('expired_at', '>=', now()->startOfDay())
             ->orderBy('expired_at', 'asc')
             ->get();
 
