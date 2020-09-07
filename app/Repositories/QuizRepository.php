@@ -26,7 +26,7 @@ class QuizRepository implements QuizRepositoryInterface
 
     public function getQuizById($quiz_id)
     {
-        return  Quiz::with('participants', 'quiz_infos', 'rankings')->find($quiz_id);
+        return  Quiz::with('host', 'participants', 'quiz_infos', 'rankings')->find($quiz_id);
     }
 
     public function cancelQuiz($quiz)
@@ -187,12 +187,14 @@ class QuizRepository implements QuizRepositoryInterface
     {
         $quizInfo = QuizInfo::find($quiz_info_id);
 
-        return Quiz::create([
+        $quiz = Quiz::create([
             "quiz_info_id" => $quizInfo->id,
             "host_id" => auth()->id(),
             "expired_at" => $quizInfo->expired_at,
             "private" => $private,
         ]);
+
+        return $this->getQuizById($quiz->id);
     }
 
     public function joinQuiz($quiz_id, $user_id)
