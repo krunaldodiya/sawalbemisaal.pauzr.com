@@ -94,14 +94,14 @@ class QuizController extends Controller
     public function getUserQuizzes(Request $request)
     {
         $quizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
-            ->where('host_id', "0c7509ac-25e6-4db6-89ca-7bf0ba03159f")
-            // ->orWhereHas('participants', function ($query) {
-            //     return $query->where('user_id', auth()->id());
-            // })
+            ->where('host_id', auth()->id())
+            ->orWhereHas('participants', function ($query) {
+                return $query->where('user_id', auth()->id());
+            })
             ->orderBy('expired_at', 'asc')
             ->get();
 
-        return response(['quizzes' => $quizzes, 'auth_id' => auth()->id(), 'auth_user' => auth()->user()], 200);
+        return response(['quizzes' => $quizzes], 200);
     }
 
     public function getQuizById(QuizDetail $request)
