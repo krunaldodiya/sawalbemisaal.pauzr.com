@@ -190,7 +190,7 @@ class QuizRepository implements QuizRepositoryInterface
         return Quiz::create([
             "quiz_info_id" => $quizInfo->id,
             "host_id" => auth()->id(),
-            "expired_at" => now()->addMinutes($quizInfo->expiry),
+            "expired_at" => $quizInfo->expired_at,
             "private" => $private,
         ]);
     }

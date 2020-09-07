@@ -35,9 +35,7 @@ class QuizController extends Controller
 
         $total_winners = count($prizes[$request->total_participants]);
 
-        $quiz_starting_time = Carbon::createFromFormat('d/m/Y h:m A', $request->timings);
-
-        $expiry = $quiz_starting_time->diffInMinutes(now());
+        $expired_at = Carbon::createFromFormat('d/m/Y h:m A', $request->expired_at);
 
         $quizInfo = QuizInfo::create([
             'auto' => false,
@@ -47,7 +45,7 @@ class QuizController extends Controller
             'all_questions_count' => 50,
             'answerable_questions_count' => 10,
             'total_winners' => $total_winners,
-            'expiry' => $expiry,
+            'expired_at' => $expired_at,
             'notify' => 15,
             'time' => 10
         ]);
