@@ -23,8 +23,7 @@ Route::middleware('auth:sanctum')->post('/quiz/generate', "QuizController@genera
 Route::middleware('auth:sanctum')->post('/quiz/join', "QuizController@join");
 Route::middleware('auth:sanctum')->post('/quiz/join/bulk', "QuizController@joinBulk");
 Route::middleware('auth:sanctum')->post('/quiz/submit', "QuizController@submit");
-Route::middleware('auth:sanctum')->get('/quiz/active', "QuizController@getActiveQuizzes");
-Route::middleware('auth:sanctum')->get('/quiz/user', "QuizController@getUserQuizzes");
+Route::middleware('auth:sanctum')->get('/quiz/all', "QuizController@getQuizzes");
 Route::middleware('auth:sanctum')->get('/quiz/questions/all', "QuizController@getAllQuestions");
 Route::middleware('auth:sanctum')->get('/quiz/questions/answerable', "QuizController@getAnswerableQuestions");
 Route::middleware('auth:sanctum')->get('/quiz/info', "QuizController@getQuizById");
