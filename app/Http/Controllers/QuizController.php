@@ -81,16 +81,22 @@ class QuizController extends Controller
         return response(['status' => "done"], 200);
     }
 
-    public function getQuizzes(Request $request)
+    public function getActiveQuizzes(Request $request)
     {
         $quizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
             ->where('expired_at', '>=', now()->startOfDay())
-            ->where(function($query) {
-                return $query
-                    ->where('host_id', auth()->id())
-                    ->orWhereHas('participants', function ($query) {
-                        return $query->where('user_id', auth()->id());
-                    });
+            ->orderBy('expired_at', 'asc')
+            ->get();
+
+        return response(['quizzes' => $quizzes], 200);
+    }
+
+    public function getUserQuizzes(Request $request)
+    {
+        $quizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
+            ->where('host_id', auth()->id())
+            ->orWhereHas('participants', function ($query) {
+                return $query->where('user_id', auth()->id());
             })
             ->orderBy('expired_at', 'asc')
             ->get();
