@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => env('APP_TIMEZONE', 'Asia/Kolkata'),
+    'timezone' => 'Asia/Kolkata',
 
     /*
     |--------------------------------------------------------------------------
