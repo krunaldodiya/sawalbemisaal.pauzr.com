@@ -85,9 +85,11 @@ class QuizController extends Controller
     {
         $quizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
             ->where('expired_at', '>=', now()->startOfDay())
-            ->orWhere('host_id', auth()->id())
-            ->orWhereHas('participants', function ($query) {
-                return $query->where('user_id', auth()->id());
+            ->where(function($query) {
+                return $query->where('host_id', auth()->id())
+                    ->orWhereHas('participants', function ($query) {
+                        return $query->where('user_id', auth()->id());
+                    })
             })
             ->orderBy('expired_at', 'asc')
             ->get();

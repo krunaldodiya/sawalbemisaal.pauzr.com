@@ -81,7 +81,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
-            new NovaImport
+            new NovaImport,
+            new \Beyondcode\TinkerTool\Tinker,
         ];
     }
 
