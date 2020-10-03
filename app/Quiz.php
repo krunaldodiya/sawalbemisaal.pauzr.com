@@ -11,7 +11,12 @@ class Quiz extends Model
 
     protected $guarded = [];
 
-    protected $dates = ['created_at', 'updated_at', 'expired_at'];
+    protected $appends = ['prize_amount'];
+
+    public function getPrizeAmountAttribute()
+    {
+        return $this->quiz_infos->entry_fee * $this->quiz_infos->total_participants;
+    }
 
     public function host()
     {

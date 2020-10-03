@@ -19,6 +19,7 @@ use App\Repositories\QuizRepositoryInterface;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class QuizController extends Controller
 {
@@ -83,10 +84,54 @@ class QuizController extends Controller
 
     public function getActiveQuizzes(Request $request)
     {
-        $quizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
-            ->where('expired_at', '>=', now()->startOfDay())
-            ->orderBy('expired_at', 'asc')
-            ->get();
+        $quizQuery = Quiz::query()
+            ->with('host', 'participants', 'quiz_infos', 'rankings')
+            ->withCount('host', 'participants', 'quiz_infos', 'rankings')
+            ->where('private', false)
+            ->where(function ($query) use ($request) {
+                if ($request->segment !== "all") {
+                    if ($request->segment === "Hosted Quiz") {
+                        return $query->where('host_id', auth()->id());
+                    }
+
+                    if ($request->segment === "Joined Quiz") {
+                        return $query->whereHas('participants', function ($query) {
+                            return $query->where('user_id', auth()->id());
+                        });
+                    }
+                }
+            })
+            ->where(function ($query) use ($request) {
+                if ($request->timing !== "all") {
+                    return $query->where('expired_at', $request->timing);
+                }
+
+                return $query->where('expired_at', '>=', now()->startOfDay());
+            });
+
+        if ($request->key === "latest") {
+            $quizQuery = $quizQuery->orderBy('expired_at', $request->direction);
+        }
+
+        if ($request->key === "Entry Fee") {
+            $quizQuery = $quizQuery->orderBy(
+                QuizInfo::select('entry_fee')->whereColumn('id', 'quizzes.quiz_info_id'),
+                $request->direction
+            );
+        }
+
+        if ($request->key === "Participants") {
+            $quizQuery = $quizQuery->orderBy('participants_count', $request->direction);
+        }
+
+        if ($request->key === "Prize Amount") {
+            $quizQuery = $quizQuery->orderBy(
+                QuizInfo::select(DB::raw('(entry_fee * total_participants) as prize_amount'))->whereColumn('id', 'quizzes.quiz_info_id'),
+                $request->direction
+            );
+        }
+
+        $quizzes = $quizQuery->get();
 
         return response(['quizzes' => $quizzes], 200);
     }

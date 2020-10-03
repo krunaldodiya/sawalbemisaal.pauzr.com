@@ -2,14 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-use Carbon\Carbon;
+use Illuminate\Http\Request;
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    //
+Route::get('/test', function (Request $request) {
+    return 'test';
 });
 
 Route::get('/media/{media}', 'HomeController@getMediaFile');
