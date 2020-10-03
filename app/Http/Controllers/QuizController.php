@@ -138,24 +138,51 @@ class QuizController extends Controller
 
     public function getUserQuizzes(Request $request)
     {
+        $segments = ['hosted', 'joined', 'won', 'lost', 'cancelled', 'missed'];
+
+        foreach ($segments as $segment) {
+            $quizzes[$segment] = $this->getSegmentWiseQuiz($segment);
+        }
+
+        return response(['quizzes' => $quizzes], 200);
+    }
+
+    public function getSegmentWiseQuiz($segment)
+    {
         $userQuizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
-            ->where('host_id', auth()->id())
-            ->orWhereHas('participants', function ($query) {
-                return $query->where('user_id', auth()->id());
+            ->where(function ($query) use ($segment) {
+                if ($segment === "hosted") {
+                    return $query->where('host_id', auth()->id());
+                }
+
+                if ($segment === "joined") {
+                    return $query->whereHas('participants', function ($query) {
+                        return $query->where('user_id', auth()->id());
+                    });
+                }
+
+                if ($segment === "won") {
+                    return $query->where('status', 'won');
+                }
+
+                if ($segment === "lost") {
+                    return $query->where('status', 'lost');
+                }
+
+                if ($segment === "missed") {
+                    return $query->whereHAs('participants', function ($query) {
+                        return $query->where('status', 'missed');
+                    });
+                }
+
+                if ($segment === "cancelled") {
+                    return $query->where('status', 'suspended');
+                }
             })
             ->orderBy('expired_at', 'asc')
             ->get();
 
-        $quizzes = [
-            'hosted' => $userQuizzes,
-            'joined' => $userQuizzes,
-            'won' => $userQuizzes,
-            'lost' => $userQuizzes,
-            'cancelled' => $userQuizzes,
-            'missed' => $userQuizzes
-        ];
-
-        return response(['quizzes' => $quizzes], 200);
+        return $userQuizzes;
     }
 
     public function getQuizById(QuizDetail $request)
