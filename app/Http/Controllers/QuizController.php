@@ -63,7 +63,7 @@ class QuizController extends Controller
 
     public function join(JoinQuiz $request)
     {
-        $this->quizRepositoryInterface->joinQuiz($request->quiz_id, auth()->id());
+        $this->quizRepositoryInterface->joinQuiz($request->quiz_id, $request->user_id);
 
         return response(['status' => "done"], 200);
     }

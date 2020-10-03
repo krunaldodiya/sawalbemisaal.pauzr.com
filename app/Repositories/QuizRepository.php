@@ -18,10 +18,14 @@ use Illuminate\Support\Str;
 class QuizRepository implements QuizRepositoryInterface
 {
     public $pushNotificationRepositoryInterface;
+    public $userRepositoryInterface;
 
-    public function __construct(PushNotificationRepositoryInterface $pushNotificationRepositoryInterface)
-    {
+    public function __construct(
+        PushNotificationRepositoryInterface $pushNotificationRepositoryInterface,
+        UserRepositoryInterface $userRepositoryInterface
+    ) {
         $this->pushNotificationRepositoryInterface = $pushNotificationRepositoryInterface;
+        $this->userRepositoryInterface = $userRepositoryInterface;
     }
 
     public function getQuizById($quiz_id)
@@ -199,7 +203,7 @@ class QuizRepository implements QuizRepositoryInterface
 
     public function joinQuiz($quiz_id, $user_id)
     {
-        $user = User::with('country')->find($user_id);
+        $user = $this->userRepositoryInterface->getUserById($user_id);
 
         $quiz = $this->getQuizById($quiz_id);
 
