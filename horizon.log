@@ -34,3 +34,19 @@ Horizon started successfully.
 [2020-10-04 14:45:00][74] Processing: App\Jobs\CheckQuizStatus
 [2020-10-04 14:45:00][74] Processed:  App\Jobs\CheckQuizStatus
 Horizon started successfully.
+[2020-10-05 10:15:00][75] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 10:15:00][76] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 10:15:00][75] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 10:15:00][76] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 10:16:00][77] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 10:16:00][77] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 10:15:59][78] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 10:16:00][78] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 10:16:51][79] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 10:16:51][79] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 10:16:51][80] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 10:16:51][80] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 10:18:24][82] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 10:18:24][81] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 10:18:24][82] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 10:18:24][81] Processed:  App\Jobs\NotifyBeforeStart
