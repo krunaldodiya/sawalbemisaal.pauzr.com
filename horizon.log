@@ -50,3 +50,106 @@ Horizon started successfully.
 [2020-10-05 10:18:24][81] Processing: App\Jobs\NotifyBeforeStart
 [2020-10-05 10:18:24][82] Processed:  App\Jobs\CheckQuizStatus
 [2020-10-05 10:18:24][81] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 10:45:01][83] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 10:45:01][83] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 10:45:01][84] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 10:45:01][84] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 11:15:01][88] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 11:15:02][88] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 11:15:01][87] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 11:15:02][87] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 11:15:01][86] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 11:15:02][86] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 11:15:01][85] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 11:15:02][85] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 12:15:00][90] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 12:15:00][89] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 12:15:00][89] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 12:15:01][90] Processed:  App\Jobs\CheckQuizStatus
+Horizon started successfully.
+[2020-10-05 18:45:02][91] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 18:45:02][92] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 18:45:02][91] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-05 18:45:02][92] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 19:15:00][94] Processing: App\Jobs\CheckQuizStatus
+[2020-10-05 19:15:01][94] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-05 19:15:00][93] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-05 19:15:00][93] Processed:  App\Jobs\NotifyBeforeStart
+Horizon started successfully.
+[2020-10-06 09:45:00][95] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-06 09:45:00][96] Processing: App\Jobs\CheckQuizStatus
+[2020-10-06 09:45:01][95] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-06 09:45:01][96] Processed:  App\Jobs\CheckQuizStatus
+Horizon started successfully.
+Horizon started successfully.
+[2020-10-07 08:23:01][97] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-07 08:23:01][98] Processing: App\Jobs\CheckQuizStatus
+[2020-10-07 08:23:01][100] Processing: App\Jobs\CheckQuizStatus
+[2020-10-07 08:23:01][99] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-07 08:23:02][97] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-07 08:23:02][98] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-07 08:23:02][100] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-07 08:23:02][99] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-07 11:15:00][102] Processing: App\Jobs\CheckQuizStatus
+[2020-10-07 11:15:00][101] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-07 11:15:00][101] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-07 11:15:00][102] Processed:  App\Jobs\CheckQuizStatus
+Horizon started successfully.
+Horizon started successfully.
+Horizon started successfully.
+[2020-10-08 09:45:02][103] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-08 09:45:02][104] Processing: App\Jobs\CheckQuizStatus
+[2020-10-08 09:45:13][103] Failed:     App\Jobs\NotifyBeforeStart
+[2020-10-08 09:45:13][104] Failed:     App\Jobs\CheckQuizStatus
+Horizon started successfully.
+Horizon started successfully.
+Horizon started successfully.
+[2020-10-10 17:45:00][105] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-10 17:45:00][106] Processing: App\Jobs\CheckQuizStatus
+[2020-10-10 17:45:01][105] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-10 17:45:01][106] Processed:  App\Jobs\CheckQuizStatus
+Horizon started successfully.
+[2020-10-11 07:40:07][107] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 07:40:07][108] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 07:40:08][107] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 07:40:08][108] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 10:15:02][109] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 10:15:02][109] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 10:15:01][113] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 10:15:02][113] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 10:15:01][114] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 10:15:02][114] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 10:15:02][110] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 10:15:02][110] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 11:15:00][111] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 11:15:00][112] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 11:15:01][111] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 11:15:01][112] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 13:45:00][117] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 13:45:00][117] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 13:45:00][118] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 13:45:01][118] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 14:15:00][116] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 14:15:00][116] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 14:15:00][115] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 14:15:00][115] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 17:15:00][119] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 17:15:00][119] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 17:15:00][120] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 17:15:00][120] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 17:45:00][122] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 17:45:00][122] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 17:45:00][121] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 17:45:00][121] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-11 18:45:02][124] Processing: App\Jobs\CheckQuizStatus
+[2020-10-11 18:45:02][124] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-11 18:45:02][123] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-11 18:45:02][123] Processed:  App\Jobs\NotifyBeforeStart
+Horizon started successfully.
+[2020-10-12 10:15:00][126] Processing: App\Jobs\CheckQuizStatus
+[2020-10-12 10:15:00][125] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-12 10:15:01][126] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-12 10:15:01][125] Processed:  App\Jobs\NotifyBeforeStart
+Horizon started successfully.
+Horizon started successfully.
+                                                            

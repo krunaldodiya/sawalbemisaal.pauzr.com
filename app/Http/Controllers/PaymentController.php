@@ -46,7 +46,8 @@ class PaymentController extends Controller
             'user_id' => $user->id,
             'gateway' => $request->gateway,
             'mobile' => $request->mobile,
-            'amount' => $request->amount
+            'amount' => $request->amount,
+            'status' => 'pending'
         ]);
 
         return compact('redeem');
