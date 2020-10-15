@@ -16,10 +16,14 @@ class CreatePlansTable extends Migration
         Schema::create('plans', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
+            $table->text('image');
+            $table->text('name');
+            $table->text('description')->nullable();
+
             $table->integer('amount');
             $table->integer('coins');
 
-            $table->text('description')->nullable();
+            $table->timestamps();
         });
     }
 

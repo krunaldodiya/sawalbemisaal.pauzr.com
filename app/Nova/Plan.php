@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Plan extends Resource
@@ -45,9 +46,13 @@ class Plan extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('name'),
+            Image::make('image'),
+            Textarea::make('description')->showOnIndex()->alwaysShow(),
+
             Text::make('amount'),
             Text::make('coins'),
-            Textarea::make('description')->showOnIndex()->alwaysShow(),
         ];
     }
 
