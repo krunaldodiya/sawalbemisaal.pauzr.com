@@ -1,6 +1,6 @@
-id,amount,coins,description
-0eb2ffb9-d8bd-4786-9413-e774fc30c7da,10,19,
-579fd2fe-d26b-4bbb-bfb1-78d9d0e8765f,20,39,
-77ccf60c-c680-4e77-9831-1ed9ce228c75,50,99,
-81de5fa4-6e31-4714-8b36-086890762a24,100,199,
-9bf66688-e7a1-4371-b285-f192513372fd,500,999,
+"id","image","name","description","amount","coins","created_at","updated_at"
+"0b78d133-ca81-4b2c-a48f-a97b33fe49c3",hI4jNvRI0PVxT16uswRKLW1ROGuGmle6K9uuHEGz,Chest of Coins,"199 coins",100,199,2020-10-15 20:27:01,2020-10-15 20:30:03
+cf215c91-b5b4-4e29-99c4-57279a40d3a9,URscDg14NkNHuRh8hkysH1v09EsDzGmBC9UFsVv5,Sack of Coins,"99 coins",50,99,2020-10-15 20:26:48,2020-10-15 20:30:21
+"677f15c9-b803-439f-b48f-493e42dc99aa",yUMTeuybf3xcjq7IkMOvrgm9MFbJeL6NZ493V60e,Trolley of Coins,"999 coins",500,999,2020-10-15 20:27:15,2020-10-15 20:30:27
+"170ecd86-0ca3-4801-8603-49c38a50cdd5",p19rIaVsVsQW2dDozVZMIyY2aCpg5kccMvVWKkUp,Wallet of Coins,"39 coins",20,39,2020-10-15 20:26:31,2020-10-15 20:30:43
+"790dd1c1-3b56-4171-8798-c287a1075706",g2lWgq4d6Jt0GoRIJTJqay0k4WnGZqbLNi1cxUfU,Pile of Coins,"19 coins",10,19,2020-10-15 20:23:10,2020-10-15 20:31:05
