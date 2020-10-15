@@ -14,6 +14,7 @@ Route::middleware('auth:sanctum')->post('/orders/create', "OrderController@creat
 
 Route::middleware('auth:sanctum')->get('/rankings', "RankingController@getRankings");
 Route::middleware('auth:sanctum')->get('/plans', "PlanController@getPlans");
+Route::middleware('auth:sanctum')->post('/plans/purchase', "PlanController@purchasePlan");
 
 Route::middleware('auth:sanctum')->get('/payments/withdraw/history', "PaymentController@getWithdrawHistory");
 Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController@withdrawAmount");

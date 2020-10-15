@@ -6,3 +6,7 @@
 [2020-10-15 11:15:01][2] Processed:  App\Jobs\CheckQuizStatus
 [2020-10-15 11:15:01][1] Processing: App\Jobs\NotifyBeforeStart
 [2020-10-15 11:15:01][1] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-15 12:45:00][6] Processing: App\Jobs\CheckQuizStatus
+[2020-10-15 12:45:01][5] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-15 12:45:01][6] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-15 12:45:01][5] Processed:  App\Jobs\NotifyBeforeStart

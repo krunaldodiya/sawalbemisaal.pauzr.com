@@ -14,4 +14,22 @@ class PlanController extends Controller
 
         return compact('plans');
     }
+
+    public function purchasePlan(Request $request)
+    {
+        $user = auth()->user();
+
+        $plan = Plan::find($request->plan_id);
+
+        $transaction = $user->createTransaction($plan->coins, 'deposit', [
+            'points' => [
+                'id' => $user->id,
+                'type' => "Purchased Coins"
+            ]
+        ]);
+
+        $user->deposit($transaction->transaction_id);
+
+        return response(['success' => true], 200);
+    }
 }
