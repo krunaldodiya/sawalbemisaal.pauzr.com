@@ -6,6 +6,7 @@ use App\Nova\Actions\JoinQuiz;
 use App\Nova\Actions\JoinBulkQuiz;
 use App\Repositories\PushNotificationRepository;
 use App\Repositories\QuizRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
@@ -116,8 +117,8 @@ class Quiz extends Resource
     public function actions(Request $request)
     {
         return [
-            new JoinQuiz(new QuizRepository(new PushNotificationRepository)),
-            new JoinBulkQuiz(new QuizRepository(new PushNotificationRepository)),
+            new JoinQuiz(new QuizRepository(new PushNotificationRepository, new UserRepository)),
+            new JoinBulkQuiz(new QuizRepository(new PushNotificationRepository, new UserRepository)),
         ];
     }
 }

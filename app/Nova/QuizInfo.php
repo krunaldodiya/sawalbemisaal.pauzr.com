@@ -5,6 +5,7 @@ namespace App\Nova;
 use App\Nova\Actions\GenerateQuiz;
 use App\Repositories\PushNotificationRepository;
 use App\Repositories\QuizRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
 use Laravel\Nova\Fields\Boolean;
@@ -112,6 +113,6 @@ class QuizInfo extends Resource
      */
     public function actions(Request $request)
     {
-        return [new GenerateQuiz(new QuizRepository(new PushNotificationRepository))];
+        return [new GenerateQuiz(new QuizRepository(new PushNotificationRepository, new UserRepository))];
     }
 }
