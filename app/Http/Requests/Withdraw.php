@@ -17,7 +17,7 @@ class Withdraw extends FormRequest
         return [
             'gateway' => 'required',
             'mobile' => 'required',
-            'amount' => 'required',
+            'coins' => 'required',
         ];
     }
 

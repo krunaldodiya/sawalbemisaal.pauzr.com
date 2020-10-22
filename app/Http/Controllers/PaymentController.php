@@ -23,17 +23,17 @@ class PaymentController extends Controller
     {
         $user = auth()->user();
 
-        $cash = $user->wallet->balance / 2;
+        $coins = $user->wallet->balance;
 
-        if ($request->amount < 20) {
-            throw new Error("You can't withdraw less than Rs. 20");
+        if ($request->coins < 20) {
+            throw new Error("You can't redeem less than 20 coins");
         }
 
-        if ($cash < $request->amount) {
-            throw new Error("Not Enough Balance");
+        if ($coins < $request->coins) {
+            throw new Error("Not Enough Coins");
         }
 
-        $transaction = $user->createTransaction($request->amount * 2, 'withdraw', [
+        $transaction = $user->createTransaction($request->coins, 'withdraw', [
             'points' => [
                 'id' => $user->id,
                 'type' => "Withdraw Money"
@@ -46,7 +46,7 @@ class PaymentController extends Controller
             'user_id' => $user->id,
             'gateway' => $request->gateway,
             'mobile' => $request->mobile,
-            'amount' => $request->amount,
+            'amount' => $coins * 0.4,
             'status' => 'pending'
         ]);
 

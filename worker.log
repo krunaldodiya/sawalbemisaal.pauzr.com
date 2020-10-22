@@ -10,3 +10,1206 @@
 [2020-10-15 12:45:01][5] Processing: App\Jobs\NotifyBeforeStart
 [2020-10-15 12:45:01][6] Processed:  App\Jobs\CheckQuizStatus
 [2020-10-15 12:45:01][5] Processed:  App\Jobs\NotifyBeforeStart
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+
+      [2m+19 vendor frames [22m
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+
+      [2m+19 vendor frames [22m
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+[2020-10-18 13:45:00][7] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-18 13:45:00][8] Processing: App\Jobs\CheckQuizStatus
+[2020-10-18 13:45:01][7] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-18 13:45:01][8] Processed:  App\Jobs\CheckQuizStatus
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/php/modules/gd (/usr/lib/php/modules/gd: cannot open shared object file: No such file or directory), /usr/lib/php/modules/gd.so (libfreetype.so.6: cannot open shared object file: No such file or directory)) in Unknown on line 0
