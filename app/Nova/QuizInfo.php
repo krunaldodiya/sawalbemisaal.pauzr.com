@@ -9,6 +9,7 @@ use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\HasMany;
@@ -64,7 +65,11 @@ class QuizInfo extends Resource
             Text::make('Required Participants', 'required_participants')->sortable(),
             Text::make('Total Questions', 'all_questions_count')->sortable(),
             Text::make('Answerable Questions', 'answerable_questions_count')->sortable(),
-            Text::make('Expiry', 'expired_at')->sortable(),
+
+            DateTime::make('Expired At')
+                ->exceptOnForms()
+                ->sortable(),
+
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
             Text::make('Time Per Question (Seconds)', 'time')->sortable(),
 
