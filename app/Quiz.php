@@ -11,6 +11,12 @@ class Quiz extends Model
 
     protected $guarded = [];
 
+    protected $dates = ['created_at', 'updated_at', 'expired_at'];
+
+    protected $casts = [
+        'expired_at' => 'datetime',
+    ];
+
     protected $appends = ['prize_amount'];
 
     public function getPrizeAmountAttribute()

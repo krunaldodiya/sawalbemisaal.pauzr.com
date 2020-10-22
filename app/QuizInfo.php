@@ -15,6 +15,7 @@ class QuizInfo extends Model
 
     protected $casts = [
         'prize_distribution' => 'json',
+        'expired_at' => 'datetime',
     ];
 
     public function prize_distributions()
