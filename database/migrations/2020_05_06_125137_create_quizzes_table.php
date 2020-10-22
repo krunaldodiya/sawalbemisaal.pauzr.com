@@ -26,7 +26,7 @@ class CreateQuizzesTable extends Migration
 
             $table->enum('status', ['pending', 'finished', 'started', 'suspended', 'full'])->default('pending');
 
-            $table->timestamp('expired_at')->nullable();
+            $table->string('expired_at')->nullable();
             $table->boolean('private')->default(true);
             $table->boolean('pinned')->default(false);
 
