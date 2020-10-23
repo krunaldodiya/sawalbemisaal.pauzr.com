@@ -81,8 +81,6 @@ class User extends Resource
 
             BelongsTo::make("Country"),
 
-            BelongsTo::make("Language"),
-
             BelongsToMany::make('Topics', 'topics', Topic::class)->searchable(),
 
             HasMany::make("Quizzes", "quizzes", QuizParticipant::class),
