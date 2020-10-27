@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\BelongsTo;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -44,6 +45,8 @@ class PrizeDistribution extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            BelongsTo::make('Quiz Infos', 'quiz_infos', QuizInfo::class),
 
             Text::make('Rank')->sortable(),
 

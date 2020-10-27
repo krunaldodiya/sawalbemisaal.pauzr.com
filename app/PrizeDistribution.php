@@ -11,4 +11,9 @@ class PrizeDistribution extends Model
     use HasUuid;
 
     protected $guarded = [];
+
+    public function quiz_infos()
+    {
+        return $this->belongsTo(QuizInfo::class);
+    }
 }
