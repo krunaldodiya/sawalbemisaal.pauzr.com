@@ -1243,3 +1243,176 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
     157|     }
     158| 
     159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+28 vendor frames [22m
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+[2020-10-26 10:15:00][9] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-26 10:15:01][9] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-26 10:30:00][10] Processing: App\Jobs\CheckQuizStatus
+[2020-10-26 10:30:01][10] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-26 12:15:01][11] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-26 12:15:02][11] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-26 12:30:00][12] Processing: App\Jobs\CheckQuizStatus
+[2020-10-26 12:30:01][12] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-26 18:15:00][11] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-26 18:15:01][11] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-26 18:30:00][12] Processing: App\Jobs\CheckQuizStatus
+[2020-10-26 18:30:00][12] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-26 19:15:00][13] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-26 19:15:01][13] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-26 19:30:00][14] Processing: App\Jobs\CheckQuizStatus
+[2020-10-26 19:30:00][14] Processed:  App\Jobs\CheckQuizStatus
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+[2020-10-27 09:45:01][15] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-27 09:45:01][15] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-27 10:00:00][16] Processing: App\Jobs\CheckQuizStatus
+[2020-10-27 10:00:01][16] Processed:  App\Jobs\CheckQuizStatus
