@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->post('/quiz/join/bulk', "QuizController@joinB
 Route::middleware('auth:sanctum')->post('/quiz/submit', "QuizController@submit");
 Route::middleware('auth:sanctum')->get('/quiz/active', "QuizController@getActiveQuizzes");
 Route::middleware('auth:sanctum')->get('/quiz/user', "QuizController@getUserQuizzes");
-Route::middleware('auth:sanctum')->get('/quiz/questions/all', "QuizController@getQuizQuestions");
+Route::middleware('auth:sanctum')->get('/quiz/questions', "QuizController@getQuizQuestions");
 Route::middleware('auth:sanctum')->get('/quiz/info', "QuizController@getQuizById");
 Route::middleware('auth:sanctum')->get('/quiz/winners', "QuizController@getQuizWinners");
 Route::middleware('auth:sanctum')->get('/quiz/answers', "QuizController@getQuizAnswers");

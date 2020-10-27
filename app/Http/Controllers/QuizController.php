@@ -226,8 +226,7 @@ class QuizController extends Controller
             ->whereIn('question_id', $questions_list)
             ->get()
             ->map(function ($question) use ($quiz_questions) {
-                $quiz_question = $quiz_questions->where("question_id", $question->question_id)->first();
-                $question['is_answerable'] = $quiz_question->is_answerable;
+                $question['quiz_question'] = $quiz_questions->where("question_id", $question->question_id)->first();
 
                 return $question;
             });
