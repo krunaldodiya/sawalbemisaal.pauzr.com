@@ -8,7 +8,7 @@ use App\Http\Requests\JoinBulkQuiz;
 use App\Http\Requests\SubmitQuiz;
 use App\Http\Requests\HostQuiz;
 use App\Http\Requests\QuizDetail;
-
+use App\Http\Requests\QuizQuestion;
 use App\QuestionTranslation;
 use App\Quiz;
 use App\QuizInfo;
@@ -214,43 +214,23 @@ class QuizController extends Controller
         return response(['answers' => $answers], 200);
     }
 
-    public function getAllQuestions(QuizDetail $request)
+    public function getQuizQuestions(QuizQuestion $request)
     {
-        $user = auth()->user();
+        $quiz_questions = DB::table('quiz_questions')->where('quiz_id', $request->quiz_id)->get();
 
-        $language_id = $user->language_id;
-
-        $quiz = Quiz::with('questions')->find($request->quiz_id);
-
-        $questions_list = $quiz
-            ->questions()
-            ->pluck('id')
+        $questions_list = $quiz_questions
+            ->pluck('question_id')
             ->toArray();
 
-        $questions = QuestionTranslation::where('language_id', $language_id)
+        $questions = QuestionTranslation::where('language_id', $request->language_id)
             ->whereIn('question_id', $questions_list)
-            ->get();
+            ->get()
+            ->map(function ($question) use ($quiz_questions) {
+                $quiz_question = $quiz_questions->where("question_id", $question->question_id)->first();
+                $question['is_answerable'] = $quiz_question->is_answerable;
 
-        return response(['questions' => $questions], 200);
-    }
-
-    public function getAnswerableQuestions(QuizDetail $request)
-    {
-        $user = auth()->user();
-
-        $language_id = $user->language_id;
-
-        $quiz = Quiz::with('questions')->find($request->quiz_id);
-
-        $questions_list = $quiz
-            ->questions()
-            ->where('is_answerable', true)
-            ->pluck('id')
-            ->toArray();
-
-        $questions = QuestionTranslation::where('language_id', $language_id)
-            ->whereIn('question_id', $questions_list)
-            ->get();
+                return $question;
+            });
 
         return response(['questions' => $questions], 200);
     }
