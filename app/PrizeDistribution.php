@@ -14,6 +14,6 @@ class PrizeDistribution extends Model
 
     public function quiz_infos()
     {
-        return $this->belongsTo(QuizInfo::class);
+        return $this->belongsTo(QuizInfo::class, 'quiz_info_id');
     }
 }
