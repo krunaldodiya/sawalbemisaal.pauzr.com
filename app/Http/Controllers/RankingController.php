@@ -43,7 +43,6 @@ class RankingController extends Controller
                     'prize' => $quiz_rankings->sum('prize')
                 ];
             })
-            ->sortByDesc('prize')
             ->toArray();
     }
 }

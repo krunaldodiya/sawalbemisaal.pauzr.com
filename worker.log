@@ -1622,3 +1622,5 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
 [2020-10-28 14:15:01][31] Processed:  App\Jobs\NotifyBeforeStart
 [2020-10-28 14:30:00][32] Processing: App\Jobs\CheckQuizStatus
 [2020-10-28 14:30:01][32] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-28 14:44:13][35] Processing: App\Jobs\CalculateQuizRanking
+[2020-10-28 14:44:13][35] Processed:  App\Jobs\CalculateQuizRanking
