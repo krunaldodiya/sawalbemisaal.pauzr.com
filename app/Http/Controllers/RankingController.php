@@ -32,7 +32,7 @@ class RankingController extends Controller
 
         $users = User::with(['country', 'wallet.transactions', 'quiz_rankings'])->get();
 
-        return $users
+        $rankings = $users
             ->map(function ($user) use ($period) {
                 $quiz_rankings = $user->quiz_rankings()->where(function ($query) use ($period) {
                     return $query->where('created_at', '>=', $period);
@@ -44,5 +44,7 @@ class RankingController extends Controller
                 ];
             })
             ->toArray();
+
+        return response(['rankings' => $rankings], 200);
     }
 }
