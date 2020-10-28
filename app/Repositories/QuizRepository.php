@@ -176,7 +176,7 @@ class QuizRepository implements QuizRepositoryInterface
     {
         $ids = QuizParticipant::where('quiz_id', $quiz_id)->pluck('user_id');
 
-        $participants = User::where('mobile', '<', '1000000101')
+        $participants = User::where('demo', true)
             ->whereNotIn('id', $ids)
             ->inRandomOrder()
             ->limit($total_participants)

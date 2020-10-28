@@ -38,6 +38,7 @@ class CreateUsersTable extends Migration
             $table->string('fcm_token')->nullable();
 
             $table->boolean('status')->default(false);
+            $table->boolean('demo')->default(false);
 
             $table->rememberToken();
             $table->timestamps();

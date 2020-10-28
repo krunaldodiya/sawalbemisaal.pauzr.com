@@ -6,6 +6,7 @@ use App\Nova\Actions\WalletPoint;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\HasMany;
@@ -91,6 +92,10 @@ class User extends Resource
                     return $date->format('d/m/Y h:m A');
                 })
                 ->sortable(),
+
+            Boolean::make('Demo'),
+
+            Boolean::make('Status'),
         ];
     }
 
