@@ -1624,3 +1624,110 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
 [2020-10-28 14:30:01][32] Processed:  App\Jobs\CheckQuizStatus
 [2020-10-28 14:44:13][35] Processing: App\Jobs\CalculateQuizRanking
 [2020-10-28 14:44:13][35] Processed:  App\Jobs\CalculateQuizRanking
+[2020-10-28 16:15:00][38] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-28 16:15:00][36] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-28 16:15:01][36] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-28 16:15:01][38] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-28 16:30:00][39] Processing: App\Jobs\CheckQuizStatus
+[2020-10-28 16:30:00][37] Processing: App\Jobs\CheckQuizStatus
+[2020-10-28 16:30:01][37] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-28 16:30:01][39] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-28 18:45:00][40] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-28 18:45:01][40] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-28 19:00:00][41] Processing: App\Jobs\CheckQuizStatus
+[2020-10-28 19:00:01][41] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-28 19:45:00][42] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-28 19:45:00][42] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-28 20:00:00][43] Processing: App\Jobs\CheckQuizStatus
+[2020-10-28 20:00:00][43] Processed:  App\Jobs\CheckQuizStatus
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+28 vendor frames [22m
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+[2020-10-29 08:59:10][45] Processing: App\Jobs\CheckQuizStatus
+[2020-10-29 08:59:10][44] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-29 08:59:11][44] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-29 08:59:11][45] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-29 18:45:00][46] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-29 18:45:01][46] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-29 19:00:00][47] Processing: App\Jobs\CheckQuizStatus
+[2020-10-29 19:00:01][47] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-29 19:45:00][48] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-29 19:45:01][48] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-30 08:40:43][51] Processing: App\Jobs\CheckQuizStatus
+[2020-10-30 08:40:43][49] Processing: App\Jobs\CheckQuizStatus
+[2020-10-30 08:40:43][48] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-30 08:40:43][50] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-30 08:40:44][48] Failed:     App\Jobs\NotifyBeforeStart
+[2020-10-30 08:40:45][50] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-30 08:40:45][49] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-30 08:40:45][51] Processed:  App\Jobs\CheckQuizStatus
+[2020-10-30 11:45:00][52] Processing: App\Jobs\NotifyBeforeStart
+[2020-10-30 11:45:01][52] Processed:  App\Jobs\NotifyBeforeStart
+[2020-10-30 12:00:14][53] Processing: App\Jobs\CheckQuizStatus
+[2020-10-30 12:00:16][53] Processed:  App\Jobs\CheckQuizStatus

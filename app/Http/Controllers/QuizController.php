@@ -165,11 +165,15 @@ class QuizController extends Controller
                 }
 
                 if ($segment === "won") {
-                    return $query->where('status', 'won');
+                    return $query->whereHas('rankings', function ($query) {
+                        return $query->where('prize', '>', 0)->where('user_id', auth()->id());
+                    });
                 }
 
                 if ($segment === "lost") {
-                    return $query->where('status', 'lost');
+                    return $query->whereHas('rankings', function ($query) {
+                        return $query->where('prize', 0)->where('user_id', auth()->id());
+                    });
                 }
 
                 if ($segment === "missed") {
