@@ -13,12 +13,13 @@ use App\QuestionTranslation;
 use App\Quiz;
 use App\QuizInfo;
 use App\QuizAnswer;
+use App\QuizParticipant;
 use App\QuizRanking;
 use App\Repositories\QuizRepositoryInterface;
 
 use Illuminate\Http\Request;
 
-use Carbon\Carbon;
+use Error;
 use Illuminate\Support\Facades\DB;
 
 class QuizController extends Controller
@@ -192,11 +193,34 @@ class QuizController extends Controller
         return $userQuizzes;
     }
 
+    public function searchQuizByTitle(Request $request)
+    {
+        $search = Quiz::where('title', $request->title)->first();
+
+        if ($search) {
+            $quiz = $this->quizRepositoryInterface->getQuizById($search->id);
+
+            return response(['quiz' => $quiz], 200);
+        }
+
+        throw new Error("Quiz Not Found", 404);
+    }
+
     public function getQuizById(QuizDetail $request)
     {
         $quiz = $this->quizRepositoryInterface->getQuizById($request->quiz_id);
 
         return response(['quiz' => $quiz], 200);
+    }
+
+    public function startQuiz(QuizDetail $request)
+    {
+        QuizParticipant::where([
+            'user_id', auth()->id(),
+            'quiz_id', $request->quiz_id
+        ])->update(['status', 'started']);
+
+        return response(['success' => true], 200);
     }
 
     public function getQuizWinners(QuizDetail $request)

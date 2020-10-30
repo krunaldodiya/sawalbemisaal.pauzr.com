@@ -30,6 +30,8 @@ Route::middleware('auth:sanctum')->get('/quiz/questions', "QuizController@getQui
 Route::middleware('auth:sanctum')->get('/quiz/info', "QuizController@getQuizById");
 Route::middleware('auth:sanctum')->get('/quiz/winners', "QuizController@getQuizWinners");
 Route::middleware('auth:sanctum')->get('/quiz/answers', "QuizController@getQuizAnswers");
+Route::middleware('auth:sanctum')->get('/quiz/search', "QuizController@searchQuizByTitle");
+Route::middleware('auth:sanctum')->get('/quiz/start', "QuizController@startQuiz");
 
 Route::middleware('guest:api')->post('/auth/login', "AuthController@login");
 Route::middleware('guest:api')->post('/auth/register', "AuthController@register");
