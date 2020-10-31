@@ -179,7 +179,7 @@ class QuizController extends Controller
 
                 if ($segment === "missed") {
                     return $query->whereHAs('participants', function ($query) {
-                        return $query->where('status', 'missed');
+                        return $query->where('status', 'missed')->where('user_id', auth()->id());
                     });
                 }
 
