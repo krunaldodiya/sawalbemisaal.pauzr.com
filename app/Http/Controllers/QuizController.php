@@ -203,7 +203,7 @@ class QuizController extends Controller
             return response(['quiz' => $quiz], 200);
         }
 
-        throw new Error("Quiz Not Found", 404);
+        return response(['quiz' => null], 200);
     }
 
     public function getQuizById(QuizDetail $request)
