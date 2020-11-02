@@ -9,6 +9,7 @@ Route::middleware('auth:sanctum')->post('/users/avatar/upload', "UserController@
 Route::middleware('auth:sanctum')->get('/users/wallet', "UserController@getWallet");
 Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
+Route::get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
 
 Route::middleware('auth:sanctum')->post('/orders/create', "OrderController@createOrder");
 

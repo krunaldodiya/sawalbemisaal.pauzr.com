@@ -1735,3 +1735,181 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
 [2020-10-30 12:15:01][54] Processed:  App\Jobs\NotifyBeforeStart
 [2020-10-30 12:30:00][55] Processing: App\Jobs\CheckQuizStatus
 [2020-10-30 12:30:01][55] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:16][68] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:16][56] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:16][59] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:16][64] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:16][60] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:16][66] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:16][58] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:16][57] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:17][66] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:17][68] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:17][56] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:17][58] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:17][64] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:17][57] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:17][59] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:17][60] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:18][62] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:18][70] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:18][69] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:18][71] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:18][61] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:18][62] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:18][67] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:18][63] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:18][65] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:18][70] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:19][69] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][71] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][61] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][65] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][67] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][63] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][74] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:19][72] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:19][75] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][73] Processing: App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][74] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:19][72] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-01 08:43:19][73] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-01 08:43:19][75] Processed:  App\Jobs\CheckQuizStatus
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+
+      [2m+5 vendor frames [22m
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**

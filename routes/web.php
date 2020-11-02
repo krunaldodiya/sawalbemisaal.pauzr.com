@@ -18,4 +18,12 @@ Route::get('/test', function (Request $request, QuizRepositoryInterface $quizRep
     return $quiz;
 });
 
+Route::get('/refer', function (Request $request) {
+    if ($request->has('utm_id')) {
+        $request->session()->put('utm_id', $request->get('utm_id'));
+    }
+
+    return redirect("https://www.sawalbemisaal.com");
+});
+
 Route::get('/media/{media}', 'HomeController@getMediaFile');

@@ -10,6 +10,7 @@ use App\Http\Requests\SetToken;
 use App\Repositories\UserRepositoryInterface;
 
 use App\DeviceToken;
+use App\Invitation;
 use App\Wallet;
 use App\User;
 
@@ -111,5 +112,22 @@ class UserController extends Controller
         }
 
         throw new Error("Token already exists", 401);
+    }
+
+    public function checkInvitation(Request $request)
+    {
+        $sender_id = $request->segment(3);
+        $mobile = $request->segment(4);
+
+        $exists = Invitation::where(['mobile' => $mobile])->first();
+
+        if (!$exists) {
+            Invitation::create([
+                'sender_id' => $sender_id,
+                'mobile' => $mobile
+            ]);
+        }
+
+        return redirect("/refer");
     }
 }
