@@ -9,5 +9,12 @@ class Invitation extends Model
 {
     use HasUuid;
 
+    public $incrementing = false;
+
     protected $guarded = [];
+
+    public function sender()
+    {
+        return $this->belongsTo(User::class, 'sender_id');
+    }
 }
