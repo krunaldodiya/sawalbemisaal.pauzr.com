@@ -44,9 +44,9 @@ class Faq extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Question'),
+            Text::make('Title'),
 
-            Text::make('Answer'),
+            Text::make('Content'),
 
             Number::make('Order'),
         ];
