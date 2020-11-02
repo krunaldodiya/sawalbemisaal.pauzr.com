@@ -19,7 +19,7 @@ class HomeController extends Controller
 {
     public function getFaqs(Request $request)
     {
-        $faqs = Faq::get();
+        $faqs = Faq::orderBy('order', 'asc')->get();
 
         return response(['faqs' => $faqs], 200);
     }
