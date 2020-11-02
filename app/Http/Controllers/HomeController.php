@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Country;
+use App\Faq;
 use App\Language;
 use App\QuestionTranslation;
 
@@ -16,6 +17,13 @@ use App\Imports\QuestionTranslationModel;
 
 class HomeController extends Controller
 {
+    public function getFaqs(Request $request)
+    {
+        $faqs = Faq::get();
+
+        return response(['faqs' => $faqs], 200);
+    }
+
     public function getCountries(Request $request)
     {
         $countries = Country::get();

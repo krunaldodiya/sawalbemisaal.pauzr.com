@@ -9,7 +9,7 @@ Route::middleware('auth:sanctum')->post('/users/avatar/upload', "UserController@
 Route::middleware('auth:sanctum')->get('/users/wallet', "UserController@getWallet");
 Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
-Route::get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
+Route::middleware('guest:api')->get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
 
 Route::middleware('auth:sanctum')->post('/orders/create', "OrderController@createOrder");
 
@@ -40,6 +40,7 @@ Route::middleware('guest:api')->post('/auth/register', "AuthController@register"
 Route::middleware('guest:api')->post('/otp/request', "OtpController@requestOtp");
 Route::middleware('guest:api')->post('/otp/verify', "OtpController@verifyOtp");
 
+Route::middleware('auth:sanctum')->post('/faqs', "HomeController@getFaqs");
 Route::middleware('guest:api')->post('/upload/excel', "HomeController@excel");
 
 Route::get('/countries', "HomeController@getCountries");
