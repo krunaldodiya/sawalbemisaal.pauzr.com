@@ -116,8 +116,8 @@ class UserController extends Controller
 
     public function checkInvitation(Request $request)
     {
-        $sender_id = $request->segment(3);
-        $mobile = $request->segment(4);
+        $sender_id = $request->segment(4);
+        $mobile = $request->segment(5);
 
         $exists = Invitation::where(['mobile' => $mobile])->first();
 
