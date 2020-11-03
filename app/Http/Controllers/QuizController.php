@@ -171,7 +171,7 @@ class QuizController extends Controller
                 if ($segment === "won") {
                     return $query
                         ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id());
+                            return $query->where('user_id', auth()->id())->where('status', 'finished');
                         })
                         ->whereHas('rankings', function ($query) {
                             return $query->where('prize', '>', 0)->where('user_id', auth()->id());
@@ -181,7 +181,7 @@ class QuizController extends Controller
                 if ($segment === "lost") {
                     return $query
                         ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id());
+                            return $query->where('user_id', auth()->id())->where('status', 'finished');
                         })
                         ->whereHas('rankings', function ($query) {
                             return $query->where('prize', 0)->where('user_id', auth()->id());
@@ -191,7 +191,7 @@ class QuizController extends Controller
                 if ($segment === "missed") {
                     return $query
                         ->whereHas('participants', function ($query) {
-                            return $query->where('status', 'missed')->where('user_id', auth()->id());
+                            return $query->where('user_id', auth()->id())->where('status', 'missed');
                         });
                 }
 
