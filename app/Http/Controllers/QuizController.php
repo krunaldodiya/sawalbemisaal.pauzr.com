@@ -90,7 +90,9 @@ class QuizController extends Controller
             ->withCount('host', 'participants', 'quiz_infos', 'rankings')
             ->where('private', false)
             ->where(function ($query) {
-                return $query->where('status', 'pending');
+                return $query->where('status', 'pending')
+                    ->orWhere('status', 'started')
+                    ->orWhere('status', 'full');
             })
             ->where(function ($query) use ($request) {
                 if ($request->segment !== "all") {
