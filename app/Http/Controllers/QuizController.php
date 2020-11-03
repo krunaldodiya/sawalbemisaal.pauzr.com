@@ -218,9 +218,9 @@ class QuizController extends Controller
     public function startQuiz(QuizDetail $request)
     {
         QuizParticipant::where([
-            'user_id', auth()->id(),
-            'quiz_id', $request->quiz_id
-        ])->update(['status', 'started']);
+            'user_id' => auth()->id(),
+            'quiz_id' => $request->quiz_id
+        ])->update(['status' => 'started']);
 
         return response(['success' => true], 200);
     }
