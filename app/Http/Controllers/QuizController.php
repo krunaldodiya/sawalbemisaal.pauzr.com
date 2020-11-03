@@ -90,7 +90,7 @@ class QuizController extends Controller
             ->withCount('host', 'participants', 'quiz_infos', 'rankings')
             ->where('private', false)
             ->where(function ($query) {
-                return $query->where('status', 'pending')->orWhere('status', 'started');
+                return $query->where('status', 'pending');
             })
             ->where(function ($query) use ($request) {
                 if ($request->segment !== "all") {
@@ -187,7 +187,7 @@ class QuizController extends Controller
                     return $query->where('status', 'suspended');
                 }
             })
-            ->orderBy('expired_at', 'asc')
+            ->orderBy('expired_at', 'desc')
             ->get();
 
         return $userQuizzes;
