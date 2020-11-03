@@ -10,14 +10,12 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (PushNotificationRepositoryInterface $PushNotificationRepositoryInterface) {
-    $PushNotificationRepositoryInterface->notify("/topics/all", [
+    return $PushNotificationRepositoryInterface->notify("/topics/user", [
         'title' => 'Quiz will start in few minutes',
         'body' => "Everyone is preparing, are you?",
         'image' => url('images/notify_soon.jpg'),
         'quiz_id' => "quiz123",
     ]);
-
-    return 'done';
 });
 
 Route::get('/refer', function (Request $request) {
