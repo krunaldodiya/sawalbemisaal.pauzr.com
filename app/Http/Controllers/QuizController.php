@@ -76,7 +76,7 @@ class QuizController extends Controller
         return response(['status' => "done"], 200);
     }
 
-    public function submit(SubmitQuiz $request)
+    public function submitQuiz(SubmitQuiz $request)
     {
         $this->quizRepositoryInterface->submitQuiz($request->quiz_id, $request->meta);
 
