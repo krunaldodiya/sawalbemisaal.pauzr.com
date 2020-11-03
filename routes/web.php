@@ -1,6 +1,7 @@
 <?php
 
 use App\Repositories\PushNotificationRepositoryInterface;
+use App\Topic;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
@@ -9,12 +10,17 @@ Route::get('/', function (Request $request) {
     return view('welcome');
 });
 
-Route::get('/test', function (PushNotificationRepositoryInterface $PushNotificationRepositoryInterface) {
-    return $PushNotificationRepositoryInterface->notify("/topics/user", [
-        'title' => 'Quiz will start in few minutes',
-        'body' => "Everyone is preparing, are you?",
-        'image' => url('images/notify_soon.jpg'),
-        'quiz_id' => "quiz123",
+Route::get('/test', function (
+    Request $request,
+    PushNotificationRepositoryInterface $pushNotificationRepositoryInterface
+) {
+    $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $request->quiz_id])->first();
+
+    $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+        'title' => 'Winners Announced',
+        'body' => 'Check the list,NOW! Congrats winners!',
+        'image' => url('images/notify_winners.png'),
+        'quiz_id' => $request->quiz_id,
     ]);
 });
 

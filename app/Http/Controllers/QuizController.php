@@ -162,27 +162,37 @@ class QuizController extends Controller
                 }
 
                 if ($segment === "joined") {
-                    return $query->whereHas('participants', function ($query) {
-                        return $query->where('user_id', auth()->id());
-                    });
+                    return $query
+                        ->whereHas('participants', function ($query) {
+                            return $query->where('user_id', auth()->id());
+                        });
                 }
 
                 if ($segment === "won") {
-                    return $query->whereHas('rankings', function ($query) {
-                        return $query->where('prize', '>', 0)->where('user_id', auth()->id());
-                    });
+                    return $query
+                        ->whereHas('participants', function ($query) {
+                            return $query->where('user_id', auth()->id());
+                        })
+                        ->whereHas('rankings', function ($query) {
+                            return $query->where('prize', '>', 0);
+                        });
                 }
 
                 if ($segment === "lost") {
-                    return $query->whereHas('rankings', function ($query) {
-                        return $query->where('prize', 0)->where('user_id', auth()->id());
-                    });
+                    return $query
+                        ->whereHas('participants', function ($query) {
+                            return $query->where('user_id', auth()->id());
+                        })
+                        ->whereHas('rankings', function ($query) {
+                            return $query->where('prize', 0);
+                        });
                 }
 
                 if ($segment === "missed") {
-                    return $query->whereHAs('participants', function ($query) {
-                        return $query->where('status', 'missed')->where('user_id', auth()->id());
-                    });
+                    return $query
+                        ->whereHas('participants', function ($query) {
+                            return $query->where('status', 'missed')->where('user_id', auth()->id());
+                        });
                 }
 
                 if ($segment === "cancelled") {
