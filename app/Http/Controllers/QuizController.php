@@ -196,7 +196,10 @@ class QuizController extends Controller
                 }
 
                 if ($segment === "cancelled") {
-                    return $query->where('status', 'suspended');
+                    return $query
+                        ->whereHas('participants', function ($query) {
+                            return $query->where('user_id', auth()->id())->where('status', 'suspended');
+                        });
                 }
             })
             ->orderBy('expired_at', 'desc')
