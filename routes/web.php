@@ -16,6 +16,8 @@ Route::get('/test', function (PushNotificationRepositoryInterface $PushNotificat
         'image' => url('images/notify_soon.jpg'),
         'quiz_id' => "quiz123",
     ]);
+
+    return 'done';
 });
 
 Route::get('/refer', function (Request $request) {
