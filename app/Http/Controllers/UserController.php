@@ -108,7 +108,9 @@ class UserController extends Controller
         $exists = DeviceToken::where($data)->first();
 
         if (!$exists) {
-            return DeviceToken::create($data);
+            $token = DeviceToken::create($data);
+
+            return response(['token' => $token], 200);
         }
 
         throw new Error("Token already exists", 401);
