@@ -174,7 +174,7 @@ class QuizController extends Controller
                             return $query->where('user_id', auth()->id());
                         })
                         ->whereHas('rankings', function ($query) {
-                            return $query->where('prize', '>', 0);
+                            return $query->where('prize', '>', 0)->where('user_id', auth()->id());
                         });
                 }
 
@@ -184,7 +184,7 @@ class QuizController extends Controller
                             return $query->where('user_id', auth()->id());
                         })
                         ->whereHas('rankings', function ($query) {
-                            return $query->where('prize', 0);
+                            return $query->where('prize', 0)->where('user_id', auth()->id());
                         });
                 }
 
