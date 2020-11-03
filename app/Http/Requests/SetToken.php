@@ -15,7 +15,7 @@ class SetToken extends FormRequest
     public function rules()
     {
         return [
-            'device_token' => 'required'
+            'token' => 'required'
         ];
     }
 

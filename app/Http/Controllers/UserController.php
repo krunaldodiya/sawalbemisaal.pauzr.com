@@ -103,7 +103,7 @@ class UserController extends Controller
     {
         $user = auth()->user();
 
-        $data = ['user_id' => $user->id, 'token' => $request->device_token];
+        $data = ['user_id' => $user->id, 'token' => $request->token];
 
         $exists = DeviceToken::where($data)->first();
 
