@@ -2073,3 +2073,55 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
       [2m+19 vendor frames [22m
   20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
       Illuminate\Foundation\Console\Kernel::handle()
+[2020-11-04 08:34:15][83] Processing: App\Jobs\CheckQuizStatus
+[2020-11-04 08:34:15][82] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-04 08:34:15][80] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-04 08:34:15][81] Processing: App\Jobs\CheckQuizStatus
+[2020-11-04 08:34:16][80] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-04 08:34:16][82] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-04 08:34:16][81] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-04 08:34:16][83] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-04 09:45:00][84] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-04 09:45:02][84] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-04 10:00:00][85] Processing: App\Jobs\CheckQuizStatus
+[2020-11-04 10:00:01][85] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-04 10:05:00][86] Processing: App\Jobs\CalculateQuizRanking
+[2020-11-04 10:05:01][86] Processed:  App\Jobs\CalculateQuizRanking
+[2020-11-04 12:15:00][87] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-04 12:15:01][87] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-04 12:30:00][88] Processing: App\Jobs\CheckQuizStatus
+[2020-11-04 12:30:01][88] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-04 12:45:00][89] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-04 12:45:01][89] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-04 13:00:00][90] Processing: App\Jobs\CheckQuizStatus
+[2020-11-04 13:00:02][90] Processed:  App\Jobs\CheckQuizStatus
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**

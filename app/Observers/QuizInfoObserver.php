@@ -27,7 +27,7 @@ class QuizInfoObserver
                 'updated_at' => now(),
             ];
         })
-        ->toArray();
+            ->toArray();
 
         PrizeDistribution::insert($data);
     }

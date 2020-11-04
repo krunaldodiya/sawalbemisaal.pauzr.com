@@ -104,6 +104,7 @@ class QuizRepository implements QuizRepositoryInterface
 
                 return [
                     'user_id' => $participant->user_id,
+                    'points' => $participant->points,
                     'rank' => $rank,
                     'prize' => $prize,
                 ];

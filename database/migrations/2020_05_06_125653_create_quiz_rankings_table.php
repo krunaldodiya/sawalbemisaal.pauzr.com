@@ -22,6 +22,8 @@ class CreateQuizRankingsTable extends Migration
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
+            $table->decimal('points', 8, 2)->default(0);
+
             $table->integer('rank')->nullable();
             $table->integer('prize')->nullable();
 
