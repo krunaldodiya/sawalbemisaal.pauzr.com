@@ -16,7 +16,7 @@ use App\QuizAnswer;
 use App\QuizParticipant;
 use App\QuizRanking;
 use App\Repositories\QuizRepositoryInterface;
-
+use App\User;
 use Illuminate\Http\Request;
 
 use Error;
@@ -230,6 +230,16 @@ class QuizController extends Controller
 
     public function startQuiz(QuizDetail $request)
     {
+        $user = User::with('country')->find(auth()->id());
+
+        $quiz = $this->quizRepositoryInterface->getQuizById($request->quiz_id);
+
+        $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
+
+        if (!$quiz_participant || $quiz->status !== 'started') {
+            throw new Error("Quiz has already been {$quiz->status}");
+        }
+
         QuizParticipant::where([
             'user_id' => auth()->id(),
             'quiz_id' => $request->quiz_id
