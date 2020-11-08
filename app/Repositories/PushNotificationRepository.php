@@ -56,7 +56,9 @@ class PushNotificationRepository implements PushNotificationRepositoryInterface
             return $device_token->token;
         });
 
-        dd($tokens);
+        if (count($tokens)) {
+            dd($tokens);
+        }
 
         if (count($tokens)) {
             return $this->updateTopicSubscriptions($topic, $tokens);
