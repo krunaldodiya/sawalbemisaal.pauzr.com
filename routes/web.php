@@ -1,5 +1,6 @@
 <?php
 
+use App\QuizParticipant;
 use App\Repositories\PushNotificationRepositoryInterface;
 use App\Topic;
 use Illuminate\Support\Facades\Route;
@@ -8,6 +9,10 @@ use Illuminate\Http\Request;
 
 Route::get('/', function (Request $request) {
     return view('welcome');
+});
+
+Route::get('/test', function (Request $request) {
+    return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
 });
 
 Route::get('/test/push', function (

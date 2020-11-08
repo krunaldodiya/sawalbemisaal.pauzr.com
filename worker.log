@@ -2253,3 +2253,1477 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
     157|     }
     158| 
     159|     /**
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+
+   ParseError 
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+
+  4   app/Providers/RouteServiceProvider.php:63
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (
+    15|     Request $request,
+  > 16| ) {
+    17|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    18| });
+    19| 
+    20| Route::get('/test/push', function (
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
+
+   ParseError 
+
+  syntax error, unexpected ')', expecting variable (T_VARIABLE)
+
+  at routes/web.php:16
+    12| });
+    13| 
+    14| Route::get('/test', function (Request $request) {
+    15|     return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+  > 16| });
+    17| 
+    18| Route::get('/test/push', function (
+    19|     Request $request,
+    20|     PushNotificationRepositoryInterface $pushNotificationRepositoryInterface
+
+      [2m+3 vendor frames [22m
+  4   app/Providers/RouteServiceProvider.php:63
+      Illuminate\Routing\RouteRegistrar::group()
+
+  5   app/Providers/RouteServiceProvider.php:47
+      App\Providers\RouteServiceProvider::mapWebRoutes()
