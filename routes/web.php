@@ -10,7 +10,7 @@ Route::get('/', function (Request $request) {
     return view('welcome');
 });
 
-Route::get('/test', function (
+Route::get('/test/push', function (
     Request $request,
     PushNotificationRepositoryInterface $pushNotificationRepositoryInterface
 ) {
@@ -21,6 +21,15 @@ Route::get('/test', function (
         'body' => 'test',
         'image' => url('images/notify_winners.png'),
     ]);
+});
+
+Route::get('/test/subscribe', function (
+    Request $request,
+    PushNotificationRepositoryInterface $pushNotificationRepositoryInterface
+) {
+    $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $request->quiz_id])->first();
+
+    return $pushNotificationRepositoryInterface->subscribeToTopic($topic->name, $request->user_id);
 });
 
 Route::get('/refer', function (Request $request) {
