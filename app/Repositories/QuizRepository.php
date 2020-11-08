@@ -141,10 +141,6 @@ class QuizRepository implements QuizRepositoryInterface
             throw new Error("Quiz has already been finished");
         }
 
-        if ($quiz->status === 'suspended') {
-            throw new Error("Quiz has already been suspended");
-        }
-
         if ($quiz->status !== 'started') {
             throw new Error("Quiz has not started yet");
         }
