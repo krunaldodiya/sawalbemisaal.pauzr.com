@@ -150,7 +150,7 @@ class QuizRepository implements QuizRepositoryInterface
                 $question_translation = QuestionTranslation::where('question_id', $answer['question_id'])->first();
 
                 $is_correct = $question_translation->answer == $answer['current_answer'];
-                $points = $is_correct ? 10 + (1 / $answer['seconds']) : 0;
+                $points = $is_correct ? 10 + (1 / $answer['seconds'] + 1) : 0;
 
                 return [
                     'id' => Str::uuid(),
