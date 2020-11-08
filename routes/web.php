@@ -16,8 +16,6 @@ Route::get('/test', function (
 ) {
     $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $request->quiz_id])->first();
 
-    dd($topic);
-
     $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
         'title' => 'test',
         'body' => 'test',
