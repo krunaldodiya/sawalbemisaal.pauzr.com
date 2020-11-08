@@ -16,11 +16,12 @@ Route::get('/test', function (
 ) {
     $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $request->quiz_id])->first();
 
+    dd($topic);
+
     $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
-        'title' => 'Winners Announced',
-        'body' => 'Check the list,NOW! Congrats winners!',
+        'title' => 'test',
+        'body' => 'test',
         'image' => url('images/notify_winners.png'),
-        'quiz_id' => $request->quiz_id,
     ]);
 });
 

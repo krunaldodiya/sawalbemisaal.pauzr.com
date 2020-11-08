@@ -2125,3 +2125,131 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
     157|     }
     158| 
     159|     /**
+[2020-11-04 18:45:00][91] Processing: App\Jobs\NotifyBeforeStart
+[2020-11-04 18:45:01][91] Processed:  App\Jobs\NotifyBeforeStart
+[2020-11-04 19:00:00][92] Processing: App\Jobs\CheckQuizStatus
+[2020-11-04 19:00:01][92] Processed:  App\Jobs\CheckQuizStatus
+[2020-11-04 19:05:00][93] Processing: App\Jobs\CalculateQuizRanking
+[2020-11-04 19:05:00][93] Failed:     App\Jobs\CalculateQuizRanking
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
