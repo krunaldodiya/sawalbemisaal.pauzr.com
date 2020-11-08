@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\QuestionTranslationModel;
+use App\Locale;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,13 @@ class HomeController extends Controller
         $countries = Country::get();
 
         return response(['countries' => $countries], 200);
+    }
+
+    public function getLocales(Request $request)
+    {
+        $locales = Locale::where('language_id', $request->language_id)->get();
+
+        return response(['locales' => $locales], 200);
     }
 
     public function getLanguages(Request $request)
