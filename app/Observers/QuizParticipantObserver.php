@@ -37,8 +37,6 @@ class QuizParticipantObserver
 
         $topic->subscribers()->attach($user);
 
-        $this->pushNotificationRepositoryInterface->subscribeToTopic($topic->name, $user->id);
-
         $transaction = $user->createTransaction($quiz->quiz_infos->entry_fee, 'withdraw', [
             'points' => [
                 'id' => $user->id,
