@@ -3,16 +3,16 @@
 namespace App\Observers;
 
 use App\DeviceToken;
-use App\Repositories\PushNotificationRepository;
+use App\Repositories\PushNotificationRepositoryInterface;
 use App\User;
 
 class DeviceTokenObserver
 {
-    public $pushNotificationRepository;
+    public $pushNotificationRepositoryInterface;
 
-    public function __construct(PushNotificationRepository $pushNotificationRepository)
+    public function __construct(PushNotificationRepositoryInterface $pushNotificationRepositoryInterface)
     {
-        $this->pushNotificationRepository = $pushNotificationRepository;
+        $this->pushNotificationRepositoryInterface = $pushNotificationRepositoryInterface;
     }
 
     public function manageTokens(DeviceToken $deviceToken)
@@ -20,7 +20,7 @@ class DeviceTokenObserver
         $user = User::with('device_tokens', 'topics')->find($deviceToken->user_id);
 
         $user->topics->each(function ($topic) use ($deviceToken) {
-            $this->pushNotificationRepository->updateTopicSubscriptions($topic, [$deviceToken->token]);
+            $this->pushNotificationRepositoryInterface->updateTopicSubscriptions($topic, [$deviceToken->token]);
         });
     }
 

@@ -222,8 +222,6 @@ class QuizRepository implements QuizRepositoryInterface
             throw new Error("Not Enough wallet points");
         }
 
-        $quiz->participants()->create(['user_id' => $user->id]);
-
-        return true;
+        return $quiz->participants()->create(['user_id' => $user->id]);
     }
 }

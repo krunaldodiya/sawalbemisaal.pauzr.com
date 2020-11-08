@@ -4,11 +4,19 @@ namespace App\Observers;
 
 use App\Quiz;
 use App\QuizParticipant;
+use App\Repositories\PushNotificationRepositoryInterface;
 use App\Topic;
 use App\User;
 
 class QuizParticipantObserver
 {
+    public $pushNotificationRepositoryInterface;
+
+    public function __construct(PushNotificationRepositoryInterface $pushNotificationRepositoryInterface)
+    {
+        $this->pushNotificationRepositoryInterface = $pushNotificationRepositoryInterface;
+    }
+
     /**
      * Handle the quiz participant "created" event.
      *
@@ -28,6 +36,8 @@ class QuizParticipantObserver
         $topic = Topic::where('name', "quiz_{$quiz->id}")->first();
 
         $topic->subscribers()->attach($user);
+
+        $this->pushNotificationRepositoryInterface->subscribeToTopic($topic->name, $user->id);
 
         $transaction = $user->createTransaction($quiz->quiz_infos->entry_fee, 'withdraw', [
             'points' => [
