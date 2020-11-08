@@ -134,15 +134,19 @@ class QuizRepository implements QuizRepositoryInterface
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
         if (!$quiz_participant) {
-            throw new Error("Quiz not joined yet");
+            throw new Error("Quiz has not been joined yet");
         }
 
-        if ($quiz_participant->status === 'finished') {
-            throw new Error("Quiz already finished");
+        if ($quiz->status === 'finished') {
+            throw new Error("Quiz has already been finished");
+        }
+
+        if ($quiz->status === 'suspended') {
+            throw new Error("Quiz has already been suspended");
         }
 
         if ($quiz->status !== 'started') {
-            throw new Error("Quiz not started yet");
+            throw new Error("Quiz has not started yet");
         }
 
         $answers = collect($meta)
@@ -150,7 +154,7 @@ class QuizRepository implements QuizRepositoryInterface
                 $question_translation = QuestionTranslation::where('question_id', $answer['question_id'])->first();
 
                 $is_correct = $question_translation->answer == $answer['current_answer'];
-                $points = $is_correct ? 10 + (1 / $answer['seconds'] + 1) : 0;
+                $points = $is_correct ? 10 + (1 / $answer['seconds']) : 0;
 
                 return [
                     'id' => Str::uuid(),
