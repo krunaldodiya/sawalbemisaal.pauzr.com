@@ -12,7 +12,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    return QuizParticipant::where(['id' => $request->quiz_participant_id])->update(['status' => $request->status]);
+    return 'test';
 });
 
 Route::get('/test/push', function (
