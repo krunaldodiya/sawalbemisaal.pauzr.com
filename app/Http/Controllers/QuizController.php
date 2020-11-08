@@ -236,7 +236,11 @@ class QuizController extends Controller
 
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
-        if (!$quiz_participant || $quiz->status !== 'started') {
+        if (!$quiz_participant) {
+            throw new Error("Quiz has not been joined yet");
+        }
+
+        if ($quiz->status !== 'started') {
             throw new Error("Quiz has already been {$quiz->status}");
         }
 
