@@ -214,7 +214,7 @@ class QuizRepository implements QuizRepositoryInterface
             throw new Error("You have already joined the quiz");
         }
 
-        if (!($quiz->status === 'pending' || $quiz->status === 'started')) {
+        if (!($quiz->status === 'pending')) {
             throw new Error("Can't join now, Quiz is already {$quiz->status}");
         }
 
