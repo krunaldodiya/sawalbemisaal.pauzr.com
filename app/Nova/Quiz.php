@@ -56,7 +56,7 @@ class Quiz extends Resource
 
             Text::make('Title')->sortable(),
 
-            Text::make("Status")->exceptOnForms()->sortable(),
+            Text::make("Status")->sortable(),
 
             DateTime::make('Expired At')
                 ->exceptOnForms()
