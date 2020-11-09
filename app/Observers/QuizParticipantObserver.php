@@ -40,7 +40,7 @@ class QuizParticipantObserver
         $transaction = $user->createTransaction($quiz->quiz_infos->entry_fee, 'withdraw', [
             'points' => [
                 'id' => $user->id,
-                'type' => "Joined Quiz"
+                'type' => "joined_quiz"
             ]
         ]);
 

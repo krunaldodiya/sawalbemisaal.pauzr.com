@@ -45,7 +45,7 @@ class QuizRepository implements QuizRepositoryInterface
             $transaction = $user->createTransaction($quiz->quiz_infos->entry_fee, 'deposit', [
                 'points' => [
                     'id' => $user->id,
-                    'type' => "Quiz Suspended"
+                    'type' => "quiz_suspended"
                 ]
             ]);
 

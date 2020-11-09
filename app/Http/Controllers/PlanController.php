@@ -24,7 +24,7 @@ class PlanController extends Controller
         $transaction = $user->createTransaction($plan->coins, 'deposit', [
             'points' => [
                 'id' => $user->id,
-                'type' => "Purchased Coins"
+                'type' => "purchased_coins"
             ]
         ]);
 

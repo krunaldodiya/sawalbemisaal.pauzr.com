@@ -38,7 +38,7 @@ class PaymentController extends Controller
         $transaction = $user->createTransaction($redeemable_coins, 'withdraw', [
             'points' => [
                 'id' => $user->id,
-                'type' => "Withdraw Money"
+                'type' => "withdraw_money"
             ]
         ]);
 

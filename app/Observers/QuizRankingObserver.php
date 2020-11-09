@@ -20,7 +20,7 @@ class QuizRankingObserver
         $transaction = $user->createTransaction($quizRanking->prize, 'deposit', [
             'points' => [
                 'id' => $user->id,
-                'type' => "Won Quiz"
+                'type' => "won_quiz"
             ]
         ]);
 

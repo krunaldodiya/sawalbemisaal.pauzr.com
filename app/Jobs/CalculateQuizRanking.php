@@ -40,7 +40,7 @@ class CalculateQuizRanking implements ShouldQueue
         $transaction = $quiz->host->createTransaction($host_prize, 'deposit', [
             'points' => [
                 'id' => $quiz->host->id,
-                'type' => "Quiz Hosted"
+                'type' => "quiz_hosted"
             ]
         ]);
 
