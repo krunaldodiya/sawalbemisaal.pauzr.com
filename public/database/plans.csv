@@ -1,6 +1,6 @@
 "id","image","name","description","amount","coins","created_at","updated_at"
-"0b78d133-ca81-4b2c-a48f-a97b33fe49c3",hI4jNvRI0PVxT16uswRKLW1ROGuGmle6K9uuHEGz,Chest of Coins,"199 coins",100,199,2020-10-15 20:27:01,2020-10-15 20:30:03
-cf215c91-b5b4-4e29-99c4-57279a40d3a9,URscDg14NkNHuRh8hkysH1v09EsDzGmBC9UFsVv5,Sack of Coins,"99 coins",50,99,2020-10-15 20:26:48,2020-10-15 20:30:21
-"677f15c9-b803-439f-b48f-493e42dc99aa",yUMTeuybf3xcjq7IkMOvrgm9MFbJeL6NZ493V60e,Trolley of Coins,"999 coins",500,999,2020-10-15 20:27:15,2020-10-15 20:30:27
-"170ecd86-0ca3-4801-8603-49c38a50cdd5",p19rIaVsVsQW2dDozVZMIyY2aCpg5kccMvVWKkUp,Wallet of Coins,"39 coins",20,39,2020-10-15 20:26:31,2020-10-15 20:30:43
-"790dd1c1-3b56-4171-8798-c287a1075706",g2lWgq4d6Jt0GoRIJTJqay0k4WnGZqbLNi1cxUfU,Pile of Coins,"19 coins",10,19,2020-10-15 20:23:10,2020-10-15 20:31:05
+cf215c91-b5b4-4e29-99c4-57279a40d3a9,"1HW1JXFcyPH0ts9L1YpAhIqHH33TuWYoxlkU2T4V.png",sack_of_coins,"99 coins",50,99,2020-10-16 01:56:48,2020-11-09 12:41:38
+"790dd1c1-3b56-4171-8798-c287a1075706",oa34aQFjPXL49tA5CWddk0EyQXC82DZeL24DVMtk.png,pile_of_coins,"19 coins",10,19,2020-10-16 01:53:10,2020-11-09 12:42:31
+"677f15c9-b803-439f-b48f-493e42dc99aa",WLxzpzhPlqwMkUAcc9EVkdraRKB1hujhFNp3Kjol.png,trolley_of_coins,"999 coins",500,999,2020-10-16 01:57:15,2020-11-09 12:42:52
+"170ecd86-0ca3-4801-8603-49c38a50cdd5",t7qaaeQfZ7lOrnDmsBcowOPPmX7NWchUAyCPZT1z.png,wallet_of_coins,"39 coins",20,39,2020-10-16 01:56:31,2020-11-09 12:43:11
+"0b78d133-ca81-4b2c-a48f-a97b33fe49c3",xHQEswf0zCmF6XWGZFwNOmbEvJF38AD88oPZeLds.png,treasure_chest_of_coins,"199 coins",100,199,2020-10-16 01:57:01,2020-11-09 12:43:43
