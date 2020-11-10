@@ -85,7 +85,8 @@ class QuizRepository implements QuizRepositoryInterface
         $quiz
             ->participants()
             ->where(function ($query) {
-                return $query->where('status', 'joined')
+                return $query
+                    ->where('status', 'joined')
                     ->orWhere('status', 'started');
             })
             ->update(['status' => 'missed']);
