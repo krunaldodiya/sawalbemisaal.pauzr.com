@@ -55,9 +55,9 @@ class QuizParticipant extends Resource
 
             HasMany::make("Quiz Answers", "answers"),
 
-            Text::make("Status")->exceptOnForms(),
+            Text::make("Status"),
 
-            Text::make("Points")->exceptOnForms(),
+            Text::make("Points"),
         ];
     }
 
