@@ -40,11 +40,6 @@ class QuizParticipant extends Resource
         return false;
     }
 
-    public function authorizedToUpdate(Request $request)
-    {
-        return false;
-    }
-
     /**
      * Get the fields displayed by the resource.
      *
@@ -60,7 +55,7 @@ class QuizParticipant extends Resource
 
             HasMany::make("Quiz Answers", "answers"),
 
-            Text::make("Status"),
+            Text::make("Status")->exceptOnForms(),
 
             Text::make("Points")->exceptOnForms(),
         ];
