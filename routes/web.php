@@ -13,7 +13,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $quiz = Quiz::where('id', $request->quiz_id)->first();
+    $quiz = Quiz::with('participants')->where('id', $request->quiz_id)->first();
 
     $participants = $quiz->participants()->whereHas('user', function ($query) {
         return $query->where('demo', true);
