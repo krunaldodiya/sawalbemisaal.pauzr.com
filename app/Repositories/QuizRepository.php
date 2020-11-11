@@ -64,7 +64,24 @@ class QuizRepository implements QuizRepositoryInterface
         ]);
     }
 
-    public function startQuiz($quiz)
+    public function startQuiz($quiz, $user)
+    {
+        $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
+
+        if (!$quiz_participant) {
+            throw new Error("Quiz has not been joined yet");
+        }
+
+        if ($quiz->status !== 'started') {
+            throw new Error("Quiz has already been {$quiz->status}");
+        }
+
+        QuizParticipant::query()
+            ->where(['user_id' => auth()->id(), 'quiz_id' => $quiz->id])
+            ->update(['status' => 'started']);
+    }
+
+    public function quizCanBeStarted($quiz)
     {
         $quiz->update(['status' => 'started']);
 

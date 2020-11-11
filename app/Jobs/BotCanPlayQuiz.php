@@ -42,5 +42,9 @@ class BotCanPlayQuiz implements ShouldQueue
         auth()->loginUsingId($user->id);
 
         dump(auth()->user()->name);
+
+        // start quiz
+
+        // play quiz
     }
 }

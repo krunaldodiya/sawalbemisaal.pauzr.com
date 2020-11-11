@@ -1,9 +1,5 @@
 <?php
 
-use App\Quiz;
-use App\QuizParticipant;
-use App\Repositories\PushNotificationRepositoryInterface;
-use App\Topic;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;

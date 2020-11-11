@@ -234,20 +234,7 @@ class QuizController extends Controller
 
         $quiz = $this->quizRepositoryInterface->getQuizById($request->quiz_id);
 
-        $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
-
-        if (!$quiz_participant) {
-            throw new Error("Quiz has not been joined yet");
-        }
-
-        if ($quiz->status !== 'started') {
-            throw new Error("Quiz has already been {$quiz->status}");
-        }
-
-        QuizParticipant::where([
-            'user_id' => auth()->id(),
-            'quiz_id' => $request->quiz_id
-        ])->update(['status' => 'started']);
+        $this->quizRepositoryInterface->startQuiz($quiz, $user);
 
         return response(['success' => true], 200);
     }

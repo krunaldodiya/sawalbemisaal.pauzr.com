@@ -39,6 +39,6 @@ class CheckQuizStatus implements ShouldQueue
             return $quizRepositoryInterface->cancelQuiz($quiz);
         }
 
-        return $quizRepositoryInterface->startQuiz($quiz);
+        return $quizRepositoryInterface->quizCanBeStarted($quiz);
     }
 }
