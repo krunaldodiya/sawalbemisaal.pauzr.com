@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Quiz;
+use App\Repositories\QuizRepositoryInterface;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -34,17 +35,16 @@ class BotCanPlayQuiz implements ShouldQueue
      *
      * @return void
      */
-    public function handle()
+    public function handle(QuizRepositoryInterface $quizRepositoryInterface)
     {
         $quiz = $this->quiz;
+
         $user = $this->user;
 
         auth()->loginUsingId($user->id);
 
-        dump(auth()->user()->name);
+        $quizRepositoryInterface->startQuiz($quiz, $user);
 
-        // start quiz
-
-        // play quiz
+        $quizRepositoryInterface->submitQuiz($quiz->id, []);
     }
 }
