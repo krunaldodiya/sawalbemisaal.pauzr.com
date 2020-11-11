@@ -11,18 +11,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request, PushNotificationRepositoryInterface $pushNotificationRepositoryInterface) {
-    $quiz_id = "c3b21b58-27c1-4c43-803f-de67e88c4305";
-    $quiz = Quiz::find($quiz_id);
-
-    $pushNotificationRepositoryInterface->notify("/topics/quiz_c3b21b58-27c1-4c43-803f-de67e88c4305", [
-        'key' => $request->key,
-        'title' => "Quiz #{$quiz->title} will start in few minutes",
-        'body' => "Everyone is preparing, are you?",
-        'image' => url('images/notify_soon.jpg'),
-        'quiz_id' => $quiz->id,
-    ]);
-
-    return 'push sent';
+    return 'test';
 });
 
 Route::get('/refer', function (Request $request) {
