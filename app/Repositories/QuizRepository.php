@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Jobs\CalculateQuizRanking;
-use App\Jobs\DeployBots;
+use App\Jobs\DeployQuizBots;
 use App\QuestionTranslation;
 use App\Quiz;
 use App\QuizAnswer;
@@ -72,7 +72,7 @@ class QuizRepository implements QuizRepositoryInterface
 
         CalculateQuizRanking::dispatch($quiz)->delay($quiz->expired_at->addMinutes(5));
 
-        DeployBots::dispatch($quiz)->delay($quiz->expired_at->addMinutes(1));
+        DeployQuizBots::dispatch($quiz);
 
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'key' => 'all_the_best',

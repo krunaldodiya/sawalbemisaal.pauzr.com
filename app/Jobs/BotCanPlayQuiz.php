@@ -3,26 +3,29 @@
 namespace App\Jobs;
 
 use App\Quiz;
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class DeployBots implements ShouldQueue
+class BotCanPlayQuiz implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public $quiz;
+    public $user;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(Quiz $quiz)
+    public function __construct(Quiz $quiz, User $user)
     {
         $this->quiz = $quiz;
+        $this->user = $user;
     }
 
     /**
@@ -32,18 +35,6 @@ class DeployBots implements ShouldQueue
      */
     public function handle()
     {
-        $quiz = $this->quiz;
-
-        $quiz
-            ->participants()
-            ->whereHas('user', function ($query) {
-                return $query->where('demo', true);
-            })
-            ->get()
-            ->each(function () use ($quiz) {
-                // $meta = [];
-
-                // $this->quizRepositoryInterface->submitQuiz($quiz->id, $meta);
-            });
+        //
     }
 }
