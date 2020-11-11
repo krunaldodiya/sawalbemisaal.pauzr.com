@@ -17,6 +17,8 @@ Route::get('/test', function (Request $request, PushNotificationRepositoryInterf
         'image' => url('images/notify_soon.jpg'),
         'quiz_id' => "c3b21b58-27c1-4c43-803f-de67e88c4305",
     ]);
+
+    return 'push sent';
 });
 
 Route::get('/refer', function (Request $request) {
