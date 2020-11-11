@@ -34,6 +34,16 @@ class DeployBots implements ShouldQueue
     {
         $quiz = $this->quiz;
 
-        // $participants = $quiz->participants->where();
+        $quiz
+            ->participants()
+            ->whereHas('user', function ($query) {
+                return $query->where('demo', true);
+            })
+            ->get()
+            ->each(function () use ($quiz) {
+                // $meta = [];
+
+                // $this->quizRepositoryInterface->submitQuiz($quiz->id, $meta);
+            });
     }
 }
