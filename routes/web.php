@@ -19,7 +19,7 @@ Route::get('/test', function (Request $request) {
         return $query->where('demo', true);
     });
 
-    return $participants;
+    return response(['participants' => $participants], 200);
 });
 
 Route::get('/refer', function (Request $request) {
