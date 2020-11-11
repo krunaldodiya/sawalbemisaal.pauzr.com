@@ -38,7 +38,7 @@ class NotifyBeforeStart implements ShouldQueue
 
         $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'key' => 'will_start_in_few_minutes',
-            'title' => 'Quiz will start in few minutes',
+            'title' => "Quiz #{$this->quiz->title} will start in few minutes",
             'body' => "Everyone is preparing, are you?",
             'image' => url('images/notify_soon.jpg'),
             'quiz_id' => $this->quiz->id,
