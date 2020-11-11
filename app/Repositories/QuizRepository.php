@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Jobs\CalculateQuizRanking;
+use App\Jobs\DeployBots;
 use App\QuestionTranslation;
 use App\Quiz;
 use App\QuizAnswer;
@@ -55,6 +56,7 @@ class QuizRepository implements QuizRepositoryInterface
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
 
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+            'key' => 'suspended_due_to_less_participants',
             'title' => 'Quiz suspended! Due to less participants',
             'body' => 'Don\'t worry, more quizzes loaded for you!',
             'image' => url('images/notify_canceled.png'),
@@ -70,7 +72,10 @@ class QuizRepository implements QuizRepositoryInterface
 
         CalculateQuizRanking::dispatch($quiz)->delay($quiz->expired_at->addMinutes(5));
 
+        DeployBots::dispatch($quiz)->delay($quiz->expired_at->addMinutes(1));
+
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+            'key' => 'all_the_best',
             'title' => 'All the Best!',
             'body' => 'Hurry,Start the quiz NOW!',
             'image' => url('images/notify_started.jpg'),
@@ -120,6 +125,7 @@ class QuizRepository implements QuizRepositoryInterface
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
 
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
+            'key' => 'winners_announced',
             'title' => 'Winners Announced',
             'body' => 'Check the list,NOW! Congrats winners!',
             'image' => url('images/notify_winners.png'),

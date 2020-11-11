@@ -1,5 +1,6 @@
 <?php
 
+use App\Quiz;
 use App\QuizParticipant;
 use App\Repositories\PushNotificationRepositoryInterface;
 use App\Topic;
@@ -12,7 +13,13 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    return 'test';
+    $quiz = Quiz::first();
+
+    $participants = $quiz->participants->whereHas('user', function ($query) {
+        return $query->where('demo', true);
+    });
+
+    return $participants;
 });
 
 Route::get('/refer', function (Request $request) {

@@ -3888,3 +3888,316 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
       [2m+5 vendor frames [22m
   35  artisan:37
       Illuminate\Foundation\Console\Kernel::handle()
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+
+      [2m+19 vendor frames [22m
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+   Symfony\Component\Process\Exception\ProcessTimedOutException 
+
+  The process "'/usr/bin/php' 'artisan' 'queue:work' '--once' '--queue=default' '--delay=0' '--memory=128' '--sleep=3' '--tries=1'" exceeded the timeout of 60 seconds.
+
+  at /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/vendor/symfony/process/Process.php:1201
+    1197| 
+    1198|         if (null !== $this->timeout && $this->timeout < microtime(true) - $this->starttime) {
+    1199|             $this->stop(0);
+    1200| 
+  > 1201|             throw new ProcessTimedOutException($this, ProcessTimedOutException::TYPE_GENERAL);
+    1202|         }
+    1203| 
+    1204|         if (null !== $this->idleTimeout && $this->idleTimeout < microtime(true) - $this->lastOutputTime) {
+    1205|             $this->stop(0);
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+19 vendor frames [22m
+  20  /run/media/krunaldodiya/Softwares/Code/Sawal/sawalbemisaal.pauzr.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
