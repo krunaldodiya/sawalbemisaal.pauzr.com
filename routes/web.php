@@ -15,7 +15,7 @@ Route::get('/', function (Request $request) {
 Route::get('/test', function (Request $request) {
     $quiz = Quiz::first();
 
-    $participants = $quiz->participants->whereHas('user', function ($query) {
+    $participants = $quiz->participants()->whereHas('user', function ($query) {
         return $query->where('demo', true);
     });
 
