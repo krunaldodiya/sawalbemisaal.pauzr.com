@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
 class BotCanPlayQuiz implements ShouldQueue
@@ -45,6 +46,16 @@ class BotCanPlayQuiz implements ShouldQueue
 
         $quizRepositoryInterface->startQuiz($quiz, $user);
 
-        $quizRepositoryInterface->submitQuiz($quiz->id, []);
+        $meta = $quiz->answerable_questions
+            ->map(function ($question) {
+                return [
+                    'question_id' => $question->id,
+                    'current_answer' => Arr::random((['option_1', 'option_2', 'option_3', 'option_4'])),
+                    'seconds' => Arr::random(([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])),
+                ];
+            })
+            ->toArray();
+
+        $quizRepositoryInterface->submitQuiz($quiz->id, $meta);
     }
 }
