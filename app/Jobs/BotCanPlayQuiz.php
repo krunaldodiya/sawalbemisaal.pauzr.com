@@ -9,6 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Auth;
 
 class BotCanPlayQuiz implements ShouldQueue
 {
@@ -35,6 +36,11 @@ class BotCanPlayQuiz implements ShouldQueue
      */
     public function handle()
     {
-        //
+        $quiz = $this->quiz;
+        $user = $this->user;
+
+        auth()->loginUsingId($user->id);
+
+        dump(auth()->user()->name);
     }
 }
