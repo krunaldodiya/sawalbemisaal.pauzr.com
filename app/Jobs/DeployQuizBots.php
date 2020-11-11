@@ -40,8 +40,8 @@ class DeployQuizBots implements ShouldQueue
                 return $query->where('demo', true);
             })
             ->get()
-            ->each(function ($user) use ($quiz) {
-                BotCanPlayQuiz::dispatch($quiz, $user)->delay(now()->addMinutes(1));
+            ->each(function ($participant) use ($quiz) {
+                BotCanPlayQuiz::dispatch($quiz, $participant->user)->delay(now()->addSeconds(10));
             });
     }
 }
