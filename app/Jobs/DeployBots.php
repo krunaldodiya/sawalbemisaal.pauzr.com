@@ -34,6 +34,6 @@ class DeployBots implements ShouldQueue
     {
         $quiz = $this->quiz;
 
-        $participants = $quiz->participants->where();
+        // $participants = $quiz->participants->where();
     }
 }
