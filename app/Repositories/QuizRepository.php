@@ -77,7 +77,7 @@ class QuizRepository implements QuizRepositoryInterface
         }
 
         QuizParticipant::query()
-            ->where(['user_id' => auth()->id(), 'quiz_id' => $quiz->id])
+            ->where(['user_id' => $user->id, 'quiz_id' => $quiz->id])
             ->update(['status' => 'started']);
     }
 
