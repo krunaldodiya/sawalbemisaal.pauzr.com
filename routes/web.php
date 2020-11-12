@@ -9,7 +9,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function () {
-    return 'test';
+    return 'testing';
 });
 
 Route::get('/refer', function (Request $request) {
