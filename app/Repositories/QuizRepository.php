@@ -62,6 +62,8 @@ class QuizRepository implements QuizRepositoryInterface
             'image' => url('images/notify_canceled.png'),
             'quiz_id' => $quiz->id,
         ]);
+
+        return true;
     }
 
     public function startQuiz($quiz, $user)
@@ -79,6 +81,8 @@ class QuizRepository implements QuizRepositoryInterface
         QuizParticipant::query()
             ->where(['user_id' => $user->id, 'quiz_id' => $quiz->id])
             ->update(['status' => 'started']);
+
+        return true;
     }
 
     public function quizCanBeStarted($quiz)
@@ -98,6 +102,8 @@ class QuizRepository implements QuizRepositoryInterface
             'image' => url('images/notify_started.jpg'),
             'quiz_id' => $quiz->id,
         ]);
+
+        return true;
     }
 
     public function calculateQuizRankings($quiz_id)
@@ -148,6 +154,8 @@ class QuizRepository implements QuizRepositoryInterface
             'image' => url('images/notify_winners.png'),
             'quiz_id' => $quiz->id,
         ]);
+
+        return true;
     }
 
     public function submitQuiz($quiz_id, $meta)
@@ -196,6 +204,8 @@ class QuizRepository implements QuizRepositoryInterface
                 'points' => $answers->sum('points'),
                 'status' => 'finished',
             ]);
+
+        return true;
     }
 
     public function joinBulkQuiz($quiz_id, $total_participants)
