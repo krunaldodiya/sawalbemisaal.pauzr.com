@@ -56,7 +56,8 @@ class QuizRepository implements QuizRepositoryInterface
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
 
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
-            'key' => 'suspended_due_to_less_participants',
+            'title_key' => 'suspended_due_to_less_participants_title',
+            'body_key' => 'suspended_due_to_less_participants_body',
             'title' => "Quiz #{$this->quiz->title} suspended! Due to less participants",
             'body' => 'Don\'t worry, more quizzes loaded for you!',
             'image' => url('images/notify_canceled.png'),
@@ -96,7 +97,8 @@ class QuizRepository implements QuizRepositoryInterface
         DeployQuizBots::dispatch($quiz);
 
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
-            'key' => 'all_the_best',
+            'title_key' => 'all_the_best_title',
+            'body_key' => 'all_the_best_body',
             'title' => 'All the Best!',
             'body' => "Hurry, Start the quiz #{$this->quiz->title} NOW!",
             'image' => url('images/notify_started.jpg'),
@@ -148,7 +150,8 @@ class QuizRepository implements QuizRepositoryInterface
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $quiz->id])->first();
 
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
-            'key' => 'winners_announced',
+            'title_key' => 'winners_announced_title',
+            'body_key' => 'winners_announced_body',
             'title' => 'Winners Announced',
             'body' => "Check the quiz #{$this->quiz->title} list, NOW! Congrats winners!",
             'image' => url('images/notify_winners.png'),
