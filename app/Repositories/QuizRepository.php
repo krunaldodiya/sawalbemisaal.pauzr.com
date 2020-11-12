@@ -58,7 +58,7 @@ class QuizRepository implements QuizRepositoryInterface
         $this->pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
             'title_key' => 'suspended_due_to_less_participants_title',
             'body_key' => 'suspended_due_to_less_participants_body',
-            'title' => "Quiz #{$this->quiz->title} suspended! Due to less participants",
+            'title' => "Quiz #{$quiz->title} suspended! Due to less participants",
             'body' => 'Don\'t worry, more quizzes loaded for you!',
             'image' => url('images/notify_canceled.png'),
             'quiz_id' => $quiz->id,
@@ -100,7 +100,7 @@ class QuizRepository implements QuizRepositoryInterface
             'title_key' => 'all_the_best_title',
             'body_key' => 'all_the_best_body',
             'title' => 'All the Best!',
-            'body' => "Hurry, Start the quiz #{$this->quiz->title} NOW!",
+            'body' => "Hurry, Start the quiz #{$quiz->title} NOW!",
             'image' => url('images/notify_started.jpg'),
             'quiz_id' => $quiz->id,
         ]);
@@ -153,7 +153,7 @@ class QuizRepository implements QuizRepositoryInterface
             'title_key' => 'winners_announced_title',
             'body_key' => 'winners_announced_body',
             'title' => 'Winners Announced',
-            'body' => "Check the quiz #{$this->quiz->title} list, NOW! Congrats winners!",
+            'body' => "Check the quiz #{$quiz->title} list, NOW! Congrats winners!",
             'image' => url('images/notify_winners.png'),
             'quiz_id' => $quiz->id,
         ]);
