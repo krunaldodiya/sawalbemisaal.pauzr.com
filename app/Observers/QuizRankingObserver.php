@@ -15,16 +15,18 @@ class QuizRankingObserver
      */
     public function created(QuizRanking $quizRanking)
     {
-        $user = User::find($quizRanking->user_id);
+        if ($quizRanking->prize > 0) {
+            $user = User::find($quizRanking->user_id);
 
-        $transaction = $user->createTransaction($quizRanking->prize, 'deposit', [
-            'points' => [
-                'id' => $user->id,
-                'type' => "quiz_won"
-            ]
-        ]);
+            $transaction = $user->createTransaction($quizRanking->prize, 'deposit', [
+                'points' => [
+                    'id' => $user->id,
+                    'type' => "quiz_won"
+                ]
+            ]);
 
-        $user->deposit($transaction->transaction_id);
+            $user->deposit($transaction->transaction_id);
+        }
     }
 
     /**
