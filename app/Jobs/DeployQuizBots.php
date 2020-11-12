@@ -41,7 +41,7 @@ class DeployQuizBots implements ShouldQueue
             })
             ->get()
             ->each(function ($participant) use ($quiz) {
-                BotCanPlayQuiz::dispatch($quiz, $participant->user)->delay(now()->addSeconds(5));
+                BotCanPlayQuiz::dispatch($quiz, $participant->user);
             });
     }
 }
