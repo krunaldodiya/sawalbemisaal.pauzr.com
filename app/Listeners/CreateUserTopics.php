@@ -27,7 +27,7 @@ class CreateUserTopics
      */
     public function handle(Registered $event)
     {
-        Topic::firstOrCreate(['notifiable_type' => 'user', 'notifiable_id' => null]);
+        Topic::firstOrCreate(['name' => 'user', 'notifiable_type' => 'user', 'notifiable_id' => null]);
 
         Topic::addTopic('user', $event->user->id);
     }
