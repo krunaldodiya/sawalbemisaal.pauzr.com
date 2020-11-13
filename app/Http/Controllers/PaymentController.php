@@ -48,6 +48,7 @@ class PaymentController extends Controller
             'user_id' => $user->id,
             'gateway' => $request->gateway,
             'mobile' => $request->mobile,
+            'coins' => $redeemable_coins,
             'amount' => $redeemable_coins * 0.4,
             'status' => 'pending'
         ]);
