@@ -21,8 +21,9 @@ class CreateRedeemsTable extends Migration
 
             $table->string('gateway');
             $table->string('mobile');
+            $table->integer('coins');
+            $table->decimal('amount', 8, 2)->default(0);
 
-            $table->integer('amount');
             $table->enum('status', ['pending', 'success', 'fail'])->default('pending');
 
             $table->timestamps();
