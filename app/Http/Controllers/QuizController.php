@@ -42,7 +42,7 @@ class QuizController extends Controller
             'entry_fee' => $request->entry_fee,
             'total_participants' => $request->total_participants,
             'required_participants' => $request->total_participants,
-            'all_questions_count' => 50,
+            'all_questions_count' => 20,
             'answerable_questions_count' => 10,
             'total_winners' => $total_winners,
             'expired_at' => $request->expired_at,
