@@ -28,11 +28,11 @@ class PaymentController extends Controller
         $redeemable_coins = $request->coins;
 
         if ($redeemable_coins < 20) {
-            throw new Error("You can't redeem less than 20 coins");
+            throw new Error("minimum_redeem_coins_error");
         }
 
         if ($coins < $redeemable_coins) {
-            throw new Error("Not Enough Coins");
+            throw new Error("not_enough_wallet_points");
         }
 
         $transaction = $user->createTransaction($redeemable_coins, 'withdraw', [

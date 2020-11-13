@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\QuestionTranslationModel;
 use App\Locale;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -86,6 +87,6 @@ class HomeController extends Controller
             return response()->file("storage/{$file}");
         }
 
-        throw new Error("File Does not exists");
+        throw new \Error("File Does not exists");
     }
 }

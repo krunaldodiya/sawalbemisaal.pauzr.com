@@ -72,11 +72,11 @@ class QuizRepository implements QuizRepositoryInterface
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
         if (!$quiz_participant) {
-            throw new Error("Quiz has not been joined yet");
+            throw new Error("not_joined_yet");
         }
 
-        if ($quiz->status !== 'started') {
-            throw new Error("Quiz has already been {$quiz->status}");
+        if ($quiz->status === 'finished') {
+            throw new Error("quiz_already_finished");
         }
 
         QuizParticipant::query()
@@ -170,15 +170,19 @@ class QuizRepository implements QuizRepositoryInterface
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
         if (!$quiz_participant) {
-            throw new Error("Quiz has not been joined yet");
+            throw new Error("not_joined_yet");
         }
 
         if ($quiz->status === 'finished') {
-            throw new Error("Quiz has already been finished");
+            throw new Error("quiz_already_finished");
+        }
+
+        if ($quiz->status === 'suspended') {
+            throw new Error("quiz_already_suspended");
         }
 
         if ($quiz->status === 'pending') {
-            throw new Error("Quiz has not started yet");
+            throw new Error("quiz_not_started_yet");
         }
 
         $answers = collect($meta)
@@ -249,15 +253,27 @@ class QuizRepository implements QuizRepositoryInterface
         $quiz_participant = $quiz->participants()->where('user_id', $user->id)->first();
 
         if ($quiz_participant) {
-            throw new Error("You have already joined the quiz");
+            throw new Error("quiz_already_joined");
         }
 
-        if (!($quiz->status === 'pending')) {
-            throw new Error("Can't join now, Quiz is already {$quiz->status}");
+        if ($quiz->status === 'full') {
+            throw new Error("quiz_already_full");
+        }
+
+        if ($quiz->status === 'suspended') {
+            throw new Error("quiz_already_suspended");
+        }
+
+        if ($quiz->status === 'finished') {
+            throw new Error("quiz_already_finished");
+        }
+
+        if ($quiz->status === 'started') {
+            throw new Error("quiz_already_started");
         }
 
         if ($quiz->quiz_infos->entry_fee > $user->wallet->balance) {
-            throw new Error("Not Enough wallet points");
+            throw new Error("not_enough_wallet_points");
         }
 
         return $quiz->participants()->create(['user_id' => $user->id]);
