@@ -47,6 +47,8 @@ class StoryItem extends Resource
         return [
             ID::make()->sortable(),
 
+            BelongsTo::make('Story', 'story', Story::class),
+
             Select::make("Type")
                 ->options([
                     'image' => 'Image',
@@ -58,8 +60,6 @@ class StoryItem extends Resource
             Textarea::make("Caption"),
 
             Number::make("Duration"),
-
-            BelongsTo::make('Story', 'story', Story::class),
         ];
     }
 
