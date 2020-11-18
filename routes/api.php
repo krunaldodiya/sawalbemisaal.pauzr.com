@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->post('/plans/purchase', "PlanController@purch
 Route::middleware('auth:sanctum')->get('/payments/withdraw/history', "PaymentController@getWithdrawHistory");
 Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController@withdrawAmount");
 
-Route::middleware('auth:sanctum')->post('/stories', "StoryController@getStories");
+Route::middleware('auth:sanctum')->get('/stories', "StoryController@getStories");
 
 Route::middleware('auth:sanctum')->post('/quiz/host', "QuizController@host");
 Route::middleware('auth:sanctum')->post('/quiz/generate', "QuizController@generate");
