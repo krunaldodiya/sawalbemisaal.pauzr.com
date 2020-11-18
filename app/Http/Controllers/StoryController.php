@@ -10,7 +10,9 @@ class StoryController extends Controller
 {
     public function getStories(Request $request)
     {
-        $stories = Story::with('items')->get();
+        $stories = Story::with('items')
+            ->orderBy('order', 'asc')
+            ->get();
 
         return response(['stories' => $stories], 200);
     }
