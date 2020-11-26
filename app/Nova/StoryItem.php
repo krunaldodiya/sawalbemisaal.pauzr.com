@@ -60,6 +60,8 @@ class StoryItem extends Resource
             Textarea::make("Caption"),
 
             Number::make("Duration"),
+
+            Number::make("Order"),
         ];
     }
 
