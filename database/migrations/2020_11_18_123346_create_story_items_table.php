@@ -27,7 +27,7 @@ class CreateStoryItemsTable extends Migration
 
             $table->text('caption');
 
-            $table->number('order');
+            $table->integer('order');
 
             $table->timestamps();
         });
