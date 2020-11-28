@@ -17,8 +17,44 @@ use App\Imports\QuestionTranslationModel;
 use App\Locale;
 use Illuminate\Support\Facades\Storage;
 
+use Error;
+
 class HomeController extends Controller
 {
+    public function downloadApp(Request $request)
+    {
+        if (!$request->query("mobile")) {
+            throw new Error("No mobile provided");
+        }
+
+        $url = "https://api.msg91.com/api/v2/sendsms";
+
+        $data = [
+            'sender' => "SOCIAL",
+            'route' => "4",
+            'country' => "91",
+            "sms" => [
+                [
+                    "message" => "Get the Sawal Bemisaal app and enjoy Quizzing on the go! \n Learn & Earn ! Click https://bit.ly/SawalBemisaalApp to download now!",
+                    "to" => [$request->query("mobile")]
+                ]
+            ]
+        ];
+
+        $client = new \GuzzleHttp\Client();
+
+        $request = $client->post($url, [
+            'json' => $data,
+            'headers' => [
+                "authkey" => env("MSG91_KEY"),
+                'content-type' => 'application/json',
+                'Accept' => 'application/json'
+            ]
+        ]);
+
+        return $request->getBody();
+    }
+
     public function getFaqs(Request $request)
     {
         $faqs = Faq::orderBy('order', 'asc')->get();
