@@ -23,7 +23,16 @@ class HomeController extends Controller
 {
     public function downloadApp(Request $request)
     {
-        //
+        $file_name = "sawal-bemisaal.apk";
+
+        $path = storage_path("app/public/apps/$file_name");
+
+        $headers = [
+            "Content-Type" => "application/vnd.android.package-archive",
+            "Content-Disposition" => "attachment; filename='$file_name'",
+        ];
+
+        return response()->download($path, "$file_name", $headers);
     }
 
     public function sendAppLink(Request $request)
