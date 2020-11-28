@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -43,6 +44,13 @@ class Binary extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            File::make("name")
+                ->disk("public")
+                ->path("apps")
+                ->storeAs(function (Request $request) {
+                    return "sawal-bemisaal.apk";
+                })
         ];
     }
 
