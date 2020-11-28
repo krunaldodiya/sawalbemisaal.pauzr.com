@@ -23,6 +23,11 @@ class HomeController extends Controller
 {
     public function downloadApp(Request $request)
     {
+        //
+    }
+
+    public function sendAppLink(Request $request)
+    {
         if (!$request->query("mobile")) {
             throw new Error("No mobile provided");
         }
