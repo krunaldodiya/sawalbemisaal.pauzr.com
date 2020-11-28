@@ -45,8 +45,8 @@ Route::middleware('guest:api')->post('/otp/verify', "OtpController@verifyOtp");
 Route::middleware('auth:sanctum')->post('/faqs', "HomeController@getFaqs");
 Route::middleware('guest:api')->post('/upload/excel', "HomeController@excel");
 
-Route::post('/download/send-app-link', "HomeController@sendAppLink");
-Route::get('/download/app', "HomeController@downloadApp");
+Route::post('/app/send-link', "HomeController@sendAppLink");
+Route::get('/app/download', "HomeController@downloadApp");
 
 Route::get('/countries', "HomeController@getCountries");
 Route::get('/languages', "HomeController@getLanguages");
