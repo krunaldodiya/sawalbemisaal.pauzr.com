@@ -46,7 +46,6 @@ Route::middleware('auth:sanctum')->post('/faqs', "HomeController@getFaqs");
 Route::middleware('guest:api')->post('/upload/excel', "HomeController@excel");
 
 Route::post('/app/send-link', "HomeController@sendAppLink");
-Route::get('/app/download', "HomeController@downloadApp");
 
 Route::get('/countries', "HomeController@getCountries");
 Route::get('/languages', "HomeController@getLanguages");

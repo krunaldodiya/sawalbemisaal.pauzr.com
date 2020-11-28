@@ -20,4 +20,6 @@ Route::get('/refer', function (Request $request) {
     return redirect("https://www.sawalbemisaal.com");
 });
 
+
+Route::get('/app/download', "HomeController@downloadApp");
 Route::get('/media/{media}', 'HomeController@getMediaFile');
