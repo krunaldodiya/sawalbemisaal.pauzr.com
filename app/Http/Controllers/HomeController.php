@@ -51,7 +51,7 @@ class HomeController extends Controller
             'country' => "91",
             "sms" => [
                 [
-                    "message" => "Get the Sawal Bemisaal app and enjoy Quizzing on the go! \n Learn & Earn ! Click https://bit.ly/SawalBemisaalApp to download now!",
+                    "message" => "Get the Sawal Bemisaal app and enjoy Quizzing on the go! \n Learn & Earn ! Click https://bit.ly/SawalBemisaal_V2 to download now!",
                     "to" => [$mobile]
                 ]
             ]
