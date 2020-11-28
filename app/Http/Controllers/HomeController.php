@@ -37,7 +37,9 @@ class HomeController extends Controller
 
     public function sendAppLink(Request $request)
     {
-        if (!$request->query("mobile")) {
+        $mobile = $request->mobile;
+
+        if (!$mobile) {
             throw new Error("No mobile provided");
         }
 
@@ -50,7 +52,7 @@ class HomeController extends Controller
             "sms" => [
                 [
                     "message" => "Get the Sawal Bemisaal app and enjoy Quizzing on the go! \n Learn & Earn ! Click https://bit.ly/SawalBemisaalApp to download now!",
-                    "to" => [$request->query("mobile")]
+                    "to" => [$mobile]
                 ]
             ]
         ];
