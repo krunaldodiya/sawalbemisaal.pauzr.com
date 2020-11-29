@@ -63,7 +63,7 @@ class StoryItem extends Resource
 
             Number::make("Duration"),
 
-            Number::make("Order"),
+            Number::make("Order")->sortable(),
         ];
     }
 

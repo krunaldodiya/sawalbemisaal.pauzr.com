@@ -51,7 +51,7 @@ class Story extends Resource
 
             Text::make("Title"),
 
-            Number::make("Order"),
+            Number::make("Order")->sortable(),
 
             HasMany::make('Story Items', 'items', StoryItem::class),
         ];
