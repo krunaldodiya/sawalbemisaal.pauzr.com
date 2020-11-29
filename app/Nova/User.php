@@ -62,9 +62,9 @@ class User extends Resource
                 ->rules('required', 'max:255'),
 
             Select::make("Gender")->options([
-                'male' => 'Male',
-                'female' => 'Female',
-                'none' => 'None',
+                'Male' => 'Male',
+                'Female' => 'Female',
+                'None' => 'None',
             ])->sortable(),
 
             Text::make('Mobile')
