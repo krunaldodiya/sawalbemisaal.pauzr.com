@@ -73,7 +73,7 @@ class User extends Resource
 
             Text::make('Username')
                 ->sortable()
-                ->rules('required', 'max:254'),
+                ->rules('required', 'max:254', 'regex:/^[\w-]*$/'),
 
             Text::make('Email')
                 ->sortable()
