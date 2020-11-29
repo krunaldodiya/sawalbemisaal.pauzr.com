@@ -11,6 +11,10 @@ class Redeem extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'amount' => 'float',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
