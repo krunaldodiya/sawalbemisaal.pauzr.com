@@ -9,7 +9,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function () {
-    return 'testing';
+    return 'test';
 });
 
 Route::get('/refer', function (Request $request) {
@@ -19,7 +19,6 @@ Route::get('/refer', function (Request $request) {
 
     return redirect("https://www.sawalbemisaal.com");
 });
-
 
 Route::get('/app/download', "HomeController@downloadApp");
 Route::get('/media/{media}', 'HomeController@getMediaFile');
