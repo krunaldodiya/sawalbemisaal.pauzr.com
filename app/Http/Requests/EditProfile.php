@@ -29,6 +29,7 @@ class EditProfile extends FormRequest
             'name.required' => 'Name is required',
             'username.required' => 'Username is required',
             'username.unique' => 'Username must be unique',
+            'username.invalid' => 'Username can only have alphabets, numbers and dashes',
             'email.required' => 'Email is required',
             'email.unique' => 'Email must be unique',
             'dob.required' => 'Date of Birth is required',
