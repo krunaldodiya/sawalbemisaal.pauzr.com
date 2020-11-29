@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Nova\Actions\WalletPoint;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
@@ -63,6 +64,8 @@ class User extends Resource
                 ->sortable()
                 ->rules('required', 'max:254'),
 
+            Avatar::make('Avatar'),
+
             Text::make('Username')
                 ->sortable()
                 ->rules('required', 'max:254'),
@@ -76,6 +79,7 @@ class User extends Resource
             Password::make('Password')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
+
                 ->updateRules('nullable', 'string', 'min:8'),
 
             HasOne::make('Wallet'),

@@ -4888,3 +4888,72 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /usr/lib/
     157|     }
     158| 
     159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Predis\Connection\ConnectionException 
+
+  Connection refused [tcp://127.0.0.1:6379]
+
+  at vendor/predis/predis/src/Connection/AbstractConnection.php:155
+    151|      */
+    152|     protected function onConnectionError($message, $code = null)
+    153|     {
+    154|         CommunicationException::handle(
+  > 155|             new ConnectionException($this, static::createExceptionMessage($message), $code)
+    156|         );
+    157|     }
+    158| 
+    159|     /**
+
+      [2m+28 vendor frames [22m
+  29  [internal]:0
+      Illuminate\Foundation\Application::Illuminate\Foundation\{closure}()
+
+      [2m+5 vendor frames [22m
+  35  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
