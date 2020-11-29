@@ -55,7 +55,7 @@ class User extends Resource
         return [
             ID::make()->sortable(),
 
-            Gravatar::make(),
+            Avatar::make('Avatar'),
 
             Text::make('Name')
                 ->sortable()
@@ -70,8 +70,6 @@ class User extends Resource
             Text::make('Mobile')
                 ->sortable()
                 ->rules('required', 'max:254'),
-
-            Avatar::make('Avatar'),
 
             Text::make('Username')
                 ->sortable()
