@@ -42,7 +42,7 @@ class CreateQuiz extends Command
         $quizInfos = QuizInfo::where('auto', true)->get();
 
         collect($quizInfos)->each(function ($quizInfo) use ($quizRepositoryInterface) {
-            return $quizRepositoryInterface->generateQuiz($quizInfo->id);
+            return $quizRepositoryInterface->generateQuiz($quizInfo->id, false);
         });
     }
 }

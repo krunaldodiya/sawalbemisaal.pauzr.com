@@ -42,12 +42,12 @@ class QuizController extends Controller
             'entry_fee' => $request->entry_fee,
             'total_participants' => $request->total_participants,
             'required_participants' => $request->total_participants,
-            'all_questions_count' => 20,
-            'answerable_questions_count' => 10,
+            'all_questions_count' => $request->all_questions_count ?? 20,
+            'answerable_questions_count' => $request->answerable_questions_count ?? 10,
             'total_winners' => $total_winners,
             'expired_at' => $request->expired_at,
-            'notify' => 15,
-            'time' => 10
+            'notify' => $request->notify ?? 15,
+            'time' => $request->time ?? 10
         ]);
 
         $quiz = $this->quizRepositoryInterface->generateQuiz($quizInfo->id, $request->private);
@@ -57,7 +57,7 @@ class QuizController extends Controller
 
     public function generate(GenerateQuiz $request)
     {
-        $quiz = $this->quizRepositoryInterface->generateQuiz($request->quiz_info_id, true);
+        $quiz = $this->quizRepositoryInterface->generateQuiz($request->quiz_info_id, false);
 
         return response(['quiz' => $quiz], 200);
     }

@@ -16,7 +16,7 @@ class GenerateQuiz extends Action
 {
     use InteractsWithQueue, Queueable;
 
-    public $onlyOnDetail = true;
+    public $onlyOnIndex = true;
 
     public $quizRepositoryInterface;
 
@@ -36,7 +36,7 @@ class GenerateQuiz extends Action
     {
         $quiz_info = $models[0];
 
-        $this->quizRepositoryInterface->generateQuiz($quiz_info->id);
+        $this->quizRepositoryInterface->generateQuiz($quiz_info->id, false);
 
         return Action::message("Quiz has been generated");
     }
