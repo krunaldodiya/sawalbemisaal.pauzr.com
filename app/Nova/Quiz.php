@@ -10,6 +10,7 @@ use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
@@ -54,6 +55,10 @@ class Quiz extends Resource
         return [
             ID::make()->sortable(),
 
+            Boolean::make('Private')->sortable(),
+
+            Boolean::make('Pinned')->sortable(),
+
             Text::make('Title')->sortable(),
 
             Text::make("Status")->sortable(),
@@ -62,7 +67,7 @@ class Quiz extends Resource
                 ->exceptOnForms()
                 ->sortable(),
 
-            BelongsTo::make("Quiz Info", "quiz_infos"),
+            BelongsTo::make("Quiz Info", "quiz_infos", QuizInfo::class),
 
             HasMany::make("Quiz Participants", "participants"),
 
