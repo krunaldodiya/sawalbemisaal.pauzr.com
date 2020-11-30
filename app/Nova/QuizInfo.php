@@ -56,12 +56,11 @@ class QuizInfo extends Resource
     {
         return [
             ID::make()->sortable(),
-
             Text::make('Entry Fee (Coins)', 'entry_fee')->sortable(),
             Text::make('Total Participants', 'total_participants')->sortable(),
             Hidden::make('Total Winners', 'total_winners')->default(0),
             Text::make('Required Participants', 'required_participants')->sortable(),
-            DateTime::make('Expired At')->exceptOnForms()->sortable(),
+            DateTime::make('Expired At')->sortable(),
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
         ];
     }
