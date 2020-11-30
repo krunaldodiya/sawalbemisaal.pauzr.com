@@ -46,9 +46,7 @@ class Quiz extends Model
 
     public function answerable_questions()
     {
-        return $this->belongsToMany(Question::class, 'quiz_questions')
-            ->withPivot('question_id')
-            ->where('is_answerable', true);
+        return $this->belongsToMany(Question::class, 'quiz_questions')->where('is_answerable', true);
     }
 
     public function quiz_infos()
