@@ -33,6 +33,10 @@ class QuizController extends Controller
 
     public function host(HostQuiz $request)
     {
+        $prizes = config('prizes');
+
+        $total_winners = count($prizes[$request->total_participants]);
+
         $quizInfo = QuizInfo::create([
             'auto' => false,
             'entry_fee' => $request->entry_fee,
@@ -40,6 +44,7 @@ class QuizController extends Controller
             'required_participants' => $request->total_participants,
             'all_questions_count' => $request->all_questions_count ?? 20,
             'answerable_questions_count' => $request->answerable_questions_count ?? 10,
+            'total_winners' => $total_winners,
             'expired_at' => $request->expired_at,
             'notify' => $request->notify ?? 15,
             'time' => $request->time ?? 10
