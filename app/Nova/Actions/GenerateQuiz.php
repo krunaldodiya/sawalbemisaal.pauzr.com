@@ -16,7 +16,7 @@ class GenerateQuiz extends Action
 {
     use InteractsWithQueue, Queueable;
 
-    public $onlyOnIndex = true;
+    public $onlyOnDetail = true;
 
     public $quizRepositoryInterface;
 

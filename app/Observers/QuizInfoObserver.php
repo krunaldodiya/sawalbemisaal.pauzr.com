@@ -15,6 +15,12 @@ class QuizInfoObserver
 
         $distributions = $prizes[$quizInfo->total_participants];
 
+        $total_winners = count($distributions);
+
+        $quizInfo->total_winners = $total_winners;
+
+        $quizInfo->save();
+
         $total_prize = $quizInfo->entry_fee * $quizInfo->total_participants;
 
         $data = collect($distributions)->map(function ($distribution, $index) use ($quizInfo, $total_prize) {

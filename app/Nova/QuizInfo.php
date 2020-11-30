@@ -72,8 +72,6 @@ class QuizInfo extends Resource
 
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
             Text::make('Time Per Question (Seconds)', 'time')->sortable(),
-
-            HasMany::make('Distribution', 'prize_distributions', PrizeDistribution::class),
         ];
     }
 
