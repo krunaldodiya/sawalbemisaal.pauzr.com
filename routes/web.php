@@ -12,7 +12,7 @@ Route::get('/', function (Request $request) {
 Route::get('/test', function (Request $request) {
     $quiz = Quiz::with('participants', 'quiz_infos', 'rankings', 'answerable_questions')->find($request->quiz_id);
 
-    return response(['quiz' => $quiz[0]->answerable_questions[0]]);
+    return response(['quiz' => $quiz]);
 });
 
 Route::get('/refer', function (Request $request) {

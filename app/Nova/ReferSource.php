@@ -2,8 +2,13 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\BelongsTo;
+
 use Illuminate\Http\Request;
+
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class ReferSource extends Resource
@@ -43,6 +48,20 @@ class ReferSource extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            BelongsTo::make('Refer Source', 'refer_source'),
+
+            // Text::make('Languages', 'languages')->sortable(),
+
+            Text::make('Ip Address', 'ip_address')->sortable(),
+            Text::make('Device', 'device')->sortable(),
+            Text::make('Platform', 'platform')->sortable(),
+            Text::make('Platform Version', 'platform_version')->sortable(),
+            Text::make('Browser', 'browser')->sortable(),
+            Text::make('Browser Version', 'browser_version')->sortable(),
+            Text::make('Robot', 'robot')->sortable(),
+            DateTime::make('created_at')->sortable(),
+
         ];
     }
 

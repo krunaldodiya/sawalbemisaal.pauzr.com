@@ -3,7 +3,11 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Refer extends Resource
@@ -43,6 +47,15 @@ class Refer extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('Utm Source Name', 'name')->sortable(),
+            Text::make('Url')->sortable(),
+            Text::make('Youtube')->sortable(),
+            Text::make('Instagram')->sortable(),
+            Text::make('Facebook')->sortable(),
+            Text::make('Website')->sortable(),
+
+            HasMany::make('Refer', 'refers')
         ];
     }
 
