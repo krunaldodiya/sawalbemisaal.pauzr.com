@@ -15,9 +15,7 @@ class QuizInfoObserver
 
         $distributions = $prizes[$quizInfo->total_participants];
 
-        $quizInfo->total_winners = count($distributions);
-
-        $quizInfo->save();
+        QuizInfo::where('id', $quizInfo->id)->update(['total_winners' => $distributions]);
 
         $total_prize = $quizInfo->entry_fee * $quizInfo->total_participants;
 
