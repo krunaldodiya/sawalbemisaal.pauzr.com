@@ -13,7 +13,7 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\HasMany;
-
+use Laravel\Nova\Fields\Hidden;
 use R64\NovaFields\Number;
 use R64\NovaFields\Row;
 
@@ -57,19 +57,13 @@ class QuizInfo extends Resource
         return [
             ID::make()->sortable(),
 
-            Boolean::make("Auto"),
-
             Text::make('Entry Fee (Coins)', 'entry_fee')->sortable(),
             Text::make('Total Participants', 'total_participants')->sortable(),
-            Text::make('Total Winners', 'total_winners')->sortable(),
+            Hidden::make('Total Winners', 'total_winners')->default(0),
             Text::make('Required Participants', 'required_participants')->sortable(),
-            Text::make('Total Questions', 'all_questions_count')->sortable(),
-            Text::make('Answerable Questions', 'answerable_questions_count')->sortable(),
-
             DateTime::make('Expired At')
                 ->exceptOnForms()
                 ->sortable(),
-
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
             Text::make('Time Per Question (Seconds)', 'time')->sortable(),
         ];
