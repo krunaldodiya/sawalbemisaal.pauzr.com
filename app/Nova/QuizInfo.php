@@ -61,11 +61,8 @@ class QuizInfo extends Resource
             Text::make('Total Participants', 'total_participants')->sortable(),
             Hidden::make('Total Winners', 'total_winners')->default(0),
             Text::make('Required Participants', 'required_participants')->sortable(),
-            DateTime::make('Expired At')
-                ->exceptOnForms()
-                ->sortable(),
+            DateTime::make('Expired At')->exceptOnForms()->sortable(),
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
-            Text::make('Time Per Question (Seconds)', 'time')->sortable(),
         ];
     }
 
