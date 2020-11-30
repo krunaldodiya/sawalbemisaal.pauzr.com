@@ -31,7 +31,7 @@ class QuizRepository implements QuizRepositoryInterface
 
     public function getQuizById($quiz_id)
     {
-        return  Quiz::with('host', 'participants.user', 'quiz_infos.prize_distributions', 'rankings')->find($quiz_id);
+        return  Quiz::with('host', 'participants.user', 'quiz_infos.prize_distributions', 'rankings', 'answerable_questions')->find($quiz_id);
     }
 
     public function cancelQuiz($quiz)

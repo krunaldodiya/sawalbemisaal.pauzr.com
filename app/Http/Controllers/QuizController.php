@@ -155,7 +155,7 @@ class QuizController extends Controller
 
     public function getSegmentWiseQuiz($segment)
     {
-        $userQuizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings')
+        $userQuizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings', 'answerable_questions')
             ->where(function ($query) use ($segment) {
                 if ($segment === "hosted") {
                     return $query->where('host_id', auth()->id());

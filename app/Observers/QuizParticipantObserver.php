@@ -27,7 +27,7 @@ class QuizParticipantObserver
     {
         $user = User::with('country')->find($quizParticipant->user_id);
 
-        $quiz = Quiz::with('participants', 'quiz_infos')->find($quizParticipant->quiz_id);
+        $quiz = Quiz::with('participants', 'quiz_infos', 'answerable_questions')->find($quizParticipant->quiz_id);
 
         if ($quiz->participants->count() >= $quiz->quiz_infos->total_participants) {
             $quiz->update(['status' => 'full']);

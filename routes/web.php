@@ -1,5 +1,6 @@
 <?php
 
+use App\Quiz;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
@@ -8,8 +9,10 @@ Route::get('/', function (Request $request) {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return 'test';
+Route::get('/test', function (Request $request) {
+    $quiz = Quiz::with('participants', 'quiz_infos', 'rankings', 'answerable_questions')->find($request->quiz_id);
+
+    return response(['quiz' => $quiz]);
 });
 
 Route::get('/refer', function (Request $request) {
