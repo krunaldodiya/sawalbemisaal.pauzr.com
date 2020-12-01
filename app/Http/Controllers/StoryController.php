@@ -11,6 +11,7 @@ class StoryController extends Controller
     public function getStories(Request $request)
     {
         $stories = Story::query()
+            ->has('items', '>', 0)
             ->with(['items' => function ($query) {
                 return $query->orderBy("order", "asc");
             }])
