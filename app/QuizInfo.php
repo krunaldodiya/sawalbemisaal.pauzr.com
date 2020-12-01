@@ -18,6 +18,11 @@ class QuizInfo extends Model
         'expired_at' => 'datetime',
     ];
 
+    public function quizzes()
+    {
+        return $this->hasMany(Quiz::class);
+    }
+
     public function prize_distributions()
     {
         return $this->hasMany(PrizeDistribution::class);

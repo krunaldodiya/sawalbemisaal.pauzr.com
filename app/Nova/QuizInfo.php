@@ -62,6 +62,7 @@ class QuizInfo extends Resource
             Text::make('Required Participants', 'required_participants')->sortable(),
             DateTime::make('Expired At')->sortable(),
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
+            HasMany::make('Quizzes', 'quizzes', Quiz::class)->sortable(),
         ];
     }
 
