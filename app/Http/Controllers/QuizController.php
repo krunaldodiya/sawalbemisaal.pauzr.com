@@ -147,58 +147,58 @@ class QuizController extends Controller
         $segments = ['hosted', 'joined', 'won', 'lost', 'cancelled', 'missed'];
 
         foreach ($segments as $segment) {
-            $quizzes[$segment] = $this->getSegmentWiseQuiz($segment);
+            $quizzes[$segment] = $this->getSegmentWiseQuiz($segment, $request->user_id ?? auth()->id());
         }
 
         return response(['quizzes' => $quizzes], 200);
     }
 
-    public function getSegmentWiseQuiz($segment)
+    public function getSegmentWiseQuiz($segment, $user_id)
     {
         $userQuizzes = Quiz::with('host', 'participants', 'quiz_infos', 'rankings', 'answerable_questions')
-            ->where(function ($query) use ($segment) {
+            ->where(function ($query) use ($segment, $user_id) {
                 if ($segment === "hosted") {
-                    return $query->where('host_id', auth()->id());
+                    return $query->where('host_id', $user_id);
                 }
 
                 if ($segment === "joined") {
                     return $query
-                        ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id());
+                        ->whereHas('participants', function ($query) use ($segment, $user_id) {
+                            return $query->where('user_id', $user_id);
                         });
                 }
 
                 if ($segment === "won") {
                     return $query
-                        ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id())->where('status', 'finished');
+                        ->whereHas('participants', function ($query) use ($segment, $user_id) {
+                            return $query->where('user_id', $user_id)->where('status', 'finished');
                         })
-                        ->whereHas('rankings', function ($query) {
-                            return $query->where('prize', '>', 0)->where('user_id', auth()->id());
+                        ->whereHas('rankings', function ($query) use ($segment, $user_id) {
+                            return $query->where('prize', '>', 0)->where('user_id', $user_id);
                         });
                 }
 
                 if ($segment === "lost") {
                     return $query
-                        ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id())->where('status', 'finished');
+                        ->whereHas('participants', function ($query) use ($segment, $user_id) {
+                            return $query->where('user_id', $user_id)->where('status', 'finished');
                         })
-                        ->whereHas('rankings', function ($query) {
-                            return $query->where('prize', 0)->where('user_id', auth()->id());
+                        ->whereHas('rankings', function ($query) use ($segment, $user_id) {
+                            return $query->where('prize', 0)->where('user_id', $user_id);
                         });
                 }
 
                 if ($segment === "missed") {
                     return $query
-                        ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id())->where('status', 'missed');
+                        ->whereHas('participants', function ($query) use ($segment, $user_id) {
+                            return $query->where('user_id', $user_id)->where('status', 'missed');
                         });
                 }
 
                 if ($segment === "cancelled") {
                     return $query
-                        ->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id())->where('status', 'suspended');
+                        ->whereHas('participants', function ($query) use ($segment, $user_id) {
+                            return $query->where('user_id', $user_id)->where('status', 'suspended');
                         });
                 }
             })
