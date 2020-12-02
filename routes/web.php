@@ -5,6 +5,7 @@ use App\User;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 Route::get('/', function (Request $request) {
     return view('welcome');

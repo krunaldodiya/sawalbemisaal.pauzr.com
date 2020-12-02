@@ -3,12 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Jamesh\Uuid\HasUuid;
 
 class Follow extends Model
 {
-    use HasUuid;
-
     protected $guarded = [];
 
     public function followers()

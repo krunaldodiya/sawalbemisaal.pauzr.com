@@ -14,8 +14,6 @@ class CreateFollowsTable extends Migration
     public function up()
     {
         Schema::create('follows', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-
             $table->uuid('follower_id')->nullable();
             $table->foreign('follower_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
