@@ -11,6 +11,7 @@ Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
 Route::middleware('guest:api')->get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
 
+Route::middleware('auth:sanctum')->post('/follows/toggle', "FollowController@toggle");
 Route::middleware('auth:sanctum')->post('/orders/create', "OrderController@createOrder");
 
 Route::middleware('auth:sanctum')->get('/rankings', "RankingController@getRankings");
