@@ -93,6 +93,10 @@ class User extends Resource
 
             BelongsToMany::make('Topics', 'topics', Topic::class)->searchable(),
 
+            BelongsToMany::make('Followers', 'followers', Follow::class)->searchable(),
+
+            BelongsToMany::make('Followings', 'followings', Follow::class)->searchable(),
+
             HasMany::make("Quizzes", "quizzes", QuizParticipant::class),
 
             Date::make('Joined On', "created_at")
