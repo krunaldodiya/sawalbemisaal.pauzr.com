@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('dob')->default("01-01-1990");
             $table->enum('gender', ['None', 'Male', 'Female'])->default('None');
             $table->string('avatar')->nullable();
+            $table->text('instagram_username')->nullable();
             $table->text('bio')->nullable();
 
             $table->uuid('country_id');
