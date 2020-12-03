@@ -34,8 +34,12 @@ class BotCanJoinQuiz implements ShouldQueue
     {
         $quiz = $this->quiz;
 
-        $total_participants = $quiz->quiz_infos->total_participants - $quiz->participants->count();
+        $needed_participants = $quiz->quiz_infos->total_participants - $quiz->participants->count();
 
-        $quizRepositoryInterface->joinBulkQuiz($quiz->id, $total_participants);
+        $joined_participants_percentage = $quiz->participants->count() / $quiz->quiz_infos->total_participants;
+
+        if ($joined_participants_percentage >= 0.8) {
+            $quizRepositoryInterface->joinBulkQuiz($quiz->id, $needed_participants);
+        }
     }
 }
