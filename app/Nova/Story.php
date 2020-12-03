@@ -20,6 +20,8 @@ class Story extends Resource
      */
     public static $model = \App\Story::class;
 
+    public static $group = 'Story';
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *

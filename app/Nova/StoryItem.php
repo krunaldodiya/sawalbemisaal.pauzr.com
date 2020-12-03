@@ -20,6 +20,8 @@ class StoryItem extends Resource
      */
     public static $model = \App\StoryItem::class;
 
+    public static $group = 'Story';
+
     public static $perPageViaRelationship = 100;
 
     /**
