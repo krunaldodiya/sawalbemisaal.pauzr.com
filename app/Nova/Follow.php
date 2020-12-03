@@ -43,9 +43,9 @@ class Follow extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make("Follower", 'follower', 'follower_id', 'following_id'),
+            BelongsTo::make("Follower", 'follower', Follow::class),
 
-            BelongsTo::make("Following", 'following', 'following_id', 'follower_id'),
+            BelongsTo::make("Following", 'following', Follow::class),
         ];
     }
 
