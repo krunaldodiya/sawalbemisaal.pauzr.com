@@ -16,15 +16,18 @@ class CreatePushNotificationsTable extends Migration
         Schema::create('push_notifications', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
-            $table->string('subject');
+            $table->uuid('topic_id');
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
 
+            $table->string('subject');
             $table->string('title');
             $table->text('description');
 
             $table->string('image')->nullable();
             $table->string('sound')->nullable();
 
-            $table->timestamps();
+            $table->boolean('status')->default(false);
+            $table->json('response')->nullable();
         });
     }
 
