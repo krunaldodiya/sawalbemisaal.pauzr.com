@@ -13,17 +13,23 @@ class RankingController extends Controller
     {
         $period = User::filterPeriod($request->period);
 
-        $users = User::with(['country', 'wallet.transactions', 'quiz_rankings'])->get();
+        $users = User::query()
+            ->with([
+                'country',
+                'wallet.transactions',
+                'quiz_rankings' => function ($query) use ($period) {
+                    return $query->where(function ($query) use ($period) {
+                        return $query->where('created_at', '>=', User::filterPeriod($period));
+                    });
+                }
+            ])
+            ->get();
 
         $rankings = $users
             ->map(function ($user) use ($period) {
-                $quiz_rankings = $user->quiz_rankings()->where(function ($query) use ($period) {
-                    return $query->where('created_at', '>=', $period);
-                });
-
                 return [
                     'user' => $user,
-                    'prize' => $quiz_rankings->sum('prize')
+                    'prize' => $user->quiz_rankings->sum('prize')
                 ];
             })
             ->toArray();
