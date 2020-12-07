@@ -74,4 +74,21 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Language::class);
     }
+
+    public static function filterPeriod($period)
+    {
+        switch ($period) {
+            case 'Today':
+                return now()->startOfDay();
+
+            case 'This Week':
+                return now()->startOfWeek();
+
+            case 'This Month':
+                return now()->startOfMonth();
+
+            default:
+                return now()->startOfDay();
+        }
+    }
 }

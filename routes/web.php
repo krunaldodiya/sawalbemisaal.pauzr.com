@@ -12,9 +12,9 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $user = User::with('quiz_rankings')->find($request->user_id);
+    $user = User::with(['quiz_rankings'])->find($request->user_id);
 
-    return response(['user' => $user]);
+    return response(['user' => $user, 'period' => User::filterPeriod($request->period)]);
 });
 
 Route::get('/refer', function (Request $request) {

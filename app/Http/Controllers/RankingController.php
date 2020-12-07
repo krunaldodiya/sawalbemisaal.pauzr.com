@@ -9,26 +9,11 @@ use Illuminate\Http\Request;
 
 class RankingController extends Controller
 {
-    public function filterPeriod($period)
-    {
-        switch ($period) {
-            case 'Today':
-                return now()->startOfDay();
 
-            case 'This Week':
-                return now()->startOfWeek();
-
-            case 'This Month':
-                return now()->startOfMonth();
-
-            default:
-                return now()->startOfDay();
-        }
-    }
 
     public function getRankings(GetRankings $request)
     {
-        $period = $this->filterPeriod($request->period);
+        $period = User::filterPeriod($request->period);
 
         $users = User::with(['country', 'wallet.transactions', 'quiz_rankings'])->get();
 
