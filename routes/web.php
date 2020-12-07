@@ -20,7 +20,7 @@ Route::get('/test', function (Request $request) {
         });
     }])->find($request->user_id);
 
-    return response(['user' => $user, 'prize' => $user->quiz_rankings()->sum('prize')]);
+    return response(['user' => $user, 'prize' => $user->quiz_rankings->sum('prize')]);
 });
 
 Route::get('/refer', function (Request $request) {
