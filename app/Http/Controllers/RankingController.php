@@ -9,8 +9,6 @@ use Illuminate\Http\Request;
 
 class RankingController extends Controller
 {
-
-
     public function getRankings(GetRankings $request)
     {
         $period = User::filterPeriod($request->period);
