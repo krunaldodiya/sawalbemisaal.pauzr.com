@@ -19,7 +19,7 @@ class RankingController extends Controller
                 'wallet.transactions',
                 'quiz_rankings' => function ($query) use ($period) {
                     return $query->where(function ($query) use ($period) {
-                        return $query->where('created_at', '>=', User::filterPeriod($period));
+                        return $query->where('created_at', '>=', $period);
                     });
                 }
             ])
@@ -29,7 +29,8 @@ class RankingController extends Controller
             ->map(function ($user) use ($period) {
                 return [
                     'user' => $user,
-                    'prize' => $user->quiz_rankings->sum('prize')
+                    'prize' => $user->quiz_rankings->sum('prize'),
+                    'period' => $period
                 ];
             })
             ->toArray();
