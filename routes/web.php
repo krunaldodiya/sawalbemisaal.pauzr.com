@@ -16,7 +16,7 @@ Route::get('/test', function (Request $request) {
 
     $user = User::with(['quiz_rankings' => function ($query) use ($period) {
         return $query->where(function ($query) use ($period) {
-            return $query->where('created_at', '>=', $period);
+            return $query->where('created_at', '>=', User::filterPeriod($period));
         });
     }])->find($request->user_id);
 
