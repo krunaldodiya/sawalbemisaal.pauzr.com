@@ -12,7 +12,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $user = User::with('followers', 'followings')->find($request->user_id);
+    $user = User::with('quiz_rankings')->find($request->user_id);
 
     return response(['user' => $user]);
 });
