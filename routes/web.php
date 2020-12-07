@@ -12,9 +12,15 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $user = User::with(['quiz_rankings'])->find($request->user_id);
+    $period = $request->period;
 
-    return response(['user' => $user, 'period' => User::filterPeriod($request->period)]);
+    $user = User::with(['quiz_rankings' => function ($query) use ($period) {
+        return $query->where(function ($query) use ($period) {
+            return $query->where('created_at', '>=', $period);
+        });
+    }])->find($request->user_id);
+
+    return response(['user' => $user, 'period' => User::filterPeriod($period)]);
 });
 
 Route::get('/refer', function (Request $request) {
