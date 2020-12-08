@@ -10,4 +10,9 @@ return [
         'type' => 'referral_bonus',
         'points' => 9
     ],
+
+    'quiz_hosting_charge' => [
+        'type' => 'quiz_hosting_charge',
+        'points' => 2
+    ],
 ];

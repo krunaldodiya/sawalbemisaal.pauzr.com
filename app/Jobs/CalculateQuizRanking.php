@@ -37,14 +37,23 @@ class CalculateQuizRanking implements ShouldQueue
 
         $host_prize = $quiz->quiz_infos->total_participants * $quiz->quiz_infos->entry_fee * 0.08;
 
-        $transaction = $quiz->host->createTransaction($host_prize, 'deposit', [
+        $quiz_hosting_earning = $quiz->host->createTransaction($host_prize, 'deposit', [
             'points' => [
                 'id' => $quiz->host->id,
-                'type' => "quiz_hosted"
+                'type' => "quiz_hosting_earning"
             ]
         ]);
 
-        $quiz->host->deposit($transaction->transaction_id);
+        $quiz->host->deposit($quiz_hosting_earning->transaction_id);
+
+        $quiz_hosting_charge = $quiz->host->createTransaction(config('points.quiz_hosting_charge'), 'withdraw', [
+            'points' => [
+                'id' => $quiz->host->id,
+                'type' => "quiz_hosting_charge"
+            ]
+        ]);
+
+        $quiz->host->deposit($quiz_hosting_charge->transaction_id);
 
         return $quizRepositoryInterface->calculateQuizRankings($quiz->id);
     }
