@@ -241,14 +241,14 @@ class QuizRepository implements QuizRepositoryInterface
             "private" => $private,
         ]);
 
-        $quiz_hosting_charge = $quiz->host->createTransaction(2, 'withdraw', [
+        $transaction = $quiz->host->createTransaction(2, 'withdraw', [
             'points' => [
                 'id' => $quiz->host->id,
                 'type' => "quiz_hosting_charge"
             ]
         ]);
 
-        $quiz->host->deposit($quiz_hosting_charge->transaction_id);
+        $quiz->host->deposit($transaction->transaction_id);
 
         return $this->getQuizById($quiz->id);
     }
