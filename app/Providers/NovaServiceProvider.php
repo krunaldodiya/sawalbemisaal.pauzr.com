@@ -48,6 +48,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 "kunal.dodiya1@gmail.com",
                 "aryanadya@gmail.com",
                 "jayeshnerkar26@gmail.com",
+                "admin@sb.com",
             ]);
         });
     }
