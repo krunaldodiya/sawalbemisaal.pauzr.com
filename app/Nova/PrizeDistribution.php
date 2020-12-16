@@ -33,6 +33,7 @@ class PrizeDistribution extends Resource
      */
     public static $search = [
         'id',
+        'quiz_info_id',
     ];
 
     /**
