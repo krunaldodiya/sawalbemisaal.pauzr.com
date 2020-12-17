@@ -14,7 +14,7 @@ class UpdatePrizeTypeInQuizRankingsTable extends Migration
     public function up()
     {
         Schema::table('quiz_rankings', function (Blueprint $table) {
-            $table->decimal('prize', 8, 2)->default(0)->nullable();
+            $table->decimal('prize', 8, 2)->default(0)->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class UpdatePrizeTypeInQuizRankingsTable extends Migration
     public function down()
     {
         Schema::table('quiz_rankings', function (Blueprint $table) {
-            $table->dropColumn('prize');
+            $table->integer('prize')->default(0)->nullable()->change();
         });
     }
 }
