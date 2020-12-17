@@ -8,6 +8,7 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 use Anaseqal\NovaImport\NovaImport;
+use App\User;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -43,13 +44,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function gate()
     {
-        Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                "kunal.dodiya1@gmail.com",
-                "aryanadya@gmail.com",
-                "jayeshnerkar26@gmail.com",
-                "admin@sb.com",
-            ]);
+        $admins = User::where('admin', true)->pluck('email')->toArray();
+
+        Gate::define('viewNova', function ($user) use ($admins) {
+            return in_array($user->email, $admins);
         });
     }
 
