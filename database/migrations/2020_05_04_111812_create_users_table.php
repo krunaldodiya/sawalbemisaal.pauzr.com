@@ -32,6 +32,8 @@ class CreateUsersTable extends Migration
             $table->text('instagram_username')->nullable();
             $table->text('bio')->nullable();
 
+            $table->boolean('admin')->default(false);
+
             $table->uuid('country_id');
             $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');
 

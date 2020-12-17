@@ -106,6 +106,8 @@ class User extends Resource
                 })
                 ->sortable(),
 
+            Boolean::make('Admin'),
+
             Boolean::make('Demo'),
 
             Boolean::make('Status'),
