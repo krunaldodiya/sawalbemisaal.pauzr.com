@@ -20,7 +20,7 @@ class CreatePrizeDistributionsTable extends Migration
             $table->foreign('quiz_info_id')->references('id')->on('quiz_infos')->onUpdate('cascade')->onDelete('cascade');
 
             $table->integer('rank');
-            $table->string('prize');
+            $table->decimal('prize', 8, 2)->default(0)->nullable();
 
             $table->timestamps();
         });
