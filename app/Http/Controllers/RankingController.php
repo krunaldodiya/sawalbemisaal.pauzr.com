@@ -18,13 +18,12 @@ class RankingController extends Controller
                 'country',
                 'wallet.transactions',
                 'quiz_rankings' => function ($query) use ($period) {
-                    if ($period === null) {
-                        return $query
-                            ->where('prize', '>', 0);
-                    } else {
+                    if ($period) {
                         return $query
                             ->where('created_at', '>=', $period)
                             ->where('prize', '>', 0);
+                    } else {
+                        return $query->where('prize', '>', 0);
                     }
                 }
             ])
