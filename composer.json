@@ -25,7 +25,6 @@
         "krunaldodiya/wallet": "1.2.1",
         "laravel/framework": "^7.0",
         "laravel/horizon": "^4.3",
-        "laravel/legacy-factories": "^1.1",
         "laravel/nova": "~3.0",
         "laravel/sanctum": "^2.2",
         "laravel/telescope": "^3.3",
