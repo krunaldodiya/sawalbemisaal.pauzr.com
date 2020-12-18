@@ -87,6 +87,9 @@ class User extends Authenticatable
             case 'This Month':
                 return now()->startOfMonth();
 
+            case 'All Time':
+                return null;
+
             default:
                 return now()->startOfDay();
         }
