@@ -17,6 +17,7 @@
         "php": "^7.2.5",
         "64robots/nova-fields": "^0.17.0",
         "anaseqal/nova-import": "^0.0.4",
+        "appstract/laravel-opcache": "^4.0",
         "beyondcode/nova-tinker-tool": "^1.1",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
