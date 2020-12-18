@@ -112,7 +112,7 @@ class QuizController extends Controller
                 if ($request->timing !== "all") {
                     $parsedTime = Carbon::parse($request->timing);
                     dump("{$request->timing} {$parsedTime}");
-                    return $query->where('expired_at', $parsedTime);
+                    return $query->where('expired_at', $request->timing);
                 }
 
                 return $query->where('expired_at', '>=', now()->startOfDay());
