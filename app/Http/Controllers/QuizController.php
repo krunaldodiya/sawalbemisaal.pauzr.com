@@ -109,9 +109,8 @@ class QuizController extends Controller
                 }
             })
             ->where(function ($query) use ($request) {
-                if ($request->timing !== "all") {
-                    dump($request->timing);
-                    return $query->where('expired_at', $request->timing);
+                if ($request->timing !== "all") {;
+                    return $query->where('expired_at', Carbon::createFromFormat('d/m/Y h:i A',  $request->timing));
                 }
 
                 return $query->where('expired_at', '>=', now());
@@ -139,7 +138,7 @@ class QuizController extends Controller
             );
         }
 
-        $quizzes = $quizQuery->get();
+        $quizzes = $quizQuery->get()->toArray();
 
         return response(['quizzes' => $quizzes], 200);
     }
