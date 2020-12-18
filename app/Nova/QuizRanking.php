@@ -33,7 +33,7 @@ class QuizRanking extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'user'
     ];
 
     public static function authorizedToCreate(Request $request)

@@ -37,10 +37,10 @@ class RedeemObserver
 
         if ($redeem->status === 'success') {
             $this->pushNotificationRepositoryInterface->notify("/topics/user_{$user->id}", [
-                'title_key' => 'will_start_in_few_minutes_title',
-                'body_key' => 'will_start_in_few_minutes_body',
-                'title' => "test will start in few minutes",
-                'body' => "Everyone is preparing, are you?",
+                'title_key' => 'Congratulations! Amount Transferred!',
+                'body_key' => "Rs. {$redeem->amount} transferred to your {$redeem->gateway} account. Congrats!",
+                'title' => "Congratulations! Amount Transferred!",
+                'body' => "Rs. {$redeem->amount} transferred to your {$redeem->gateway} account. Congrats!",
                 'image' => url('images/notify_soon.jpg'),
                 'show_alert_box' => false
             ]);
