@@ -41,7 +41,7 @@ class RedeemObserver
                 'body_key' => "Rs. {$redeem->amount} transferred to your {$redeem->gateway} account. Congrats!",
                 'title' => "Congratulations! Amount Transferred!",
                 'body' => "Rs. {$redeem->amount} transferred to your {$redeem->gateway} account. Congrats!",
-                'image' => url('images/notify_soon.jpg'),
+                'image' => url('images/payment_success.jpg'),
                 'show_alert_box' => false
             ]);
         }
