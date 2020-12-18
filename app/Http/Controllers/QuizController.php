@@ -110,11 +110,11 @@ class QuizController extends Controller
             })
             ->where(function ($query) use ($request) {
                 if ($request->timing !== "all") {
-                    dump("test");
+                    dump($request->timing);
                     return $query->where('expired_at', $request->timing);
                 }
 
-                return $query->where('expired_at', '>=', now()->startOfDay());
+                return $query->where('expired_at', '>=', now());
             });
 
         if ($request->key === "latest") {
