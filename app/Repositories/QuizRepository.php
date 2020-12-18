@@ -62,6 +62,7 @@ class QuizRepository implements QuizRepositoryInterface
             'body' => 'Don\'t worry, more quizzes loaded for you!',
             'image' => url('images/notify_canceled.png'),
             'quiz_id' => $quiz->id,
+            'show_alert_box' => true
         ]);
 
         return true;
@@ -103,6 +104,7 @@ class QuizRepository implements QuizRepositoryInterface
             'body' => "Hurry, Start the quiz #{$quiz->title} NOW!",
             'image' => url('images/notify_started.jpg'),
             'quiz_id' => $quiz->id,
+            'show_alert_box' => true
         ]);
 
         return true;
@@ -156,6 +158,7 @@ class QuizRepository implements QuizRepositoryInterface
             'body' => "Check the quiz #{$quiz->title} list, NOW! Congrats winners!",
             'image' => url('images/notify_winners.png'),
             'quiz_id' => $quiz->id,
+            'show_alert_box' => true
         ]);
 
         return true;

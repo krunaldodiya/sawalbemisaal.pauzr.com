@@ -43,6 +43,7 @@ class NotifyBeforeStart implements ShouldQueue
             'body' => "Everyone is preparing, are you?",
             'image' => url('images/notify_soon.jpg'),
             'quiz_id' => $this->quiz->id,
+            'show_alert_box' => true
         ]);
     }
 }
