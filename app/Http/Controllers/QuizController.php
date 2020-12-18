@@ -17,6 +17,7 @@ use App\QuizParticipant;
 use App\QuizRanking;
 use App\Repositories\QuizRepositoryInterface;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use Error;
@@ -109,7 +110,10 @@ class QuizController extends Controller
             })
             ->where(function ($query) use ($request) {
                 if ($request->timing !== "all") {
-                    return $query->where('expired_at', $request->timing);
+                    dump($request->all());
+                    dump($query->get());
+                    dump(Carbon::parse($request->timing));
+                    return $query->where('expired_at', Carbon::parse($request->timing));
                 }
 
                 return $query->where('expired_at', '>=', now()->startOfDay());
