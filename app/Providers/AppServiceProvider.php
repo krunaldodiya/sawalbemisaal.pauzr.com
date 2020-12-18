@@ -23,6 +23,9 @@ use App\Observers\QuizInfoObserver;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Sanctum\Sanctum;
 
+use App\Redeem;
+use App\Observers\RedeemObserver;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -48,5 +51,6 @@ class AppServiceProvider extends ServiceProvider
         QuizParticipant::observe(QuizParticipantObserver::class);
         QuizRanking::observe(QuizRankingObserver::class);
         QuizInfo::observe(QuizInfoObserver::class);
+        Redeem::observe(RedeemObserver::class);
     }
 }
