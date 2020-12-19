@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\Plan;
 
 use Illuminate\Http\Request;
@@ -30,6 +31,17 @@ class PlanController extends Controller
 
         $user->deposit($transaction->transaction_id);
 
-        return response(['success' => true], 200);
+        $subscription = Order::create([
+            'user_id' => $user->id,
+            'plan_id' => $plan->id,
+            'payment_id' => $request->transaction_id,
+            'status' => true
+        ]);
+
+        if ($subscription) {
+            return response(['success' => true], 200);
+        }
+
+        return response(['success' => false], 400);
     }
 }
