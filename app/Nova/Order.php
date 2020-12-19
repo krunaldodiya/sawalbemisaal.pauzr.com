@@ -6,6 +6,7 @@ use App\Nova\Filters\OrderStatus;
 use Illuminate\Http\Request;
 
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -52,7 +53,7 @@ class Order extends Resource
 
             BelongsTo::make('User')->sortable(),
 
-            Text::make("Status")->sortable(),
+            Boolean::make("Status")->sortable(),
 
             Text::make('Created At')->sortable(),
         ];
