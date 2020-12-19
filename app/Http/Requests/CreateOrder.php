@@ -16,8 +16,7 @@ class CreateOrder extends FormRequest
     {
         return [
             'plan_id' => 'required',
-            'payment_id' => 'required',
-            'status' => 'required|boolean',
+            'transaction_id' => 'required',
         ];
     }
 

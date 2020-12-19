@@ -12,11 +12,10 @@ Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserByI
 Route::middleware('guest:api')->get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
 
 Route::middleware('auth:sanctum')->post('/follows/toggle', "FollowController@toggle");
-Route::middleware('auth:sanctum')->post('/orders/create', "OrderController@createOrder");
 
 Route::middleware('auth:sanctum')->get('/rankings', "RankingController@getRankings");
 Route::middleware('auth:sanctum')->get('/plans', "PlanController@getPlans");
-Route::middleware('auth:sanctum')->post('/plans/purchase', "PlanController@purchasePlan");
+Route::middleware('auth:sanctum')->post('/plans/purchase', "OrderController@createOrder");
 
 Route::middleware('auth:sanctum')->get('/payments/withdraw/history', "PaymentController@getWithdrawHistory");
 Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController@withdrawAmount");
