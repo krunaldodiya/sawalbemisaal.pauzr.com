@@ -56,8 +56,6 @@ class Quiz extends Resource
         return [
             ID::make()->sortable(),
 
-            HasOne::make("Host", "host", Quiz::class),
-
             Boolean::make('Private')->sortable(),
 
             Boolean::make('Pinned')->sortable(),
