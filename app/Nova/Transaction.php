@@ -34,7 +34,7 @@ class Transaction extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'amount'
+        'id', 'amount', 'transaction_type'
     ];
 
     /**
