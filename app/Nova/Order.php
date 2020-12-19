@@ -47,8 +47,6 @@ class Order extends Resource
     public function fields(Request $request)
     {
         return [
-            Text::make('Amount')->sortable(),
-
             BelongsTo::make('Plan', 'plan', 'App\Nova\Plan')->sortable(),
 
             BelongsTo::make('User')->sortable(),
