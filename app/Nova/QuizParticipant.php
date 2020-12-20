@@ -19,6 +19,8 @@ class QuizParticipant extends Resource
 
     public static $group = 'Quiz';
 
+    public static $perPageViaRelationship = 100;
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
