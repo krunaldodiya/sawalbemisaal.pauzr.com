@@ -50,22 +50,18 @@ class BotCanPlayQuiz implements ShouldQueue
             $meta = $quiz->answerable_questions
                 ->map(function ($question) {
                     $translations = $question->translations()->first();
-                    $correct_answer = $translations->answer;
-                    $random_answers = [
+                    $correct_answers = array_fill(0, 20, $translations->answer);
+                    $random_answers = array_merge($correct_answers, [
                         'option_1',
-                        $correct_answer,
                         'option_2',
-                        $correct_answer,
                         'option_3',
-                        $correct_answer,
                         'option_4',
-                        $correct_answer
-                    ];
+                    ]);
 
                     return [
                         'question_id' => $question->id,
                         'current_answer' => Arr::random($random_answers),
-                        'seconds' => Arr::random(([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])),
+                        'seconds' => Arr::random(([1, 2])),
                     ];
                 })
                 ->toArray();
