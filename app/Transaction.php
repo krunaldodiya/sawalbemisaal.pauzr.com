@@ -9,4 +9,6 @@ use Jamesh\Uuid\HasUuid;
 class Transaction extends KDWalletTransaction
 {
     use HasUuid;
+
+    protected $guarded = [];
 }

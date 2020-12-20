@@ -2,11 +2,10 @@
 
 namespace App;
 
-use KD\Wallet\Models\Wallet as KDWallet;
-
+use Illuminate\Database\Eloquent\Model;
 use Jamesh\Uuid\HasUuid;
 
-class Wallet extends KDWallet
+class Influencer extends Model
 {
     use HasUuid;
 
