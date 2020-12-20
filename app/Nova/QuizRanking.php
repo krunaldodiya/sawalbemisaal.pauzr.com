@@ -62,9 +62,9 @@ class QuizRanking extends Resource
         return [
             BelongsTo::make("User")->sortable(),
 
-            Text::make("Rank"),
+            Text::make("Rank")->sortable(),
 
-            Text::make("Prize"),
+            Text::make("Prize")->sortable(),
         ];
     }
 

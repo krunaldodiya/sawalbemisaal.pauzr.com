@@ -55,9 +55,9 @@ class QuizParticipant extends Resource
 
             HasMany::make("Quiz Answers", "answers"),
 
-            Text::make("Status"),
+            Text::make("Status")->sortable(),
 
-            Text::make("Points"),
+            Text::make("Points")->sortable(),
         ];
     }
 
