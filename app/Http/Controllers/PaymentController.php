@@ -17,7 +17,8 @@ class PaymentController extends Controller
         $payments = Redeem::where('status', 'success')
             ->orderBy('created_at', 'desc')
             ->limit(20)
-            ->get();
+            ->get()
+            ->toArray();
 
         return PaymentResource::collection($payments);
     }
