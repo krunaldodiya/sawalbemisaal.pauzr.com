@@ -26,11 +26,6 @@ class Quiz extends Model
 
     public function host()
     {
-        return $this->hasOne(User::class, 'id', 'host_id');
-    }
-
-    public function creator()
-    {
         return $this->belongsTo(User::class, 'host_id');
     }
 

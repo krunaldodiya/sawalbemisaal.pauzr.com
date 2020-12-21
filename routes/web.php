@@ -12,7 +12,7 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $quiz = Quiz::with('creator')->first();
+    $quiz = Quiz::with('host')->first();
 
     return response(['quiz' => $quiz], 200);
 });
