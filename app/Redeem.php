@@ -16,11 +16,6 @@ class Redeem extends Model
         'amount' => 'float',
     ];
 
-    public function getImageAttribute($image)
-    {
-        return Storage::disk('public')->url($image);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
