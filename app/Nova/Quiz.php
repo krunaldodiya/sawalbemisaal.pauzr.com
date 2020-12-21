@@ -68,6 +68,8 @@ class Quiz extends Resource
                 ->exceptOnForms()
                 ->sortable(),
 
+            BelongsTo::make("Host", "host", Quiz::class),
+
             BelongsTo::make("Quiz Info", "quiz_infos", QuizInfo::class),
 
             HasMany::make("Quiz Participants", "participants"),
