@@ -14,12 +14,12 @@ class PaymentResource extends ResourceCollection
      */
     public function toArray($request)
     {
+        $redeem = $this->resource;
+
         return [
-            'id' => $this->id,
-            'image' => $this->image,
-            'gateway' => $this->gateway,
-            'coins' => $this->coins,
-            'amount' => $this->amount,
+            'image' => $redeem->image,
+            'gateway' => $redeem->gateway,
+            'amount' => $redeem->amount,
         ];
     }
 }
