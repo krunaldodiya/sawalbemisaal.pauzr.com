@@ -52,7 +52,7 @@ class Redeem extends Resource
         return [
             ID::make()->sortable(),
 
-            Image::make("Image")->nullable(),
+            Image::make("Image")->disk('public')->nullable(),
 
             BelongsTo::make('User')->sortable(),
 
