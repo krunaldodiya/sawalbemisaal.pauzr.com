@@ -21,6 +21,8 @@ class QuizParticipant extends Resource
 
     public static $perPageViaRelationship = 100;
 
+    public static $orderBy = ['points' => 'desc'];
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *

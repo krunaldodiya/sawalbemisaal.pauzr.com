@@ -22,6 +22,8 @@ class QuizRanking extends Resource
 
     public static $perPageViaRelationship = 100;
 
+    public static $orderBy = ['rank' => 'asc'];
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
