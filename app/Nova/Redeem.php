@@ -5,6 +5,7 @@ namespace App\Nova;
 use App\Nova\Filters\RedeemStatus;
 use Illuminate\Http\Request;
 
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Text;
@@ -49,6 +50,8 @@ class Redeem extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            File::make("Image")->nullable(),
 
             BelongsTo::make('User')->sortable(),
 

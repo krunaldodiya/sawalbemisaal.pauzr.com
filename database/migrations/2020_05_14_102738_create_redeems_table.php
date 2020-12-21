@@ -16,6 +16,8 @@ class CreateRedeemsTable extends Migration
         Schema::create('redeems', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
+            $table->string('image')->nullable();
+
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 

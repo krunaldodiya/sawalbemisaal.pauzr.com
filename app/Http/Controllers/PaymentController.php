@@ -12,6 +12,13 @@ use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
+    public function proofs(Request $request)
+    {
+        $payments = Redeem::where('status', 'success')->get(20);
+
+        return response(['payments' => $payments], 200);
+    }
+
     public function getWithdrawHistory(Request $request)
     {
         $history = Redeem::where('user_id', auth()->id())->get();
