@@ -29,6 +29,11 @@ class Quiz extends Model
         return $this->hasOne(User::class, 'id', 'host_id');
     }
 
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'host_id');
+    }
+
     public function participants()
     {
         return $this->hasMany(QuizParticipant::class);

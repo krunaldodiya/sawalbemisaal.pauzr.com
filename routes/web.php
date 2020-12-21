@@ -12,31 +12,9 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $period = User::filterPeriod($request->period);
+    $quiz = Quiz::with('creator')->first();
 
-    $users = User::query()
-        ->with([
-            'country',
-            'wallet.transactions',
-            'quiz_rankings' => function ($query) use ($period) {
-                return $query
-                    ->where('created_at', '>=', $period)
-                    ->where('prize', '>', 0);
-            }
-        ])
-        ->get();
-
-    $rankings = $users
-        ->map(function ($user) use ($period) {
-            return [
-                'user' => $user,
-                'prize' => $user->quiz_rankings->sum('prize'),
-                'period' => $period
-            ];
-        })
-        ->toArray();
-
-    return response(['rankings' => $rankings], 200);
+    return response(['quiz' => $quiz], 200);
 });
 
 Route::get('/refer', function (Request $request) {
