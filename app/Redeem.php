@@ -18,7 +18,7 @@ class Redeem extends Model
 
     public function getImageAttribute($image)
     {
-        return Storage::url($image);
+        return Storage::disk('public')->url($image);
     }
 
     public function user()
