@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Withdraw;
+use App\Http\Resources\RedeemResourceCollection;
 use App\Redeem;
 
 use Error;
@@ -16,10 +17,9 @@ class PaymentController extends Controller
         $payments = Redeem::where('status', 'success')
             ->orderBy('created_at', 'desc')
             ->limit(20)
-            ->get()
-            ->pluck('image');
+            ->get();
 
-        return response(['payments' => $payments], 200);
+        return RedeemResourceCollection::collection($payments)->response();
     }
 
     public function getWithdrawHistory(Request $request)
