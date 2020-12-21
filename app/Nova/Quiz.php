@@ -29,6 +29,8 @@ class Quiz extends Resource
 
     public static $group = 'Quiz';
 
+    public static $orderBy = ['expired_at' => 'desc'];
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
