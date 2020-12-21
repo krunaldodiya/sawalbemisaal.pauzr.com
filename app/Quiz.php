@@ -26,7 +26,7 @@ class Quiz extends Model
 
     public function host()
     {
-        return $this->belongsTo(User::class, 'id', 'host_id');
+        return $this->hasOne(User::class, 'id', 'host_id');
     }
 
     public function participants()
