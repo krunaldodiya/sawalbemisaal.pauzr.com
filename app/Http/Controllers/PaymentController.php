@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Withdraw;
-
+use App\Http\Resources\PaymentResource;
 use App\Redeem;
 
 use Error;
@@ -19,7 +19,7 @@ class PaymentController extends Controller
             ->limit(20)
             ->get();
 
-        return response(['payments' => $payments], 200);
+        return PaymentResource::collection($payments);
     }
 
     public function getWithdrawHistory(Request $request)

@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
+class PaymentResource extends ResourceCollection
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'image' => $this->image,
+            'gateway' => $this->gateway,
+            'coins' => $this->coins,
+            'amount' => $this->amount,
+        ];
+    }
+}
