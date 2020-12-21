@@ -14,12 +14,6 @@ class PaymentResource extends ResourceCollection
      */
     public function toArray($request)
     {
-        $redeem = $this->resource;
-
-        return [
-            'image' => $redeem->image,
-            'gateway' => $redeem->gateway,
-            'amount' => $redeem->amount,
-        ];
+        return parent::toArray($request);
     }
 }
