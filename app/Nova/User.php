@@ -44,6 +44,8 @@ class User extends Resource
         'id', 'name', 'email',
     ];
 
+    public static $orderBy = ['created_at' => 'desc'];
+
     /**
      * Get the fields displayed by the resource.
      *

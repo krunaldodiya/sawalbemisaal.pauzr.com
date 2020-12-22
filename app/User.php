@@ -94,4 +94,9 @@ class User extends Authenticatable
                 return now()->startOfDay();
         }
     }
+
+    public function routeNotificationFor($driver, $notification = null)
+    {
+        return "https://hooks.slack.com/services/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";
+    }
 }

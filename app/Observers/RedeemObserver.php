@@ -2,8 +2,11 @@
 
 namespace App\Observers;
 
+use App\Notifications\RedeemRequestReceived;
+use App\User;
 use App\Redeem;
 use App\Repositories\PushNotificationRepositoryInterface;
+use Illuminate\Support\Facades\Notification;
 
 class RedeemObserver
 {
@@ -22,7 +25,9 @@ class RedeemObserver
      */
     public function created(Redeem $redeem)
     {
-        //
+        $admins = User::where('admin', true)->get();
+
+        Notification::send($admins, new RedeemRequestReceived($redeem));
     }
 
     /**
