@@ -25,9 +25,9 @@ class RedeemObserver
      */
     public function created(Redeem $redeem)
     {
-        $admins = User::where('admin', true)->get();
+        // $admins = User::where('admin', true)->get();
 
-        Notification::send($admins, new RedeemRequestReceived($redeem));
+        Notification::send(null, new RedeemRequestReceived($redeem));
     }
 
     /**
