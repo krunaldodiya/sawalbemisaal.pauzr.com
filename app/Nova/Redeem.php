@@ -41,6 +41,8 @@ class Redeem extends Resource
         'id',
     ];
 
+    public static $orderBy = ['created_at' => 'desc'];
+
     /**
      * Get the fields displayed by the resource.
      *
