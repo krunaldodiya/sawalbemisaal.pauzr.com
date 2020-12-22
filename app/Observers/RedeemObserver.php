@@ -25,7 +25,7 @@ class RedeemObserver
      */
     public function created(Redeem $redeem)
     {
-        Notification::send($redeem->user, new RedeemRequestReceived($redeem));
+        $redeem->user->notify(new RedeemRequestReceived($redeem));
     }
 
     /**

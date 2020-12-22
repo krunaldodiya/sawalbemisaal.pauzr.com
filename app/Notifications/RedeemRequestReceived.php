@@ -8,27 +8,32 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Notification;
 
+use App\User;
+use App\Redeem;
+
 class RedeemRequestReceived extends Notification
 {
     use Queueable;
 
-    public function __construct()
+    public $redeem;
+
+    public function __construct(Redeem $redeem)
     {
-        //
+        $this->redeem = $redeem;
     }
 
-    public function via($notifiable)
+    public function via(User $notifiable)
     {
         return ['slack'];
     }
 
-    public function toSlack($notifiable)
+    public function toSlack(User $notifiable)
     {
         $url = env('APP_URL');
 
-        $action_url = "{$url}/nova/resources/redeems/{$notifiable->id}";
+        $action_url = "{$url}/nova/resources/redeems/{$this->redeem->id}";
 
         return (new SlackMessage)
-            ->content("{$action_url} => new redeem request of Rs. {$notifiable->amount} has just arrived");
+            ->content("{$action_url} => new redeem request of Rs. {$this->redeem->amount} has just arrived");
     }
 }
