@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Notification;
-
 use App\Http\Requests\ToggleFollow;
 use App\Notifications\UserFollowed;
 use App\User;
@@ -20,7 +18,7 @@ class FollowController extends Controller
             $follow = $user->followings()->toggle($following->id);
 
             if (empty($follow['detached'])) {
-                Notification::send($following, new UserFollowed($following->toArray(), $user->toArray()));
+                $following->notify(new UserFollowed($following->toArray(), $user->toArray()));
             }
 
             if (empty($follow['attached'])) {
