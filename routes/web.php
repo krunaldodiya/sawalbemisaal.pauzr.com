@@ -1,5 +1,6 @@
 <?php
 
+use App\Notifications\QuizHosted;
 use App\Quiz;
 use Illuminate\Support\Facades\Route;
 
@@ -11,7 +12,8 @@ Route::get('/', function (Request $request) {
 
 Route::get('/test', function (Request $request) {
     $quiz = Quiz::with('host')->find($request->quiz_id);
-    $followers = $quiz->host->followers;
+
+    $quiz->host->followers()->notify(new QuizHosted($quiz));
 
     return compact('quiz', 'followers');
 });

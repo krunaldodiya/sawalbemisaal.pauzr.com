@@ -30,6 +30,6 @@ class NotifyFollowers implements ShouldQueue
     {
         $quiz = Quiz::with('host')->find($event->quiz->id);
 
-        $quiz->host->followers->notify(new QuizHosted($quiz));
+        $quiz->host->followers()->notify(new QuizHosted($quiz));
     }
 }
