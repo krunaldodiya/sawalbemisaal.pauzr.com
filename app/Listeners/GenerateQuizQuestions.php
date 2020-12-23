@@ -7,7 +7,7 @@ use App\Question;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class GenerateQuizQuestions
+class GenerateQuizQuestions implements ShouldQueue
 {
     /**
      * Create the event listener.

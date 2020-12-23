@@ -3,12 +3,11 @@
 namespace App\Listeners;
 
 use App\Repositories\PushNotificationRepository;
-use App\Topic;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class SubscribeToTopics
+class SubscribeToTopics implements ShouldQueue
 {
     public $pushNotificationRepository;
 

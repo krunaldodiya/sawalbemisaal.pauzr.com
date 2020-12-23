@@ -19,6 +19,7 @@ use App\Listeners\GenerateQuizTitle;
 use App\Listeners\GenerateQuizQuestions;
 use App\Listeners\GenerateQuizTopic;
 use App\Listeners\GenerateQuizNotification;
+use App\Listeners\NotifyFollowers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
@@ -45,10 +46,10 @@ class EventServiceProvider extends ServiceProvider
 
         QuizGenerated::class => [
             GenerateQuizTitle::class,
-
             GenerateQuizQuestions::class,
             GenerateQuizTopic::class,
             GenerateQuizNotification::class,
+            NotifyFollowers::class
         ],
     ];
 

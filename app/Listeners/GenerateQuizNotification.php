@@ -9,7 +9,7 @@ use App\Jobs\NotifyBeforeStart;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class GenerateQuizNotification
+class GenerateQuizNotification implements ShouldQueue
 {
     /**
      * Create the event listener.

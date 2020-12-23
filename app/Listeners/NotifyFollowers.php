@@ -2,11 +2,13 @@
 
 namespace App\Listeners;
 
-use App\Events\TopicSubscribed;
+use App\Events\QuizGenerated;
+use App\Quiz;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use App\Notifications\QuizHosted;
 
-class ManageTopicSubscription implements ShouldQueue
+class NotifyFollowers implements ShouldQueue
 {
     /**
      * Create the event listener.
@@ -21,11 +23,13 @@ class ManageTopicSubscription implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param  TopicSubscribed  $event
+     * @param  QuizGenerated  $event
      * @return void
      */
-    public function handle(TopicSubscribed $event)
+    public function handle(QuizGenerated $event)
     {
-        //
+        $quiz = Quiz::with('host')->find($event->quiz->id);
+
+        $quiz->host->followers()->notify(new QuizHosted($quiz));
     }
 }

@@ -8,7 +8,7 @@ use App\Events\QuizGenerated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class GenerateQuizTitle
+class GenerateQuizTitle implements ShouldQueue
 {
     /**
      * Create the event listener.
