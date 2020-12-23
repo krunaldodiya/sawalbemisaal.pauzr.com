@@ -161,7 +161,7 @@ class UserController extends Controller
     {
         $keywords = $request->keywords;
 
-        $users = User::where('name', 'LIKE', "%$keywords%")->get();
+        $users = User::where('name', 'ilike', "%$keywords%")->get();
 
         return response(['users' => $users], 200);
     }
