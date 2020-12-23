@@ -13,7 +13,7 @@ use App\DeviceToken;
 use App\Invitation;
 use App\Wallet;
 use App\User;
-
+use Carbon\Carbon;
 use Error;
 
 use Illuminate\Http\Request;
@@ -56,7 +56,7 @@ class UserController extends Controller
 
     public function uploadAvatar(Request $request)
     {
-        $user = auth()->user();
+        $user = User::find(auth()->id());
 
         $file = $request->file('avatar');
 
@@ -69,7 +69,7 @@ class UserController extends Controller
 
     public function changePassword(ChangePassword $request)
     {
-        $user = auth()->user();
+        $user = User::find(auth()->id());
 
         try {
             $user = $user->update(['password' => bcrypt($request->password)]);
@@ -82,7 +82,7 @@ class UserController extends Controller
 
     public function editProfile(EditProfile $request)
     {
-        $user = auth()->user();
+        $user = User::find(auth()->id());
 
         $data = $request->all();
 
@@ -101,7 +101,7 @@ class UserController extends Controller
 
     public function setToken(SetToken $request)
     {
-        $user = auth()->user();
+        $user = User::find(auth()->id());
 
         $data = ['user_id' => $user->id, 'token' => $request->token];
 
@@ -131,5 +131,38 @@ class UserController extends Controller
         }
 
         return redirect("/refer");
+    }
+
+    public function getNotifications(Request $request)
+    {
+        $user = User::find(auth()->id());
+
+        $notifications = $user
+            ->notifications()
+            ->where('created_at', '>', Carbon::now()->subDays(30))
+            ->get();
+
+        return response(['notifications' => $notifications], 200);
+    }
+
+    public function markNotificationAsRead(Request $request)
+    {
+        $user = User::find(auth()->id());
+
+        $user
+            ->notifications()
+            ->where('id', $request->notification_id)
+            ->update(['read_at' => Carbon::now()]);
+
+        return response(['status' => true], 200);
+    }
+
+    public function search(Request $request)
+    {
+        $keywords = $request->keywords;
+
+        $users = User::where('name', 'LIKE', "%$keywords%")->get();
+
+        return response(['users' => $users], 200);
     }
 }
