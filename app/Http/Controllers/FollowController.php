@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ToggleFollow;
+use App\Notifications\UserFollowed;
 use App\User;
-use Illuminate\Http\Request;
 
 class FollowController extends Controller
 {
@@ -12,8 +12,20 @@ class FollowController extends Controller
     {
         $user = User::find(auth()->id());
 
+        $following = User::find($request->following_id);
+
         try {
-            $user->followings()->toggle($request->following_id);
+            $follow = $user->followings()->toggle($following->id);
+
+            if (empty($follow['detached'])) {
+                $following->notify(new UserFollowed($following->toArray(), $user->toArray()));
+            } else {
+                $following->notifications()
+                    ->where('data->following_id', $following->id)
+                    ->where('data->follower_id', $user->id)
+                    ->delete();
+            }
+
             return response(['success' => true], 200);
         } catch (\Throwable $th) {
             throw $th;
