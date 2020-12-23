@@ -9,10 +9,10 @@ Route::middleware('auth:sanctum')->post('/users/avatar/upload', "UserController@
 Route::middleware('auth:sanctum')->get('/users/wallet', "UserController@getWallet");
 Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
+Route::middleware('auth:sanctum')->get('/users/search', 'UserController@searchUsers');
+Route::middleware('auth:sanctum')->get('/users/notifications', 'UserController@getNotifications');
+Route::middleware('auth:sanctum')->post('/users/mark-notification-as-read', 'UserController@markNotificationAsRead');
 Route::middleware('guest:api')->get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
-Route::middleware('guest:api')->get('/users/notifications', 'UserController@getNotifications');
-Route::middleware('guest:api')->post('/users/mark-notification-as-read', 'UserController@markNotificationAsRead');
-Route::middleware('guest:api')->post('/users/search', 'UserController@searchUsers');
 
 Route::middleware('auth:sanctum')->post('/follows/toggle', "FollowController@toggle");
 Route::middleware('auth:sanctum')->post('/follows/suggest', "FollowController@suggest");
