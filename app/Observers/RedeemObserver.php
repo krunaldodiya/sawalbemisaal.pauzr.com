@@ -25,9 +25,9 @@ class RedeemObserver
      */
     public function created(Redeem $redeem)
     {
-        $slack = "https://hooks.slack.com/services/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";
+        // $slack = "https://hooks.slack.com/services/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";
 
-        $redeem->user->notify(new RedeemRequestReceived($redeem))->route('slack', $slack);
+        // $redeem->user->notify(new RedeemRequestReceived($redeem))->route('slack', $slack);
     }
 
     /**
