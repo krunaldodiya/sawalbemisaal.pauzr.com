@@ -50,7 +50,11 @@ class PushNotificationRepository implements PushNotificationRepositoryInterface
 
         $topic = Topic::where(['name' => $topic])->first();
 
-        $topic->subscribers()->attach($user);
+        $subscription = $topic->subscribers()->where('user_id', $user_id)->first();
+
+        if (is_null($subscription)) {
+            $topic->subscribers()->attach($user);
+        }
 
         $tokens = $user->device_tokens->map(function ($device_token) {
             return $device_token->token;
