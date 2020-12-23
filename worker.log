@@ -41380,3 +41380,1116 @@ In Application.php line 690:
 
   3   [internal]:0
       spl_autoload_call()
+
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+
+   ParseError 
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+
+  3   app/Providers/AppServiceProvider.php:50
+   ParseError 
+      spl_autoload_call()
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+      [2m+1 vendor frames [22m
+
+   ParseError 
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()
+
+   ParseError 
+
+  syntax error, unexpected 'return' (T_RETURN)
+
+  at app/User.php:104
+    100| 
+    101|         dd(
+    102|             $driver
+    103|         )
+  > 104|         return "https://hooks.slack.com/services/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";
+    105|     }
+    106| }
+    107|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass()
+
+  3   app/Providers/AppServiceProvider.php:50
+      spl_autoload_call()

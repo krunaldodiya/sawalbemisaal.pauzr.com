@@ -1,20 +1,15 @@
 <?php
 
-use App\Quiz;
-use App\User;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 Route::get('/', function (Request $request) {
     return view('welcome');
 });
 
 Route::get('/test', function (Request $request) {
-    $quiz = Quiz::with('host')->first();
-
-    return response(['quiz' => $quiz], 200);
+    return 'test';
 });
 
 Route::get('/refer', function (Request $request) {

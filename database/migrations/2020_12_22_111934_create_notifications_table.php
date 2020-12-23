@@ -18,7 +18,7 @@ class CreateNotificationsTable extends Migration
             $table->string('type');
             $table->string('notifiable_type');
             $table->uuid('notifiable_id');
-            $table->text('data');
+            $table->json('data');
             $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
