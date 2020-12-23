@@ -34,6 +34,7 @@ class RedeemRequestReceived extends Notification
         $action_url = "{$url}/nova/resources/redeems/{$this->redeem->id}";
 
         return (new SlackMessage)
+            ->to("https://hooks.slack.com/services/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")
             ->content("{$action_url} => new redeem request of Rs. {$this->redeem->amount} has just arrived");
     }
 }
