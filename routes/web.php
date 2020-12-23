@@ -12,13 +12,11 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $quiz = Quiz::with('host')->find($request->quiz_id);
+    $quiz = Quiz::with('host.followers')->find($request->quiz_id);
 
-    $host = User::find($quiz->host_id);
+    $host = User::with('followers')->find($quiz->host_id);
 
-    $auth = User::where('email', 'kunal.dodiya1@gmail.com')->first();
-
-    $auth->notify(new QuizHosted($quiz));
+    $host->followers()->notify(new QuizHosted($quiz));
 
     return compact('quiz');
 });
