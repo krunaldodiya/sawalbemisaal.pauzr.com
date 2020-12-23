@@ -27,7 +27,7 @@ class RedeemObserver
     {
         $slack = "https://hooks.slack.com/services/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";
 
-        Notification::route('slack', $slack)->notify(new RedeemRequestReceived($redeem));
+        Notification::route('slack', $slack)->notify($redeem->user, new RedeemRequestReceived($redeem));
     }
 
     /**
