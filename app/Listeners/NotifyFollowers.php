@@ -5,9 +5,11 @@ namespace App\Listeners;
 use App\Events\QuizGenerated;
 use App\Quiz;
 use App\User;
+use App\Notifications\QuizHosted;
+
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
-use App\Notifications\QuizHosted;
 
 class NotifyFollowers implements ShouldQueue
 {
@@ -33,6 +35,6 @@ class NotifyFollowers implements ShouldQueue
 
         $host = User::with('followers')->find($quiz->host_id);
 
-        $host->followers->notify(new QuizHosted($quiz));
+        Notification::send($host->followers, new QuizHosted($quiz));
     }
 }

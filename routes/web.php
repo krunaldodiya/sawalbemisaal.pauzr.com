@@ -4,6 +4,7 @@ use App\Notifications\QuizHosted;
 use App\Quiz;
 use App\User;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Notification;
 
 use Illuminate\Http\Request;
 
@@ -13,10 +14,9 @@ Route::get('/', function (Request $request) {
 
 Route::get('/test', function (Request $request) {
     $quiz = Quiz::with('host.followers')->find($request->quiz_id);
-
     $host = User::with('followers')->find($quiz->host_id);
 
-    $host->followers->notify(new QuizHosted($quiz));
+    Notification::send($host->followers, new QuizHosted($quiz));
 
     return compact('quiz');
 });
