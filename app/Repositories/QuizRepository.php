@@ -238,6 +238,7 @@ class QuizRepository implements QuizRepositoryInterface
         $quizInfo = QuizInfo::find($quiz_info_id);
 
         $quiz = Quiz::create([
+            "title" => Quiz::generateTitle(),
             "quiz_info_id" => $quizInfo->id,
             "host_id" => auth()->id(),
             "expired_at" => $quizInfo->expired_at,

@@ -14,9 +14,6 @@ Route::get('/', function (Request $request) {
 
 Route::get('/test', function (Request $request) {
     $quiz = Quiz::with('host.followers')->find($request->quiz_id);
-    $host = User::with('followers')->find($quiz->host_id);
-
-    Notification::send($host->followers, new QuizHosted($quiz));
 
     return compact('quiz');
 });
