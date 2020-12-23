@@ -157,7 +157,7 @@ class UserController extends Controller
         return response(['status' => true], 200);
     }
 
-    public function search(Request $request)
+    public function searchUsers(Request $request)
     {
         $keywords = $request->keywords;
 

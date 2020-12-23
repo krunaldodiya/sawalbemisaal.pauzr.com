@@ -209,7 +209,7 @@ class QuizController extends Controller
         return $userQuizzes;
     }
 
-    public function searchQuizByTitle(Request $request)
+    public function searchQuiz(Request $request)
     {
         $search = Quiz::where('title', $request->title)->first();
 

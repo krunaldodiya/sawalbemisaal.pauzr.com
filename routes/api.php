@@ -10,8 +10,12 @@ Route::middleware('auth:sanctum')->get('/users/wallet', "UserController@getWalle
 Route::middleware('auth:sanctum')->get('/users/me', "UserController@me");
 Route::middleware('auth:sanctum')->get('/users/info', "UserController@getUserById");
 Route::middleware('guest:api')->get('/users/invite/{sender_id}/{mobile}', 'UserController@checkInvitation');
+Route::middleware('guest:api')->get('/users/notifications', 'UserController@getNotifications');
+Route::middleware('guest:api')->post('/users/mark-notification-as-read', 'UserController@markNotificationAsRead');
+Route::middleware('guest:api')->post('/users/search', 'UserController@searchUsers');
 
 Route::middleware('auth:sanctum')->post('/follows/toggle', "FollowController@toggle");
+Route::middleware('auth:sanctum')->post('/follows/suggest', "FollowController@suggest");
 
 Route::middleware('auth:sanctum')->get('/rankings', "RankingController@getRankings");
 Route::middleware('auth:sanctum')->get('/plans', "PlanController@getPlans");
@@ -34,7 +38,7 @@ Route::middleware('auth:sanctum')->get('/quiz/questions', "QuizController@getQui
 Route::middleware('auth:sanctum')->get('/quiz/info', "QuizController@getQuizById");
 Route::middleware('auth:sanctum')->get('/quiz/winners', "QuizController@getQuizWinners");
 Route::middleware('auth:sanctum')->get('/quiz/answers', "QuizController@getQuizAnswers");
-Route::middleware('auth:sanctum')->get('/quiz/search', "QuizController@searchQuizByTitle");
+Route::middleware('auth:sanctum')->get('/quiz/search', "QuizController@searchQuiz");
 
 Route::middleware('guest:api')->post('/auth/login', "AuthController@login");
 Route::middleware('guest:api')->post('/auth/register', "AuthController@register");
