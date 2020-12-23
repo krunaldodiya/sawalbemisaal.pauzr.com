@@ -12,7 +12,6 @@ use App\Events\QuizGenerated;
 use App\Listeners\AddWalletBonusPoints;
 use App\Listeners\CheckInvitation;
 use App\Listeners\CreateUserTopics;
-use App\Listeners\SubscribeToTopics;
 use App\Listeners\ManageTopicSubscription;
 
 use App\Listeners\GenerateQuizQuestions;
@@ -35,7 +34,6 @@ class EventServiceProvider extends ServiceProvider
             AddWalletBonusPoints::class,
             CheckInvitation::class,
             CreateUserTopics::class,
-            SubscribeToTopics::class,
         ],
 
         TopicSubscribed::class => [

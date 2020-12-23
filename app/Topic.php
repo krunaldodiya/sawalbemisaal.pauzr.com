@@ -20,6 +20,6 @@ class Topic extends Model
     {
         $name = implode('_', array_filter([$notifiable_type, $notifiable_id]));
 
-        Topic::create(['name' => $name, 'notifiable_type' => $notifiable_type, 'notifiable_id' => $notifiable_id]);
+        Topic::firstOrCreate(['name' => $name, 'notifiable_type' => $notifiable_type, 'notifiable_id' => $notifiable_id]);
     }
 }
