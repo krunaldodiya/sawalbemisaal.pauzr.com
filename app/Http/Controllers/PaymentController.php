@@ -14,7 +14,9 @@ class PaymentController extends Controller
 {
     public function proofs(Request $request)
     {
-        $payments = Redeem::where('status', 'success')
+        $payments = Redeem::query()
+            ->where('status', 'success')
+            ->where('image', '!==', null)
             ->orderBy('created_at', 'desc')
             ->limit(20)
             ->get();
