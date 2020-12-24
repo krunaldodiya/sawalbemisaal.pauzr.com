@@ -211,15 +211,11 @@ class QuizController extends Controller
 
     public function searchQuiz(Request $request)
     {
-        $search = Quiz::where('title', $request->title)->first();
+        $title = $request->title;
 
-        if ($search) {
-            $quiz = $this->quizRepositoryInterface->getQuizById($search->id);
+        $quizzes = Quiz::where('title', 'ilike', "%$title%")->get();
 
-            return response(['quiz' => $quiz], 200);
-        }
-
-        return response(['quiz' => null], 200);
+        return response(['quizzes' => $quizzes], 200);
     }
 
     public function getQuizById(QuizDetail $request)
