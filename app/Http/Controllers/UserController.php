@@ -152,7 +152,8 @@ class UserController extends Controller
         $user
             ->notifications()
             ->where('id', $request->notification_id)
-            ->update(['read_at' => Carbon::now()]);
+            ->first()
+            ->markAsRead();
 
         return response(['status' => true], 200);
     }

@@ -14,6 +14,7 @@ class RankingController extends Controller
         $period = User::filterPeriod($request->period);
 
         $users = User::query()
+            ->where('status', true)
             ->with([
                 'country',
                 'wallet.transactions',
