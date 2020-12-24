@@ -213,7 +213,7 @@ class QuizController extends Controller
     {
         $title = $request->title;
 
-        $quizzes = Quiz::where('title', 'ilike', "%$title%")->get();
+        $quizzes = Quiz::with('host', 'participants.user', 'quiz_infos.prize_distributions', 'rankings', 'answerable_questions')->where('title', 'ilike', "%$title%")->get();
 
         return response(['quizzes' => $quizzes], 200);
     }
