@@ -16,7 +16,7 @@ class PaymentController extends Controller
     {
         $payments = Redeem::query()
             ->where('status', 'success')
-            ->where('image', '!==', null)
+            ->where('image', '!=', null)
             ->orderBy('created_at', 'desc')
             ->limit(20)
             ->get();
