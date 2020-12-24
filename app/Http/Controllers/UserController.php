@@ -160,11 +160,11 @@ class UserController extends Controller
 
     public function searchUsers(Request $request)
     {
-        $keywords = $request->keywords;
+        $title = $request->title;
 
         $users = User::query()
-            ->where('name', 'ilike', "%$keywords%")
-            ->orWhere('username', 'ilike', "%$keywords%")
+            ->where('name', 'ilike', "%$title%")
+            ->orWhere('username', 'ilike', "%$title%")
             ->get();
 
         return response(['users' => $users], 200);
