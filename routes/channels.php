@@ -1,6 +1,5 @@
 <?php
 
-use App\Quiz;
 
 use Illuminate\Support\Facades\Broadcast;
 
