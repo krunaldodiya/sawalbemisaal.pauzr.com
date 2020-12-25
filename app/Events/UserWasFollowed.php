@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 
 use App\User;
 
-class UserWasFollowed
+class UserWasFollowed implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -32,6 +32,6 @@ class UserWasFollowed
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new Channel("follower.{$this->following}");
     }
 }
