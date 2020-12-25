@@ -32,6 +32,6 @@ class UserWasFollowed implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel("follower.{$this->following}");
+        return new Channel("new.follower");
     }
 }
