@@ -2,7 +2,6 @@
 
 namespace App\Events;
 
-use App\Quiz;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -11,15 +10,19 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class QuizGenerated
+use App\User;
+
+class UserWasFollowed
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $quiz;
+    public $following;
+    public $follower;
 
-    public function __construct(Quiz $quiz)
+    public function __construct(User $following, User $follower)
     {
-        $this->quiz = $quiz;
+        $this->following = $following;
+        $this->follower = $follower;
     }
 
     /**

@@ -22,20 +22,10 @@ class UserFollowed extends Notification
 
     public function via($notifiable)
     {
-        return ['database', 'broadcast'];
+        return ['database'];
     }
 
     public function toArray($notifiable)
-    {
-        return [
-            'following_id' => $this->following['id'],
-            'follower_id' => $this->follower['id'],
-            'following' => $this->following,
-            'follower' => $this->follower,
-        ];
-    }
-
-    public function toBroadcast($notifiable)
     {
         return [
             'following_id' => $this->following['id'],

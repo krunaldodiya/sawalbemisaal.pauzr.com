@@ -8,6 +8,9 @@ use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 
 use App\Events\TopicSubscribed;
 use App\Events\QuizGenerated;
+use App\Events\UserWasFollowed;
+
+use App\Listeners\ManageUserWasFollowed;
 
 use App\Listeners\AddWalletBonusPoints;
 use App\Listeners\CheckInvitation;
@@ -34,6 +37,10 @@ class EventServiceProvider extends ServiceProvider
             AddWalletBonusPoints::class,
             CheckInvitation::class,
             CreateUserTopics::class,
+        ],
+
+        UserWasFollowed::class => [
+            ManageUserWasFollowed::class,
         ],
 
         TopicSubscribed::class => [

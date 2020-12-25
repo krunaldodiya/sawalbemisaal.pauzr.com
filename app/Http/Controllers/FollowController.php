@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserWasFollowed;
 use App\Http\Requests\ToggleFollow;
 use App\Notifications\UserFollowed;
 use App\User;
@@ -18,7 +19,7 @@ class FollowController extends Controller
             $follow = $user->followings()->toggle($following->id);
 
             if (empty($follow['detached'])) {
-                $following->notify(new UserFollowed($following->toArray(), $user->toArray()));
+                event(new UserWasFollowed($following, $user));
             }
 
             if (empty($follow['attached'])) {
