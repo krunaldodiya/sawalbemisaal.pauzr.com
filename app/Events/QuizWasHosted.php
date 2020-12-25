@@ -33,6 +33,6 @@ class QuizWasHosted implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('quiz-hosted');
+        return new PrivateChannel("quiz-hosted");
     }
 }
