@@ -1,6 +1,5 @@
 <?php
 
-use App\Notifications\QuizHosted;
 use App\Quiz;
 use App\User;
 use Illuminate\Support\Facades\Route;
