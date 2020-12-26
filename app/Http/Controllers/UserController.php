@@ -151,8 +151,7 @@ class UserController extends Controller
 
         $user
             ->notifications()
-            ->update(['read_at' => now()])
-            ->markAsRead();
+            ->update(['read_at' => now()]);
 
         return response(['status' => true], 200);
     }
