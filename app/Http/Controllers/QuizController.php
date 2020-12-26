@@ -86,24 +86,29 @@ class QuizController extends Controller
 
     public function getActiveQuizzes(Request $request)
     {
+        $user = User::with('followings')->find(auth()->id());
+
         $quizQuery = Quiz::query()
             ->with('host', 'participants', 'quiz_infos', 'rankings')
             ->withCount('host', 'participants', 'quiz_infos', 'rankings')
             ->where('private', false)
-            ->where(function ($query) {
-                return $query->where('status', 'pending')
-                    ->orWhere('status', 'started')
-                    ->orWhere('status', 'full');
+            ->where(function ($query) use ($user) {
+                return $query
+                    ->where('host_id', $user->id)
+                    ->orWhereIn('host_id', $user->followings->pluck('id'));
             })
-            ->where(function ($query) use ($request) {
+            ->where(function ($query) {
+                return $query->whereNotIn('status', ['finished', 'suspended']);
+            })
+            ->where(function ($query) use ($request, $user) {
                 if ($request->segment !== "all") {
                     if ($request->segment === "Hosted Quiz") {
-                        return $query->where('host_id', auth()->id());
+                        return $query->where('host_id', $user->id);
                     }
 
                     if ($request->segment === "Joined Quiz") {
-                        return $query->whereHas('participants', function ($query) {
-                            return $query->where('user_id', auth()->id());
+                        return $query->whereHas('participants', function ($query) use ($user) {
+                            return $query->where('user_id', $user->id);
                         });
                     }
                 }
@@ -113,7 +118,7 @@ class QuizController extends Controller
                     return $query->where('expired_at', Carbon::createFromFormat('d/m/Y h:i A',  $request->timing));
                 }
 
-                return $query->where('expired_at', '>=', now());
+                return $query->where('expired_at', '>=', now()->startOfDay());
             });
 
         if ($request->key === "latest") {
@@ -133,7 +138,8 @@ class QuizController extends Controller
 
         if ($request->key === "Prize Amount") {
             $quizQuery = $quizQuery->orderBy(
-                QuizInfo::select(DB::raw('(entry_fee * total_participants) as prize_amount'))->whereColumn('id', 'quizzes.quiz_info_id'),
+                QuizInfo::select(DB::raw('(entry_fee * total_participants) as prize_amount'))
+                    ->whereColumn('id', 'quizzes.quiz_info_id'),
                 $request->direction
             );
         }

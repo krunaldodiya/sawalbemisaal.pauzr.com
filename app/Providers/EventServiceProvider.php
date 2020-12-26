@@ -39,6 +39,7 @@ class EventServiceProvider extends ServiceProvider
             AddWalletBonusPoints::class,
             CheckInvitation::class,
             CreateUserTopics::class,
+            FollowAdmin::class,
         ],
 
         UserWasFollowed::class => [
