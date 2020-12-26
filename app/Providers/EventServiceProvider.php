@@ -18,6 +18,7 @@ use App\Listeners\AddWalletBonusPoints;
 use App\Listeners\CheckInvitation;
 use App\Listeners\CreateUserTopics;
 use App\Listeners\ManageTopicSubscription;
+use App\Listeners\FollowAdmin;
 
 use App\Listeners\GenerateQuizQuestions;
 use App\Listeners\GenerateQuizTopic;
