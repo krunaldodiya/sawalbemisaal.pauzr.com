@@ -63,6 +63,7 @@ class QuizInfo extends Resource
             DateTime::make('Expired At')->sortable(),
             Text::make('Notify Before (Minutes)', 'notify')->sortable(),
             HasMany::make('Quizzes', 'quizzes', Quiz::class)->sortable(),
+            Boolean::make("Auto")
         ];
     }
 
