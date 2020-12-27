@@ -35,6 +35,7 @@ class NotifyBeforeStart implements ShouldQueue
     public function handle(PushNotificationRepositoryInterface $pushNotificationRepositoryInterface)
     {
         $joined_participants = $this->quiz->participants->count();
+
         $needed_participants = $this->quiz->quiz_infos->total_participants - $joined_participants;
 
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $this->quiz->id])->first();
@@ -49,7 +50,7 @@ class NotifyBeforeStart implements ShouldQueue
             'show_alert_box' => true
         ]);
 
-        if ($this->quiz->status !== "full") {
+        if ($needed_participants > 0) {
             $pushNotificationRepositoryInterface->notify("/topics/user_{$this->quiz->host_id}", [
                 'title_key' => 'start_inviting_people_title',
                 'body_key' => 'start_inviting_people_body',
