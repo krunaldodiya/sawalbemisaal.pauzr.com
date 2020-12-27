@@ -34,6 +34,9 @@ class NotifyBeforeStart implements ShouldQueue
      */
     public function handle(PushNotificationRepositoryInterface $pushNotificationRepositoryInterface)
     {
+        $joined_participants = $this->quiz->participants->count();
+        $needed_participants = $this->quiz->quiz_infos->total_participants - $joined_participants;
+
         $topic = Topic::where(['notifiable_type' => 'quiz', 'notifiable_id' => $this->quiz->id])->first();
 
         $pushNotificationRepositoryInterface->notify("/topics/{$topic->name}", [
@@ -50,8 +53,8 @@ class NotifyBeforeStart implements ShouldQueue
             $pushNotificationRepositoryInterface->notify("/topics/user_{$this->quiz->host_id}", [
                 'title_key' => 'start_inviting_people_title',
                 'body_key' => 'start_inviting_people_body',
-                'title' => "start inviting people",
-                'body' => "start inviting people",
+                'title' => "Spread your QuizID: #{$this->quiz->title}",
+                'body' => "{$joined_participants} people have joined your Quiz. You need {$needed_participants} more it to make it successful.",
                 'image' => url('images/notify_soon.jpg'),
                 'quiz_id' => $this->quiz->id,
                 'show_alert_box' => false
