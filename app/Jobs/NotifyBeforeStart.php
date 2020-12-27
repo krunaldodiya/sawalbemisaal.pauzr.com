@@ -45,5 +45,17 @@ class NotifyBeforeStart implements ShouldQueue
             'quiz_id' => $this->quiz->id,
             'show_alert_box' => true
         ]);
+
+        if ($this->quiz->status !== "full") {
+            $pushNotificationRepositoryInterface->notify("/topics/user_{$this->quiz->host_id}", [
+                'title_key' => 'start_inviting_people_title',
+                'body_key' => 'start_inviting_people_body',
+                'title' => "start inviting people",
+                'body' => "start inviting people",
+                'image' => url('images/notify_soon.jpg'),
+                'quiz_id' => $this->quiz->id,
+                'show_alert_box' => false
+            ]);
+        }
     }
 }
