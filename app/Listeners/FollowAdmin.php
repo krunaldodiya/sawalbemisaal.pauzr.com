@@ -25,8 +25,8 @@ class FollowAdmin implements ShouldQueue
      */
     public function handle(Registered $event)
     {
-        $following = User::where('email', 'Antriksh93@gmail.com')->first();
+        $author = User::where('email', 'Antriksh93@gmail.com')->first();
 
-        $this->userRepositoryInterface->toggleFollow($event->user, $following);
+        $this->userRepositoryInterface->toggleFollow($event->user, $author);
     }
 }

@@ -2,9 +2,12 @@
 
 namespace App\Console\Commands;
 
+use App\User;
 use App\QuizInfo;
+
 use App\Repositories\QuizRepositoryInterface;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Auth;
 
 class CreateQuiz extends Command
 {
@@ -39,6 +42,10 @@ class CreateQuiz extends Command
      */
     public function handle(QuizRepositoryInterface $quizRepositoryInterface)
     {
+        $author = User::where('email', 'Antriksh93@gmail.com')->first();
+
+        Auth::loginUsingId($author->id);
+
         $quizInfos = QuizInfo::where('auto', true)->get();
 
         collect($quizInfos)->each(function ($quizInfo) use ($quizRepositoryInterface) {

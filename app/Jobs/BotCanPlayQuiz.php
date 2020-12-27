@@ -42,7 +42,7 @@ class BotCanPlayQuiz implements ShouldQueue
 
         $user = $this->user;
 
-        auth()->loginUsingId($user->id);
+        Auth::loginUsingId($user->id);
 
         try {
             $quizRepositoryInterface->startQuiz($quiz, $user);
