@@ -25,6 +25,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $appends = [
+        'app_version',
+    ];
+
+    public function getAppVersionAttribute($avatar)
+    {
+        return Binary::latest()->first()->version;
+    }
+
     public function getAvatarAttribute($avatar)
     {
         return $avatar ? $avatar : "default.png";
