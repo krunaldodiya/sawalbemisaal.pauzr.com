@@ -55,7 +55,7 @@ class NotifyBeforeStart implements ShouldQueue
                 'title_key' => 'start_inviting_people_title',
                 'body_key' => 'start_inviting_people_body',
                 'title' => "Spread your QuizID: #{$this->quiz->title}",
-                'body' => "{$joined_participants} people have joined your Quiz. You need {$needed_participants} more it to make it successful.",
+                'body' => "{$joined_participants} people joined your Quiz. {$needed_participants} more needed to make it successful.",
                 'image' => url('images/notify_soon.jpg'),
                 'quiz_id' => $this->quiz->id,
                 'show_alert_box' => false
