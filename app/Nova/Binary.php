@@ -2,12 +2,13 @@
 
 namespace App\Nova;
 
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+
+use Illuminate\Support\Str;
 
 class Binary extends Resource
 {
@@ -44,9 +45,7 @@ class Binary extends Resource
      */
     public function fields(Request $request)
     {
-        $date = Carbon::now();
-
-        $now = $date->format('d/m/Y h:m A');
+        $name = Str::uuid();
 
         return [
             ID::make()->sortable(),
@@ -54,7 +53,7 @@ class Binary extends Resource
             File::make("file")
                 ->disk("public")
                 ->path("apps")
-                ->storeAs("{$now}.apk"),
+                ->storeAs("{$name}.apk"),
 
             Text::make('Version')
         ];
