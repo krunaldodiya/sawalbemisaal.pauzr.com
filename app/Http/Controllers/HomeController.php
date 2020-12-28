@@ -7,15 +7,17 @@ use App\Country;
 use App\Faq;
 use App\Language;
 use App\QuestionTranslation;
+use App\Locale;
+use App\Binary;
+
+use App\Imports\QuestionTranslationModel;
 
 use App\Http\Requests\GetQuestions;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\QuestionTranslationModel;
-use App\Locale;
-use Illuminate\Support\Facades\Storage;
 
 use Error;
 
@@ -23,9 +25,11 @@ class HomeController extends Controller
 {
     public function downloadApp(Request $request)
     {
+        $binary = Binary::orderByDesc('version', 'desc')->first();
+
         $file_name = "sawal-bemisaal.apk";
 
-        $path = storage_path("app/public/apps/$file_name");
+        $path = storage_path("app/public/$binary->file");
 
         $headers = [
             "Content-Type" => "application/vnd.android.package-archive",
