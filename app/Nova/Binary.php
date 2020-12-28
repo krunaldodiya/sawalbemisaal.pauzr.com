@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
@@ -43,7 +44,9 @@ class Binary extends Resource
      */
     public function fields(Request $request)
     {
-        $now = now()->format('d-m-y h:i:s');
+        $date = Carbon::now();
+
+        $now = $date->format('d/m/Y h:m A');
 
         return [
             ID::make()->sortable(),
