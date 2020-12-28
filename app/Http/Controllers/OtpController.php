@@ -60,6 +60,8 @@ class OtpController extends Controller
 
         $auth = $this->userRepositoryInterface->getAuth($mobile, $country_id);
 
+        User::where('mobile', $request->mobile)->update(['version' => $request->version ?? "1.0.0"]);
+
         return response(["success" => true, "token" => $auth['token'], "user" => $auth['user']], 200);
     }
 }

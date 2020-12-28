@@ -45,7 +45,7 @@ class AuthController extends Controller
                 'password' => $request->password
             ]);
 
-            $auth = $this->userRepositoryInterface->getAuth(auth()->user());
+            $auth = $this->userRepositoryInterface->getAuth(auth()->user()->mobile, auth()->user()->country_id);
 
             return response(['user' => $auth['user'], 'token' => $auth['token']]);
         } catch (\Throwable $th) {
@@ -65,7 +65,7 @@ class AuthController extends Controller
                 'password' => bcrypt($request->password),
             ]);
 
-            $auth = $this->userRepositoryInterface->getAuth($create);
+            $auth = $this->userRepositoryInterface->getAuth($request->mobile, $request->country_id);
 
             return response(['user' => $auth['user'], 'token' => $auth['token']]);
         } catch (\Throwable $th) {
