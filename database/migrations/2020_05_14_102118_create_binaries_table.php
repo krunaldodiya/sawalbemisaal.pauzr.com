@@ -16,7 +16,9 @@ class CreateBinariesTable extends Migration
         Schema::create('binaries', function (Blueprint $table) {
             $table->uuid('id')->primary();
 
-            $table->string('name');
+            $table->string('file');
+
+            $table->string('version');
 
             $table->timestamps();
         });
