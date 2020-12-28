@@ -43,12 +43,15 @@ class Binary extends Resource
      */
     public function fields(Request $request)
     {
+        $now = now()->format('d-m-y h:i:s');
+
         return [
             ID::make()->sortable(),
 
             File::make("file")
                 ->disk("public")
-                ->path("apps"),
+                ->path("apps")
+                ->storeAs("{$now}.apk"),
 
             Text::make('Version')
         ];
