@@ -53,7 +53,9 @@ class Binary extends Resource
             File::make("file")
                 ->disk("public")
                 ->path("apps")
-                ->storeAs("{$name}.apk"),
+                ->storeAs(function (Request $request) use ($name) {
+                    return "{$name}.apk";
+                }),
 
             Text::make('Version')
         ];
