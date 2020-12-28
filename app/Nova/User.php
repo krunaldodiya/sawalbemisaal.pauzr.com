@@ -89,6 +89,8 @@ class User extends Resource
 
                 ->updateRules('nullable', 'string', 'min:8'),
 
+            Text::make('Version')->sortable(),
+
             HasOne::make('Wallet'),
 
             BelongsTo::make("Country"),
