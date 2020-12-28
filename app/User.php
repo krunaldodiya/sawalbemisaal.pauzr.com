@@ -31,7 +31,7 @@ class User extends Authenticatable
 
     public function getAppVersionAttribute($avatar)
     {
-        $binary = Binary::latest()->first();
+        $binary = Binary::orderByDesc('version', 'desc')->first();
 
         if ($binary) {
             $binary->version;
