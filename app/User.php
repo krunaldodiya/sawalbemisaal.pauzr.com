@@ -34,7 +34,7 @@ class User extends Authenticatable
         $binary = Binary::orderByDesc('version', 'desc')->first();
 
         if ($binary) {
-            $binary->version;
+            return $binary->version;
         }
 
         return '1.0.0';
