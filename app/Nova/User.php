@@ -4,7 +4,7 @@ namespace App\Nova;
 
 use App\Nova\Actions\WalletPoint;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
@@ -57,7 +57,7 @@ class User extends Resource
         return [
             ID::make()->sortable(),
 
-            Avatar::make('Avatar'),
+            Image::make('Avatar'),
 
             Text::make('Name')
                 ->sortable()
