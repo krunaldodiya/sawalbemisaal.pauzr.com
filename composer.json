@@ -33,7 +33,7 @@
         "laravel/telescope": "^3.3",
         "laravel/tinker": "^2.0",
         "maatwebsite/excel": "^3.1",
-        "madewithlove/laravel-nova-uuid-support": "^1.1",
+        "madewithlove/laravel-nova-uuid-support": "^1.2",
         "predis/predis": "^1.1",
         "pusher/pusher-php-server": "~3.0"
     },

@@ -44,7 +44,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function gate()
     {
-        $admins = User::where('admin', true)->pluck('email')->toArray();
+        $admins = config('admins.nova');
 
         Gate::define('viewNova', function ($user) use ($admins) {
             return in_array($user->email, $admins);

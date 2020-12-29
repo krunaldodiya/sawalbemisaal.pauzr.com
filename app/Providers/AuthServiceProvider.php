@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        $admins = User::where('admin', true)->pluck('email')->toArray();
+        $admins = config('admins.websockets');
 
         Gate::define('viewWebSocketsDashboard', function ($user) use ($admins) {
             return in_array($user->email, $admins);

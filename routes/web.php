@@ -1,9 +1,8 @@
 <?php
 
-use App\Quiz;
+use App\QuizRanking;
 use App\User;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Notification;
 
 use Illuminate\Http\Request;
 
@@ -12,9 +11,13 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/test', function (Request $request) {
-    $quiz = Quiz::with('host.followers')->find($request->quiz_id);
+    $balance = QuizRanking::selectRaw('sum(prize) as total')->whereColumn('user_id', 'users.id');
 
-    return compact('quiz');
+    $users = User::addSelect(['balance' => $balance])
+        ->orderBy('balance', 'DESC')
+        ->get();
+
+    return $users;
 });
 
 Route::get('/refer', function (Request $request) {

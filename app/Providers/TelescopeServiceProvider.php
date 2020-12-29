@@ -68,7 +68,7 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
      */
     protected function gate()
     {
-        $admins = User::where('admin', true)->pluck('email')->toArray();
+        $admins = config('admins.telescope');
 
         Gate::define('viewTelescope', function ($user) use ($admins) {
             return in_array($user->email, $admins);

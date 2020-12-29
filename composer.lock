@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "791be2fc8ac13a725615af447ab4f5b2",
+    "content-hash": "37b2a6299dabd52839e31f945d93d47b",
     "packages": [
         {
             "name": "64robots/nova-fields",
@@ -2469,20 +2469,20 @@
         },
         {
             "name": "madewithlove/laravel-nova-uuid-support",
-            "version": "v1.1.1",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/madewithlove/laravel-nova-uuid-support.git",
-                "reference": "8d65bff89fb99b4fe50c94341cf4b39cfc6d02fe"
+                "reference": "637903a8340521aef577a1d18a0982cf36ec53c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/madewithlove/laravel-nova-uuid-support/zipball/8d65bff89fb99b4fe50c94341cf4b39cfc6d02fe",
-                "reference": "8d65bff89fb99b4fe50c94341cf4b39cfc6d02fe",
+                "url": "https://api.github.com/repos/madewithlove/laravel-nova-uuid-support/zipball/637903a8340521aef577a1d18a0982cf36ec53c5",
+                "reference": "637903a8340521aef577a1d18a0982cf36ec53c5",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^5.7.15 | 5.8.* | ^6.0 | ^7.0",
+                "illuminate/support": "^5.7.15 | 5.8.* | ^6.0 | ^7.0 | ^8.0",
                 "php": "^7.1"
             },
             "type": "library",
@@ -2511,7 +2511,11 @@
                 "string",
                 "uuid"
             ],
-            "time": "2020-05-25T07:24:18+00:00"
+            "support": {
+                "issues": "https://github.com/madewithlove/laravel-nova-uuid-support/issues",
+                "source": "https://github.com/madewithlove/laravel-nova-uuid-support/tree/v1.2"
+            },
+            "time": "2020-09-09T06:41:09+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
