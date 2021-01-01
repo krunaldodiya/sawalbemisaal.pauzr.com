@@ -66,6 +66,8 @@ class QuizRanking extends Resource
         return [
             BelongsTo::make("User")->sortable(),
 
+            Text::make("Points")->sortable(),
+
             Text::make("Rank")->sortable(),
 
             Text::make("Prize")->sortable(),
