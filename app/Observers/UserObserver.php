@@ -35,7 +35,7 @@ class UserObserver
     public function updated(User $user)
     {
         if ($user->status === true) {
-            $author = User::where('email', 'antriksh93@gmail.com')->first();
+            $author = User::where('email', 'aryanadya@gmail.com')->first();
 
             $this->userRepositoryInterface->toggleFollow($user, $author);
         }

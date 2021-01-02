@@ -42,7 +42,7 @@ class CreateQuiz extends Command
      */
     public function handle(QuizRepositoryInterface $quizRepositoryInterface)
     {
-        $author = User::where('email', 'Antriksh93@gmail.com')->first();
+        $author = User::where('email', 'aryanadya@gmail.com')->first();
 
         Auth::loginUsingId($author->id);
 
