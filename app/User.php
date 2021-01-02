@@ -90,6 +90,11 @@ class User extends Authenticatable
         return $this->belongsTo(Language::class);
     }
 
+    public function invitations()
+    {
+        return $this->hasMany(Invitation::class);
+    }
+
     public static function filterPeriod($period)
     {
         switch ($period) {
