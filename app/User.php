@@ -92,7 +92,7 @@ class User extends Authenticatable
 
     public function invitations()
     {
-        return $this->hasMany(Invitation::class);
+        return $this->hasMany(Invitation::class, 'sender_id', 'id');
     }
 
     public static function filterPeriod($period)
