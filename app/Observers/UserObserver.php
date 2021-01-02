@@ -34,10 +34,12 @@ class UserObserver
      */
     public function updated(User $user)
     {
-        if ($user->status === true) {
-            $author = User::where('email', 'aryanadya@gmail.com')->first();
+        $admin = User::where('email', 'aryanadya@gmail.com')->first();
 
-            $this->userRepositoryInterface->toggleFollow($user, $author);
+        $isFollowingAdmin = !!$user->followings()->where('id', $admin->id)->count();
+
+        if ($user->status === true && $isFollowingAdmin === false) {
+            $this->userRepositoryInterface->toggleFollow($user, $admin);
         }
     }
 
