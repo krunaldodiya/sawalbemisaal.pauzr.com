@@ -2,11 +2,19 @@
 
 namespace App\Observers;
 
+use App\Repositories\UserRepositoryInterface;
 use App\User;
 use Illuminate\Auth\Events\Registered;
 
 class UserObserver
 {
+    public $userRepositoryInterface;
+
+    public function __construct(UserRepositoryInterface $userRepositoryInterface)
+    {
+        $this->userRepositoryInterface = $userRepositoryInterface;
+    }
+
     /**
      * Handle the user "created" event.
      *
@@ -26,7 +34,11 @@ class UserObserver
      */
     public function updated(User $user)
     {
-        //
+        if ($user->status === true) {
+            $author = User::where('email', 'antriksh93@gmail.com')->first();
+
+            $this->userRepositoryInterface->toggleFollow($user, $author);
+        }
     }
 
     /**
