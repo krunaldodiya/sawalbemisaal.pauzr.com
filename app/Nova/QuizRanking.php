@@ -71,6 +71,8 @@ class QuizRanking extends Resource
             Text::make("Rank")->sortable(),
 
             Text::make("Prize")->sortable(),
+
+            Text::make('Date', "updated_at")->sortable(),
         ];
     }
 
