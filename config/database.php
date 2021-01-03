@@ -76,6 +76,16 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
+            'dump' => [
+                'exclude_tables' => [
+                    'action_events',
+                    'websockets_statistics_entries',
+                    'telescope_entries',
+                    'telescope_entries_tags',
+                    'telescope_monitoring',
+                    'migrations'
+                ],
+            ]
         ],
 
         'sqlsrv' => [
