@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Nova\Actions\WalletPoint;
+use App\Nova\Filters\Version;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\BelongsTo;
@@ -138,7 +139,7 @@ class User extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [new Version()];
     }
 
     /**
