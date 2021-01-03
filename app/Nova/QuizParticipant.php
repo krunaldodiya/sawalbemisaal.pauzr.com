@@ -62,6 +62,8 @@ class QuizParticipant extends Resource
             Text::make("Status")->sortable(),
 
             Text::make("Points")->sortable(),
+
+            Text::make('Date', "updated_at")->sortable(),
         ];
     }
 
