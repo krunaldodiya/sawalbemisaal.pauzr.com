@@ -19,6 +19,13 @@ class PaymentController extends Controller
         return response(['success' => true], 200);
     }
 
+    public function authorized(Request $request)
+    {
+        dump($request->all());
+
+        return response(['success' => true], 200);
+    }
+
     public function proofs(Request $request)
     {
         $payments = Redeem::query()

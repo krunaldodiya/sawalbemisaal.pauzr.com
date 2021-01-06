@@ -26,6 +26,7 @@ Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController
 
 Route::get('/payments/proofs', "PaymentController@proofs");
 Route::post('/payments/captured', "PaymentController@captured");
+Route::post('/payments/authorized', "PaymentController@authorized");
 
 Route::middleware('auth:sanctum')->get('/stories', "StoryController@getStories");
 
