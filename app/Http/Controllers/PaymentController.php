@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
-    public   function onSuccess(Request $request)
+    public function captured(Request $request)
     {
         dump($request->all());
     }

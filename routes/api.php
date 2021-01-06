@@ -24,6 +24,9 @@ Route::middleware('auth:sanctum')->post('/plans/purchase', "OrderController@crea
 Route::middleware('auth:sanctum')->get('/payments/withdraw/history', "PaymentController@getWithdrawHistory");
 Route::middleware('auth:sanctum')->post('/payments/withdraw', "PaymentController@withdrawAmount");
 
+Route::get('/payments/proofs', "PaymentController@proofs");
+Route::post('/payments/captured', "PaymentController@captured");
+
 Route::middleware('auth:sanctum')->get('/stories', "StoryController@getStories");
 
 Route::middleware('auth:sanctum')->post('/quiz/host', "QuizController@host");
@@ -49,7 +52,6 @@ Route::middleware('guest:api')->post('/otp/verify', "OtpController@verifyOtp");
 Route::middleware('auth:sanctum')->post('/faqs', "HomeController@getFaqs");
 Route::middleware('guest:api')->post('/upload/excel', "HomeController@excel");
 
-Route::get('/payments/proofs', "PaymentController@proofs");
 Route::post('/influencer/join', "InfluencerController@join");
 Route::post('/app/send-link', "HomeController@sendAppLink");
 
@@ -58,5 +60,3 @@ Route::get('/languages', "HomeController@getLanguages");
 Route::get('/categories', "HomeController@getCategories");
 Route::get('/questions', "HomeController@getQuestions");
 Route::get('/locales', "HomeController@getLocales");
-
-Route::get('/payment/success', "PaymentController@onSuccess");
