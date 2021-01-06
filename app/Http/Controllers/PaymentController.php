@@ -12,6 +12,11 @@ use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
+    public   function onSuccess(Request $request)
+    {
+        dump($request->all());
+    }
+
     public function proofs(Request $request)
     {
         $payments = Redeem::query()
