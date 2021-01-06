@@ -15,6 +15,8 @@ class PaymentController extends Controller
     public function captured(Request $request)
     {
         dump($request->all());
+
+        return response(['success' => true], 200);
     }
 
     public function proofs(Request $request)
