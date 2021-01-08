@@ -61,3 +61,7 @@ Route::get('/languages', "HomeController@getLanguages");
 Route::get('/categories', "HomeController@getCategories");
 Route::get('/questions', "HomeController@getQuestions");
 Route::get('/locales', "HomeController@getLocales");
+
+Route::get('/test', function () {
+    return response(['success' => true], 200);
+});
