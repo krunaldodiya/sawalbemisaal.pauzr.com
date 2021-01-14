@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Nova\Actions\WalletPoint;
 use App\Nova\Filters\Version;
+use App\Quiz;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\BelongsTo;
@@ -90,6 +91,13 @@ class User extends Resource
                 ->updateRules('nullable', 'string', 'min:8'),
 
             Text::make('Version')->sortable(),
+
+            Text::make('Referral Code', 'referral_code')
+                ->sortable()
+                ->rules('required', 'max:255')
+                ->default(function () {
+                    return  Quiz::generateTitle();
+                }),
 
             HasOne::make('Wallet'),
 
