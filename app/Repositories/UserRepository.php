@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Events\UserWasFollowed;
+use App\Quiz;
 use App\User;
 
 class UserRepository implements UserRepositoryInterface
@@ -32,7 +33,11 @@ class UserRepository implements UserRepositoryInterface
 
     public function getAuth($mobile, $country_id)
     {
-        $auth = User::firstOrCreate(['mobile' => $mobile, 'country_id' => $country_id]);
+        $auth = User::firstOrCreate([
+            'mobile' => $mobile, 'country_id' => $country_id
+        ], [
+            'mobile' => $mobile, 'country_id' => $country_id, 'referral_code' => Quiz::generateTitle()
+        ]);
 
         $user = $this->getUserById($auth->id);
 
