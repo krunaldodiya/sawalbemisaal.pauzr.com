@@ -59,13 +59,15 @@ class Quiz extends Model
         $number = '0123456789';
         $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        function generateAlphaNumeric($alphanumeric, $length_of_string)
-        {
-            return substr(
-                str_shuffle($alphanumeric),
-                0,
-                $length_of_string
-            );
+        if (!function_exists('generateAlphaNumeric')) {
+            function generateAlphaNumeric($alphanumeric, $length_of_string)
+            {
+                return substr(
+                    str_shuffle($alphanumeric),
+                    0,
+                    $length_of_string
+                );
+            }
         }
 
         $random_alphabet = generateAlphaNumeric($alphabet, 2);
