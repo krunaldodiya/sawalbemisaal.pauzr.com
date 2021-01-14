@@ -56,22 +56,9 @@ class Quiz extends Model
 
     public static function generateTitle()
     {
-        $number = '0123456789';
-        $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $random_alphabet = substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 2);
 
-        if (!function_exists('generateAlphaNumeric')) {
-            function generateAlphaNumeric($alphanumeric, $length_of_string)
-            {
-                return substr(
-                    str_shuffle($alphanumeric),
-                    0,
-                    $length_of_string
-                );
-            }
-        }
-
-        $random_alphabet = generateAlphaNumeric($alphabet, 2);
-        $random_number = generateAlphaNumeric($number, 4);
+        $random_number = substr(str_shuffle('0123456789'), 0, 4);
 
         return "{$random_alphabet}{$random_number}";
     }
