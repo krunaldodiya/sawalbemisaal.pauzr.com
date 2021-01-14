@@ -37,8 +37,9 @@ class CreateUsersTable extends Migration
             $table->uuid('country_id');
             $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');
 
-            $table->string('version')->nullable();
             $table->string('fcm_token')->nullable();
+            $table->string('version')->nullable()->unique();
+            $table->string('referral_code')->nullable()->unique();
 
             $table->boolean('status')->default(false);
             $table->boolean('demo')->default(false);

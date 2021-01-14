@@ -15,7 +15,7 @@ class CreateTopicsTable extends Migration
     {
         Schema::create('topics', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name')->unique()->nullable();
+            $table->string('name')->nullable()->unique();
             $table->string('notifiable_type');
             $table->uuid('notifiable_id')->nullable();
             $table->timestamps();
