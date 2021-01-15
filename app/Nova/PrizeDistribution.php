@@ -26,6 +26,8 @@ class PrizeDistribution extends Resource
      */
     public static $title = 'id';
 
+    public static $group = 'Quiz';
+
     /**
      * The columns that should be searched.
      *
