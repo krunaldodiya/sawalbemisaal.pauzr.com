@@ -22,7 +22,9 @@ class CreateQuizParticipantsTable extends Migration
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
-            $table->decimal('points', 8, 2)->default(0);
+            $table->decimal('points', 8, 2)->nullable()->default(0);
+            $table->integer('rank')->nullable()->default(0);
+            $table->decimal('prize', 8, 2)->nullable()->default(0);
 
             $table->enum('status', ['joined', 'started', 'finished', 'missed', 'suspended'])->default('joined');
 
