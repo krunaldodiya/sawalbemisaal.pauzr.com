@@ -33,6 +33,7 @@ class CreateUsersTable extends Migration
             $table->text('bio')->nullable();
 
             $table->boolean('admin')->default(false);
+            $table->boolean('influencer')->default(false);
 
             $table->uuid('country_id');
             $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');
