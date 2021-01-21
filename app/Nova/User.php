@@ -122,6 +122,8 @@ class User extends Resource
 
             Boolean::make('Admin'),
 
+            Boolean::make('Influencer'),
+
             Boolean::make('Demo'),
 
             Boolean::make('Status'),
