@@ -14,34 +14,30 @@ Route::get('/', function (Request $request) {
 Route::get('/test', function (Request $request) {
     $periods = [now()->subYears(100), now()->startOfMonth(), now()->startOfDay()];
 
-    if ($request->action === "truncate") {
-        DB::table('quiz_rankings_improved')->truncate();
-    }
+    DB::table('quiz_rankings_improved')->truncate();
 
-    if ($request->action === "insert") {
-        collect($periods)
-            ->each(function ($period) {
-                $data = QuizRanking::query()
-                    ->where('prize', '>', 0)
-                    ->where(function ($query) use ($period) {
-                        return $query->where('created_at', '>', $period);
-                    })
-                    ->get()
-                    ->groupBy('user_id')
-                    ->map(function ($collection) {
-                        return [
-                            'id' => Illuminate\Support\Str::uuid(),
-                            'user_id' => $collection[0]->user_id,
-                            'prize' => $collection->sum('prize'),
-                            'period' => now()->endOfMonth(),
-                            'created_at' => now(),
-                            'updated_at' => now(),
-                        ];
-                    })->toArray();
+    collect($periods)
+        ->each(function ($period) {
+            $data = QuizRanking::query()
+                ->where('prize', '>', 0)
+                ->where(function ($query) use ($period) {
+                    return $query->where('created_at', '>', $period);
+                })
+                ->get()
+                ->groupBy('user_id')
+                ->map(function ($collection) {
+                    return [
+                        'id' => Illuminate\Support\Str::uuid(),
+                        'user_id' => $collection[0]->user_id,
+                        'prize' => $collection->sum('prize'),
+                        'period' => now()->endOfMonth(),
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ];
+                })->toArray();
 
-                DB::table('quiz_rankings_improved')->insert($data);
-            });
-    }
+            DB::table('quiz_rankings_improved')->insert($data);
+        });
 
     return 'done';
 });
