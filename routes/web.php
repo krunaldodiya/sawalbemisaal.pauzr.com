@@ -17,7 +17,7 @@ Route::get('/test', function (Request $request) {
     DB::table('quiz_rankings_improved')->truncate();
 
     collect($periods)
-        ->each(function ($period) {
+        ->each(function ($period, $index) {
             $data = QuizRanking::query()
                 ->where('prize', '>', 0)
                 ->where(function ($query) use ($period) {
@@ -25,7 +25,7 @@ Route::get('/test', function (Request $request) {
                 })
                 ->get()
                 ->groupBy('user_id')
-                ->map(function ($collection, $index) {
+                ->map(function ($collection) use ($index) {
                     $text = "ALL_TIME";
                     if ($index === 1) {
                         $text = now()->endOfMonth();
