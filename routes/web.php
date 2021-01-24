@@ -25,12 +25,18 @@ Route::get('/test', function (Request $request) {
                 })
                 ->get()
                 ->groupBy('user_id')
-                ->map(function ($collection) {
+                ->map(function ($collection, $index) {
+                    $text = "ALL_TIME";
+                    if ($index === 1) {
+                        $text = now()->endOfMonth();
+                    } else if ($index === 2) {
+                        $text = now()->endOfDay();
+                    }
                     return [
                         'id' => Illuminate\Support\Str::uuid(),
                         'user_id' => $collection[0]->user_id,
                         'prize' => $collection->sum('prize'),
-                        'period' => now()->endOfMonth(),
+                        'period' => $text,
                         'created_at' => now(),
                         'updated_at' => now(),
                     ];
